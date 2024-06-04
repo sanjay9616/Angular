@@ -40,8 +40,34 @@ Updates your workspace and its dependencies. For example - `ng update @angular/c
 
 Architect commands are based on a tool called Architect that is published under the `@angular-devkit/architect` package name. Architect helps the Angular CLI lint (ng lint), test (ng test, ng e2e), serve (ng serve), build (ng build), and deploy (ng deploy) our Angular applications. It's all about running complex tasks.
 
-**examples** - `ng build, ng deploy, ng e2e,ng lint,ng run,ng serve,ng test,ng xi18n` etc
+**examples** - `ng build, ng deploy, ng e2e, ng lint, ng run, ng serve, ng test,ng xi18n` etc
 
+**ng serve [project] or ng s [project]**: Builds and serves your application, rebuilding on file changes.
+
+**ng run <target>**: Runs an Architect target with an optional custom builder configuration defined in your project.
+
+**ng build [project] or ng b [project]**: Compiles an Angular application or library into an output directory named dist/ at the given output path.
+
+**ng test [project] or ng t [project]**: Runs unit tests in a project.
+
+**ng deploy [project]**: The command takes an optional project name, as specified in the projects section of the angular.json workspace configuration file. When a project name is not supplied, executes the deploy builder for the default project.
+
+To use the ng deploy command, use ng add to add a package that implements deployment capabilities to your favorite platform. Adding the package automatically updates your workspace configuration, adding a deployment CLI builder. For example:
+
+```ts
+"projects": {
+  "my-project": {
+    ...
+    "architect": {
+      ...
+      "deploy": {
+        "builder": "@angular/fire:deploy",
+        "options": {}
+      }
+    }
+  }
+}
+```
 
 <h2>3. Native Commands:</h2>
 
