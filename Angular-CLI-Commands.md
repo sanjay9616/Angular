@@ -22,7 +22,7 @@ Generates and/or modifies files based on a schematic, This command has the follo
 
 `ng generate directive [name] / ng generate d [name]`,`ng generate guard [name] / ng generate g [name]`,`ng generate interceptor [name]`, `ng generate module [name] / ng generate m [name]`, `ng generate pipe [name] / ng generate p [name]`, `ng generate service [name] / ng generate s [name]`, `ng generate app-shell`, `ng generate config [type]`, `ng generate enum [name] / ng generate e [name]`, `ng generate environments`, `ng generate interface [name] [type] / ng generate i [name] [type]`, `ng generate library [name] / ng generate lib [name]`, `ng generate resolver [name] / ng generate r [name]`, `ng generate service-worker`, `ng generate web-worker [name]`
 
-</h2>2. Architect Commands:</h2>
+<h2>2. Architect Commands:</h2>
 
 Architect commands are based on a tool called Architect that is published under the `@angular-devkit/architect` package name. Architect helps the Angular CLI lint (ng lint), test (ng test, ng e2e), serve (ng serve), build (ng build), and deploy (ng deploy) our Angular applications. It's all about running complex tasks.
 
