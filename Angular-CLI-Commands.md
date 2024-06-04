@@ -8,6 +8,12 @@ Schematics commands are based on a tool called Schematics that comes from the `@
 
 **examples** - `ng new, ng add, ng generate, ng update` etc
 
+<h3>ng new [name] or ng n [name]:</h3>
+
+Creates and initializes a new Angular application that is the default project for a new workspace.
+
+Provides interactive prompts for optional configuration, such as adding routing support. All prompts can safely be allowed to default.
+
 <h3>ng generate <schematic>:</h3>
 
 Generates and/or modifies files based on a schematic, This command has the following sub-commands.
