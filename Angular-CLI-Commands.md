@@ -8,6 +8,10 @@ Schematics commands are based on a tool called Schematics that comes from the `@
 
 **examples** - `ng new, ng add, ng generate, ng update` etc
 
+<h3>ng add <collection>:</h3>
+
+Adds the npm package for a published library to your workspace, and configures the project in the current working directory to use that library, as specified the library's schematic.  For example, adding @angular/pwa configures your project for PWA support: `ng add @angular/pwa`
+
 <h3>ng new [name] or ng n [name]:</h3>
 
 Creates and initializes a new Angular application that is the default project for a new workspace.
