@@ -20,7 +20,7 @@ Generates and/or modifies files based on a schematic, This command has the follo
 
 **and other sub-commands mentioned below:**
 
-`ng generate directive [name] / ng generate d [name]`,`ng generate guard [name] / ng generate g [name]`,`ng generate interceptor [name]`, `ng generate module [name] / ng generate m [name]`, `ng generate pipe [name] / ng generate p [name]`, `ng generate service [name] / ng generate s [name]`, `ng generate app-shell`, `ng generate config [type]`, `ng generate enum [name] / ng generate e [name]`, `ng generate environments`, `ng generate interface [name] [type] / ng generate i [name] [type]`, `ng generate library [name] / ng generate lib [name]`, `ng generate resolver [name] / ng generate r [name]`, `ng generate service-worker`, `ng generate web-worker [name]`
+`ng generate directive [name] / ng generate d [name]`, &emsp; `ng generate guard [name] / ng generate g [name]`, &emsp; `ng generate interceptor [name]`, &emsp; `ng generate module [name] / ng generate m [name]`, &emsp; `ng generate pipe [name] / ng generate p [name]`, &emsp; `ng generate service [name] / ng generate s [name]`, `ng generate app-shell`, &emsp; `ng generate config [type]`, &emsp; `ng generate enum [name] / ng generate e [name]`, &emsp; `ng generate environments`, &emsp; `ng generate interface [name] [type] / ng generate i [name] [type]`, &emsp; `ng generate library [name] / ng generate lib [name]`, &emsp; `ng generate resolver [name] / ng generate r [name]`, &emsp; `ng generate service-worker`, &emsp; `ng generate web-worker [name]`
 
 <h2>2. Architect Commands:</h2>
 
