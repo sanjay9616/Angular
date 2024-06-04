@@ -20,7 +20,7 @@ Generates and/or modifies files based on a schematic, This command has the follo
 
 **and other sub-commands mentioned below:**
 
-`ng generate directive [name] / ng generate d [name]`, &emsp; `ng generate guard [name] / ng generate g [name]`, &emsp; `ng generate interceptor [name]`, &emsp; `ng generate module [name] / ng generate m [name]`, &emsp; `ng generate pipe [name] / ng generate p [name]`, &emsp; `ng generate service [name] / ng generate s [name]`, `ng generate app-shell`, &emsp; `ng generate config [type]`, &emsp; `ng generate enum [name] / ng generate e [name]`, &emsp; `ng generate environments`, &emsp; `ng generate interface [name] [type] / ng generate i [name] [type]`, &emsp; `ng generate library [name] / ng generate lib [name]`, &emsp; `ng generate resolver [name] / ng generate r [name]`, &emsp; `ng generate service-worker`, &emsp; `ng generate web-worker [name]`
+`ng generate directive [name] / ng generate d [name]`, &nbsp; `ng generate guard [name] / ng generate g [name]`, &nbsp; `ng generate interceptor [name]`, &nbsp; `ng generate module [name] / ng generate m [name]`, &nbsp; `ng generate pipe [name] / ng generate p [name]`, &nbsp; `ng generate service [name] / ng generate s [name]`, `ng generate app-shell`, &nbsp; `ng generate config [type]`, &nbsp; `ng generate enum [name] / ng generate e [name]`, &nbsp; `ng generate environments`, &nbsp; `ng generate interface [name] [type] / ng generate i [name] [type]`, &nbsp; `ng generate library [name] / ng generate lib [name]`, &nbsp; `ng generate resolver [name] / ng generate r [name]`, &nbsp; `ng generate service-worker`, &nbsp; `ng generate web-worker [name]`
 
 <h2>2. Architect Commands:</h2>
 
