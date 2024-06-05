@@ -42,13 +42,32 @@ onInputChange(value: string) {
 }
 ```
 
-<h2>Interpolation</h2>
-<h2>Property Binding</h2>
-<h2>Class Binding</h2>
-<h2>Style Binding</h2>
-<h2>Attrinute Binding</h2>
-<h2>Event Binding</h2>
-<h2>One-way Binding</h2>
-<h2>Two-way Binding</h2>
+<h3>Interpolation</h3>
+
+Data binding using double curly braces {{ }} data moves in one way from source to view.
+
+```html
+<h3>Current customer: {{ currentCustomer }}</h3>
+```
+
+<h3>Property Binding</h3>
+
+Property binding using square brackets [] and value in one direction, from a component's property into a target element property.
+
+```html
+<button [disabled]="isDisabled">Property Binding</button>
+```
+
+<h3>Class Binding</h3>
+
+<h3>Style Binding</h3>
+
+<h3>Attrinute Binding</h3>
+
+<h3>Event Binding</h3>
+
+<h3>One-way Binding</h3>
+
+<h3>Two-way Binding</h3>
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
