@@ -187,9 +187,39 @@ export class CounterbuttonComponent {
 <button type="button" (click)="onDecrement()">Decrement (-)</button>
 ```
 
+<h2>4. Using Local Storage or Session Storage</h2>
 
-<h2>4. Using View Child</h2>
-<h2>5. Using @ViewChild property</h2>
-<h2>6. Using Local Storage or Session Storage</h2>
+- Local storage is a browser API that allows you to store key-value pairs in the user's browser. It can be used to store small amounts of data that need to persist between page reloads.
+- Use local storage when you need to store small amounts of data that need to persist between page reloads, such as user preferences or login information.
+
+```html
+<!-- component HTMl -->
+<div>{{ data.name }} is {{ data.age }} years old.</div>
+<button (click)="updateData()">Update Data</button> `
+```
+```ts
+// component TS
+export class MyComponent implements OnInit {
+
+  data: any = {};
+
+  ngOnInit(): void {
+    const data = JSON.parse(localStorage.getItem('data') || '{}');
+    this.data = data;
+  }
+
+  updateData(): void {
+    const newData = {
+      name: 'John',
+      age: 30
+    };
+    this.data = newData;
+    localStorage.setItem('data', JSON.stringify(newData));
+  }
+}
+```
+
+<h2>5. Using View Child</h2>
+<h2>6. Using @ViewChild property</h2>
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
