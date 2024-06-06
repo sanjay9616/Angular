@@ -41,8 +41,17 @@ onInputChange(value: string) {
     this.value = value
 }
 ```
+<h3>Other types of data bindings</h3>
 
-<h3>Interpolation</h3>
+**One-way Binding:**
+
+One-way data binding in Angular (i.e. unidirectional binding) is a way to bind data from the component to the view (DOM) or vice versa - from view to the component. It is used to display information to the end-user which automatically stays synchronized with each change of the underlying data. This is similar to the one-way binding in WPF.
+
+**Two-way Binding:**
+
+Two-way binding gives components in your application a way to share data. Use two-way binding to listen for events and update values simultaneously between parent and child components.
+
+**Interpolation:**
 
 Data binding using double curly braces {{ }} data moves in one way from source to view.
 
@@ -50,7 +59,7 @@ Data binding using double curly braces {{ }} data moves in one way from source t
 <h3>Current customer: {{ currentCustomer }}</h3>
 ```
 
-<h3>Property Binding</h3>
+**Property Binding:**
 
 Property binding using square brackets [] and value in one direction, from a component's property into a target element property.
 
@@ -58,16 +67,18 @@ Property binding using square brackets [] and value in one direction, from a com
 <button [disabled]="isDisabled">Property Binding</button>
 ```
 
-<h3>Class Binding</h3>
+**Event Binding:**
 
-<h3>Style Binding</h3>
+Event binding lets you listen for and respond to user actions such as keystrokes, mouse movements, clicks, and touches.
 
-<h3>Attrinute Binding</h3>
+```html
+<button (click)="onSave()">Save</button>
+```
 
-<h3>Event Binding</h3>
+**Class Binding:** `[class.sale]="true/false"`,  `[class]="my-class-1 my-class-2 my-class-3"`
 
-<h3>One-way Binding</h3>
+**Style Binding:** `[style.width]="100px"`, `[style.width.px]="100"`
 
-<h3>Two-way Binding</h3>
+**Attrinute Binding:** `<p [attr.attribute-you-are-targeting]="expression"></p>`, `[attr.colspan]="1 + 1"`
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
