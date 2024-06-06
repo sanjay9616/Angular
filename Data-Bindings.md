@@ -5,22 +5,18 @@ Angular provides three categories of data binding according to the direction of 
 <h2>1. From source to view</h2>
 
 ```ts
-// SOURCE
 value: string = 'From source to view data binding';
 ```
 ```html
-<!-- VIEW -->
 <h1>{{value}}</h1>
 ```
 
 <h2>2. From view to source</h2>
 
 ```html
-<!-- VIEW -->
 <input type="text" (input)="onInputChange($event)">
 ```
 ```ts
-// SOURCE
 value: string = ''
 onInputChange(value: string) {
     this.value = value
@@ -30,12 +26,10 @@ onInputChange(value: string) {
 <h2>3. In a two-way sequence of view to source to view</h2>
 
 ```html
-<!-- VIEW -->
 <input type="text" (input)="onInputChange($event)">
 <h1>{{value}}</h1>
 ```
 ```ts
-// SOURCE
 value: string = ''
 onInputChange(value: string) {
     this.value = value
