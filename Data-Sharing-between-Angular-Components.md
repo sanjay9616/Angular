@@ -2,9 +2,9 @@
 
 When building an Angular application, it's common to break it down into smaller components to keep the code manageable. However, when working with smaller components, you may need to share data between them. To do this, it's important to first define the relationship between the components. Once you have a clear understanding of the relationship, you can choose the most appropriate method to share the data.
 
-Use @Input when you need to pass data down from a parent component to a child component. This approach is useful when you want to reuse a child component in different parts of your application.
+- Use `@Input` when you need to pass data down from a parent component to a child component. This approach is useful when you want to reuse a child component in different parts of your application.
 
-Use @Output when you need to emit an event from a child component to a parent component. This approach is useful when you want to notify the parent component of a change that occurred in the child component.
+- Use `@Output` when you need to emit an event from a child component to a parent component. This approach is useful when you want to notify the parent component of a change that occurred in the child component.
 
 **Parent component HTML:**
 ```html
