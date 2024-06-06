@@ -219,7 +219,65 @@ export class MyComponent implements OnInit {
 }
 ```
 
-<h2>5. Using View Child</h2>
-<h2>6. Using @ViewChild property</h2>
+<h2>5. Using @ViewChild property</h2>
+
+- `@ViewChild` is used to access the properties and methods of a child component from the parent component. This approach is useful when you need to get data from a child component that is several levels deep in the component hierarchy.
+- Use `@ViewChild` when you need to access the properties and methods of a child component from the parent component. This approach is useful when you need to get data from a child component that is several levels deep in the component hierarchy.
+
+```html
+<!-- Child HTML -->
+<h2>{{ title }}</h2>
+```
+```ts
+// Child TS
+import { Component, Input } from '@angular/core';
+@Component({
+  selector: 'app-child',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.scss']
+})
+
+export class ChildComponent {
+
+  @Input() title!: string;
+
+  public childMethod() {
+    console.log('Child method called');
+  }
+}
+```
+```html
+<!-- Parent HTML -->
+<div>
+    <button (click)="parentMethod()">Parent Method</button>
+    <app-child #childComponent [title]="title"></app-child>
+</div>
+```
+```ts
+// Parent TS
+import { Component, ViewChild } from '@angular/core';
+import { ChildComponent } from './child.component';
+@Component({
+  selector: 'app-parent',
+  templateUrl: './parent.component.html',
+  styleUrls: ['./parent.component.scss']
+})
+
+export class ParentComponent {
+
+  @ViewChild('childComponent') child: ChildComponent;
+  public title = 'Child Component Title';
+
+  parentMethod() {
+    console.log('Parent method called');
+    this.child.childMethod();
+  }
+}
+```
+
+**Summary:**
+
+These are just a few examples of how you can share data between components in Angular. Depending on your use case, some approaches may be more appropriate than others. The Input and Output decorators are the simplest way to share data between parent and child components, while using a shared service provides more flexibility and allows you to share data between any components in your application. State management libraries like NgRx provide even more powerful tools for managing and sharing application data, but may come with a steeper learning curve. Finally, using local storage or session storage can be a good option for sharing small amounts of data between components, but may not be suitable for larger amounts of data or more complex use cases.
+
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
