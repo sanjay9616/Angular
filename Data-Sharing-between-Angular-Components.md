@@ -1,4 +1,4 @@
-<h1>Data Sharing between Angular Components</h1> - https://www.linkedin.com/pulse/different-ways-share-data-angular-mubeen-chughtai/
+<h1>Data Sharing between Angular Components</h1>
 
 When building an Angular application, it's common to break it down into smaller components to keep the code manageable. However, when working with smaller components, you may need to share data between them. To do this, it's important to first define the relationship between the components. Once you have a clear understanding of the relationship, you can choose the most appropriate method to share the data.\
 
