@@ -10,7 +10,7 @@ Angular has 8 lifecycle hooks that help us in every situation where we would lik
 <h2>1. ngOnChanges()</h2> - https://www.stackchief.com/blog/ngOnChanges%20Example%20%7C%20Angular
 
 - ngOnChanges called before `ngOnInit()` and whenever one/more data-bound input properties change.
-- It means, whenever any `@input` decorator changed `from the parent component than` the code under this function will be triggered.
+- It means, whenever any `@input` decorator changed `from the parent component` tha` the code under this function will be triggered.
 - Whenever any `@output` decorator changed from the child component than the code under this `function will not be triggered`.
 - This means if you don't have any `@Input` properties on a child, ngOnChanges will never get called.
 - It’s required to import SimpleChanges for the OnChange method only.
