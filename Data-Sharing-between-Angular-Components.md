@@ -45,7 +45,10 @@ public childMethod(): void {
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-@Injectable() export class DataService {
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
 
   private data$: BehaviorSubject<any> = new BehaviorSubject<any>({});
 
