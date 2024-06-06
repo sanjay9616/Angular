@@ -1,6 +1,12 @@
 <h1>Data Sharing between Angular Components</h1>
 
-When building an Angular application, it's common to break it down into smaller components to keep the code manageable. However, when working with smaller components, you may need to share data between them. To do this, it's important to first define the relationship between the components. Once you have a clear understanding of the relationship, you can choose the most appropriate method to share the data.\
+When building an Angular application, it's common to break it down into smaller components to keep the code manageable. However, when working with smaller components, you may need to share data between them. To do this, it's important to first define the relationship between the components. Once you have a clear understanding of the relationship, you can choose the most appropriate method to share the data.
+
+1. Using @Input @Output decorator for Parent Child Components.
+2. Using a Shared Service.
+3. Using State Management Libraries i.e Ngrx.
+4. Using Local Storage or Session Storage.
+5. Using @ViewChild property.
 
 <h2>1. Using @Input @Output decorator for Parent Child Components</h2>
 
