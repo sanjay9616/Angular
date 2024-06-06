@@ -91,8 +91,105 @@ export class MyComponent implements OnInit {
 ```
 
 
-<h2>3. Using View Child</h2>
-<h2>4. Using State Management Libraries i.e Ngrx</h2>
+<h2>3. Using State Management Libraries i.e Ngrx</h2>
+
+- NgRx is a state management library for Angular applications. It provides a way to manage application state in a centralized location and allows for easy data sharing between components.
+- Use NgRx when you need to manage complex application state or when you want to keep your data and business logic separate from your components.
+
+```ts
+// app.module.ts
+import { counterReducer } from './shared/store/counter.reducer';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { StoreModule } from '@ngrx/store';
+
+@NgModule({
+  declarations: [],
+  imports: [
+    BrowserModule,
+    StoreModule.forRoot({ counter: counterReducer })
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+```ts
+// counter.store.ts
+export const initialState = {
+    counter: 0
+}
+```
+```ts
+// counter.reducer.ts
+import { createReducer, on } from "@ngrx/store";
+import { decrement, increment } from "./counter.actions";
+import { initialState } from "./counter.store";
+
+
+const _counterReducer = createReducer(initialState,
+    on(increment, (state) => {
+        return {
+            ...state,
+            counter: state.counter + 1
+        }
+    }),
+    on(decrement, (state) => {
+        return {
+            ...state,
+            counter: state.counter - 1
+        }
+    }),
+)
+
+export function counterReducer(state: any, action: any) {
+    return _counterReducer(state, action);
+}
+```
+```ts
+// counter.actions.ts
+import { createAction, props } from "@ngrx/store";
+export const increment = createAction("increment");
+export const decrement = createAction("decrement");
+```
+```ts
+// Component TS:
+import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { decrement, increment } from 'src/app/shared/store/counter.actions';
+
+@Component({
+  selector: 'app-counterbutton',
+  templateUrl: './counterbutton.component.html',
+  styleUrls: ['./counterbutton.component.scss']
+})
+export class CounterbuttonComponent {
+
+    public counter$ = this.store.select('counter');
+
+  constructor(private store: Store<{ counter: { counter: number } }>) { }
+
+  ngOnInit() { }
+
+  onIncrement() {
+    this.store.dispatch(increment());
+  }
+
+  onDecrement() {
+    this.store.dispatch(decrement());
+  }
+}
+```
+```html
+<!-- Component HTML: -->
+<h1>Counter Application</h1>
+<button type="button" (click)="onIncrement()">Increment (+)</button>
+<button type="button" (click)="onDecrement()">Decrement (-)</button>
+```
+
+
+<h2>4. Using View Child</h2>
 <h2>5. Using @ViewChild property</h2>
+<h2>6. Using Local Storage or Session Storage</h2>
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
