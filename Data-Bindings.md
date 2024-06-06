@@ -49,7 +49,21 @@ One-way data binding in Angular (i.e. unidirectional binding) is a way to bind d
 
 **Two-way Binding:**
 
+<img src="https://images.surferseo.art/42276c9f-580d-4b70-b137-9dcde970354f.png" alt="not found">
+
 Two-way binding gives components in your application a way to share data. Use two-way binding to listen for events and update values simultaneously between parent and child components.
+
+Two-way data binding gives you a way to share data between view to source and vice versa simultaneously.Two-way data binding is a combination of property binding "[]" and event binding "()" and its syntax is called banana in a box syntax [( )].
+
+```html
+<input [ngModel]="user" (ngModelChange)="user = $event">
+```
+ngModel directive comes with property and event binding. The short form of this syntax is [(ngModel)]="user".
+
+```html
+<input type="user" name="user" [(ngModel)]="user">
+```
+
 
 **Interpolation:**
 
