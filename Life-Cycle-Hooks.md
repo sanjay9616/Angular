@@ -7,7 +7,7 @@ Angular has 8 lifecycle hooks that help us in every situation where we would lik
 
 <img src="https://media.licdn.com/dms/image/C5612AQHH-keKNUYirw/article-inline_image-shrink_1500_2232/0/1648102509784?e=1723075200&v=beta&t=PwfmG35SAngielKeuHWn641XwJOFkx7aGzZTwNiwT30" alt="not found">
 
-<h2>1. ngOnChanges()</h2> - https://www.stackchief.com/blog/ngOnChanges%20Example%20%7C%20Angular
+<h2>1. ngOnChanges()</h2>
 
 - ngOnChanges called before `ngOnInit()` and whenever one/more data-bound input properties change.
 - It means, whenever any `@input` decorator changed `from the parent component` tha` the code under this function will be triggered.
