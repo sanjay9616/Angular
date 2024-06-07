@@ -106,6 +106,21 @@ Each bound variable is returned with its corresponding SimpleChanges instance in
 
 
 <h2>2. ngOnInit()</h2>
+
+- ngOnInit is there to give us a signal that Angular has finished initializing the component and now we can perform our needed operations.
+- Therefore, I consider it as one of the important hooks from a list of Angular lifecycle hooks and very useful, as well.
+- This hook initializes data for a component.
+- After setting the input values, this hook gets its call.
+- This hook is added by default by Angular CLI to all the components.
+- It is called only for once.
+- As it is already said, this hook gets initialization after ngOnChanges that means all the properties ngOnInit can use all its properties. Any of the child directive properties cannot be used before this hack gets triggered.
+
+```ts
+ngOnInit(): void {
+  console.log(“ngOnInit running”);
+}
+```
+
 <h2>3. ngDoCheck()</h2>
 <h2>4. ngAfterContentInit()</h2>
 <h2>5. ngAfterContentInitChecked()</h2>
