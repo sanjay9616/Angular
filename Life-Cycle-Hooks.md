@@ -166,19 +166,71 @@ constructor
 ngOnChanges
 ngOnInit
 ngDoCheck
-// when changeFromChild() method called
+// when parentData updated from parent component
 ngOnChanges
 ngDoCheck
 ngOnChanges
+ngDoCheck
+// when parentData updated from child component
+ngDoCheck
 ngDoCheck
 ```
 
-
 <h2>4. ngAfterContentInit()</h2>
+
+- ngAfterContentInit, as the name suggested, responds when the angular app projects content into the component’s view and the view is ready.
+- It is called once after the first ngDoCheck().
+- It is also known as a component-only hook.
+
+```ts
+ngAfterContentInit() {
+  console.log("ngAfterContentInit");
+}
+```
+
 <h2>5. ngAfterContentInitChecked()</h2>
+
+- ngAfterContentChecked, as its name suggested respond after the app checks the content actually projected into the component.
+- It called after ngAfterContentInit and every subsequent check.
+
+```ts
+ngAfterContentInitChecked() {
+  console.log("ngAfterContentInitChecked");
+}
+```
+
 <h2>6. ngAfterViewInit()</h2>
+
+- ngAfterViewInit, responds after app initialized and all the views of component has been ready.
+- It called once after the first ngAfterContentChecked.
+
+```ts
+ngAfterViewInit() {
+  console.log("ngAfterViewInit");
+}
+```
+
 <h2>7. ngAfterViewChecked()</h2>
+
+- ngAfterViewChecked, responds after app checks all the parent and child views of components.
+- It called after the ngAfterViewInit and every subsequent call of ngAfterContentChecked
+
+```ts
+ngAfterViewChecked() {
+  console.log("ngAfterViewChecked");
+}
+```
+
 <h2>8. ngOnDestroy()</h2>
 
+- The ngDestory, as its name suggested, will use to do clean-up just before the angular app destroys everything.
+- Furthermore, it will detach the events, unsubscribe the Observables, etc to avoid any memory leaks.
+- It is called just before the angular app destroys everything like the directive and components.
+
+```ts
+ngOnDestroy() {
+  console.log("ngOnDestroy");
+}
+```
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
