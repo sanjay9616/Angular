@@ -122,6 +122,58 @@ ngOnInit(): void {
 ```
 
 <h2>3. ngDoCheck()</h2>
+
+- Used to detect changes that angular will not detect on its own. It is called immediately after ngOnChanges as well as the first ngOnInIt.
+- Since it is called multiple times it is an expensive lifecycle method. It is advisable not to use ngDoCheck with ngOnChanges since it may be very expensive.
+- ngDoCheck can get changes even when a property or array changes to data that is bound to a component or a directive.
+
+```ts
+import { Component, Input, SimpleChanges } from '@angular/core';
+
+@Component({
+  selector: 'app-child',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.scss']
+})
+export class ChildComponent {
+
+  @Input() parentData!: number;
+
+  constructor() {
+    console.log('constructor')
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('ngOnChanges', changes);
+  }
+
+  ngOnInit() {
+    console.log('ngOnInit');
+  }
+
+  ngDoCheck() {
+    console.log('ngDoCheck')
+  }
+
+  changeFromChild() {
+    this.parentData -= 1;
+  }
+}
+```
+**Output**
+```
+constructor
+ngOnChanges
+ngOnInit
+ngDoCheck
+// when changeFromChild() method called
+ngOnChanges
+ngDoCheck
+ngOnChanges
+ngDoCheck
+```
+
+
 <h2>4. ngAfterContentInit()</h2>
 <h2>5. ngAfterContentInitChecked()</h2>
 <h2>6. ngAfterViewInit()</h2>
