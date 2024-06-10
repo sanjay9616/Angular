@@ -2,12 +2,12 @@
 
 ### Table of Contents
 
-[Introduction to Angular Directives](#introduction-to-angular-directives)
-[Types of directives](#types-of-directives)
-[Creating Custom Directives](#Creating-Custom-Directives)
-[Importance of directivess](#Importance-of-directivess)
-[Best practices for using directives](#Best-practices-for-using-directives)
-[Conclusion](#Conclusion)
+[Introduction to Angular Directives](#introduction-to-angular-directives) </br>
+[Types of directives](#types-of-directives) </br>
+[Creating Custom Directives](#Creating-Custom-Directives) </br>
+[Importance of directivess](#Importance-of-directivess) </br>
+[Best practices for using directives](#Best-practices-for-using-directives) </br>
+[Conclusion](#Conclusion) </br>
 
 
 
