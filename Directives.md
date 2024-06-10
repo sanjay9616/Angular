@@ -1,12 +1,16 @@
 <h1>Angular Directives</h1>
 
-**How to create directives?**: `ng generate directive directive-name`, or `ng g d directive-name`
-
 ### Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Introduction to Angular Directives](#introduction-to-angular-directives)
-- [Types of directives](#types-of-directives)
+[Introduction to Angular Directives](#introduction-to-angular-directives)
+[Types of directives](#types-of-directives)
+[Creating Custom Directives](#Creating-Custom-Directives)
+[Importance of directivess](#Importance-of-directivess)
+[Best practices for using directives](#Best-practices-for-using-directives)
+[Conclusion](#Conclusion)
+
+
+
 
 ### <h2>Introduction to Angular Directives</h2>
 
