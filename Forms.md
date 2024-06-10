@@ -1,4 +1,4 @@
-<h1>Angular Forms</h1> - https://medium.com/@jaydeepvpatil225/forms-in-angular-8fde7d0dcdf6
+<h1>Angular Forms</h1>
 
 - In Angular, Forms provides a set of features that help us handle and manage user input in a structured and efficient manner.
 - Forms are the main part of web applications that allow users to interact with the application and submit data to the application.
