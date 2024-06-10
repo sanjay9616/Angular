@@ -36,4 +36,79 @@ Following are the key concepts related to validation objects, directives, and pr
 3. `pattern`: Validates the value against a regular expression.
 4. `email`: Validates that the value is a valid email address.
 
+**Exaple:**
+```html
+<form #singUpForm="ngForm" (ngSubmit)="onSubmit(singUpForm)">
+
+    <p>
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" required minlength="20" ngModel>
+    </p>
+
+    <p>
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" pattern="^[a-zA-Z]+$" ngModel>
+    </p>
+
+    <p>
+        <label for="email">Email </label>
+        <input type="text" id="email" name="email" required email ngModel>
+    </p>
+
+    <p>
+        <label for="gender">Geneder</label>
+        <input type="radio" value="male" name="gender" ngModel> Male
+        <input type="radio" value="female" name="gender" ngModel> Female
+    </p>
+
+    <p>
+        <label for="isMarried">Married</label>
+        <input type="checkbox" name="isMarried" ngModel>
+    </p>
+
+    <select name="country" ngModel>
+        <option [ngValue]="c.id" *ngFor="let c of countryList">
+            {{c.name}}
+        </option>
+    </select>
+
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+
+</form>
+```
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Template driven forms';
+
+  countryList: country[] = [
+    new country("1", "Pakistan"),
+    new country('2', 'UAE'),
+    new country('3', 'USA')
+  ];
+}
+
+export class country {
+  id: string;
+  name: string;
+
+  constructor(id: string, name: string) {
+    this.id = id;
+    this.name = name;
+  }
+
+  onSubmit(contactForm: any) {
+    console.log(contactForm.value);
+  }
+}
+```
+
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
