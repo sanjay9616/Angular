@@ -1,3 +1,76 @@
 <h1>Angular Directives</h1>
 
+**How to create directives?**: `ng generate directive directive-name`, or `ng g d directive-name`
+
+### Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Introduction to Angular Directives](#introduction-to-angular-directives)
+- [Types of directives](#types-of-directives)
+
+### <h2>Introduction to Angular Directives</h2>
+
+- Angular directives are a powerful feature of the Angular framework that allow developers to extend and modify the behavior of HTML elements.
+- Directives can be used to create reusable code that can be shared across multiple components and templates, and they can also provide a way to communicate between components and the DOM.
+
+`Angular framework that allow developers to adding new elements, removing elements, or changing the appearance of the DOM.`
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Types of directives<h2>
+
+Angular has two types of directives
+
+1. Structural Directives
+2. Attribute Directives
+3. Components Directives
+
+<h3>Structural directives</h3>
+
+Structural directives are used to modify the structure of the DOM by adding, removing, or manipulating elements. Structural directives are identified by an asterisk (*) prefix before the directive name.
+
+Some of the most commonly used structural directives in Angular are: `*ngIf, *ngFor, *ngSwitch`
+
+**ngIf** directive is a structural directive in Angular that adds or removes elements from the DOM based on a given expression. If the expression evaluates to true, the element is added to the DOM; if it evaluates to false, the element is removed from the DOM.
+
+**ngFor** directive is a structural directive in Angular that is used to render a list of items based on a collection in the component. The ngFor directive iterates over each product in the collection and generates a template for each product.
+
+**ngSwitch** directive is a structural directive in Angular that allows us to conditionally render content based on a set of conditions.
+
+**Examples:**
+
+```html
+<!-- ngIf -->
+<div *ngIf="loggedIn; else notLoggedIn">
+  Welcome, {{username}}!
+</div>
+<ng-template #notLoggedIn>
+  <div>
+    Please log in to access this page.
+  </div>
+</ng-template>
+
+<!-- ngFor -->
+<ul>
+  <li *ngFor="let product of products">
+    {{product}}
+  </li>
+</ul>
+
+<!-- ngSwitch -->
+<div [ngSwitch]="color">
+  <p *ngSwitchCase="'red'">The color is red.</p>
+  <p *ngSwitchCase="'blue'">The color is blue.</p>
+  <p *ngSwitchCase="'green'">The color is green.</p>
+  <p *ngSwitchDefault>The color is unknown.</p>
+</div>
+```
+
+<h3>Attribute Directives</h3>
+
+
+**[⬆ Back to Top](#table-of-contents)**
+
+
+
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
