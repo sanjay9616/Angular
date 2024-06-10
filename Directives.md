@@ -18,9 +18,9 @@ How to generate directive - `ng generate directive directive-name`, or `ng g d d
 
 `Angular framework that allow developers to adding new elements, removing elements, or changing the appearance of the DOM.`
 
-<h2>Types of directives<h2>
+<h2>Types of directives</h2>
 
-Angular has two types of directives
+Angular has three types of directives
 
 1. Structural Directives
 2. Attribute Directives
