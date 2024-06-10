@@ -87,28 +87,40 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Template driven forms';
+    title = 'Template driven forms';
 
-  countryList: country[] = [
-    new country("1", "Pakistan"),
-    new country('2', 'UAE'),
-    new country('3', 'USA')
-  ];
+    countryList: country[] = [
+        new country("1", "Pakistan"),
+        new country('2', 'UAE'),
+        new country('3', 'USA')
+    ];
 }
 
 export class country {
-  id: string;
-  name: string;
+    id: string;
+    name: string;
 
-  constructor(id: string, name: string) {
-    this.id = id;
-    this.name = name;
-  }
+    constructor(id: string, name: string) {
+        this.id = id;
+        this.name = name;
+    }
 
-  onSubmit(contactForm: any) {
-    console.log(contactForm.value);
-  }
+    onSubmit(contactForm: any) {
+        console.log(contactForm.value);
+    }
+
+    //   OR
+
+    @ViewChild('singUpForm') form: any;
+    onSubmit() {
+        if (this.form.valid) {
+            console.log("Form Submitted!");
+            this.form.reset();
+        }
+    }
 }
 ```
+
+<h2>2. Reactive Forms</h2>
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
