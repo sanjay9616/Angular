@@ -16,7 +16,7 @@ Angular provides the following two types of forms:
 -  In this form, each field is represented as a property in the component class.
 -  You Need to import **FormsModule** from the `@angular/forms` package.
 
-**Following are the key concepts related to validation objects, directives, and properties that we used while creating the template-driven forms in Angular.**
+Following are the key concepts related to validation objects, directives, and properties that we used while creating the template-driven forms in Angular:
 
 **ngForm Directive:** This directive represents an angular form and exposes methods and properties related to it for validation and data manipulation purposes.
 
