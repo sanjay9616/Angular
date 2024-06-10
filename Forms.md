@@ -323,24 +323,8 @@ The FormBuilder service is used for creating instances of FormGroup and FormCont
 </form>
 ```
 ```ts
-import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { PARAMS } from '@app/config/params';
-import { PaasHelperService } from '@app/services/helpers/paas-helper.service';
-import { PrExcelComponent } from '@app/shared/pr-excel/pr-excel.component';
-import { distinctUntilChanged, from, startWith, Subject } from 'rxjs';
-import { PrService } from '../../pr.service';
-import { AlertMessageService } from '@app/services/alert-message.service';
-import * as moment from 'moment';
-import { MESSAGES } from '@app/config/messages';
-import { PoService } from '@app/services/po.service';
-import *  as lodash from 'lodash';
-import * as _ from 'lodash';
-import { ValidationService } from '@app/services/helpers/validation.service';
-import { PrExcelValidationHelperService } from '@app/services/helpers/pr-excel-validation-helper.service';
-import { ProductService } from '@app/services/product.service';
-import { RfqService } from '@app/services/rfq.service';
-
+import { distinctUntilChanged, startWith, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-pr-sheet',
@@ -349,8 +333,7 @@ import { RfqService } from '@app/services/rfq.service';
 })
 export class PrSheetComponent implements OnInit {
 
-  checkedAllSheetGroups: boolean = true;
-  sheetGroupCheckboxStatus = {};
+  globalFilterList: any = {};
   sheetGroupInfo: Array<any> = [];
   dateRangePickerOptions: any = {
     autoApply: false,
@@ -368,56 +351,6 @@ export class PrSheetComponent implements OnInit {
     cancelLabel: 'Cancel',
     applyLabel: 'Okay'
   }
-  showSaveButton: boolean = false;
-
-  selectedSheetGroupAction: Subject<any> = new Subject<any>();
-
-  defaultSelectedSheetGroups = ['frizedPrefilledData','scrollablePrefilledData', 'toBeFilledData'];
-  selectedSheetGroups = ['frizedPrefilledData','scrollablePrefilledData', 'toBeFilledData'];
-  customFilterList: any = { 1: 'PR Id', 2: 'PR Item Id', 3: 'CPN' }
-  isDisableApplyResetBtn: boolean = false;
-
-  floatingSearchFilterData: any = {
-    customFilterList: this.customFilterList,
-    component: 'pr-sheet',
-    customFilterCtrl: '1',
-    customFilterValueCtrl: null,
-  }
-
-  @ViewChild('PrExcelsheetComponent')
-  PrExcelsheetComponent: PrExcelComponent;
-
-  height: Number = 12;
-  width: Number = 10;
-  checked = false;
-  isSheetFilterChecked: boolean = false;
-  showCloseItemButton = false;
-
-  moreactions: boolean = false;
-  dataLimitOptions: Array<any> = PARAMS.STATIC_PARAMS.DATA_LIMIT_OPTIONS;
-  dataLimit: FormControl = new FormControl(this.dataLimitOptions[0].value);
-  formGroup!: FormGroup;
-  filterCtrlFormGroup!: FormGroup;
-  itemIdSet = new Set();
-  itemIdsList = new Set();
-  nestedHeaders = [];
-  data = [];
-  filterdisabled: boolean = false;
-  page: number = 1;
-
-  disableAllItemFields: boolean = false;
-  filterClicked = new Subject<any>();
-  focusOutCell = new Subject<any>();
-  dataIndex: Object;
-  activeSheet: string = 'PAAS-SHEET';
-  public filteredDataIndex: Object;
-
-  dateTypeList: Array<any> = [
-    { view: 'Creation Date', value: 'creationDate' },
-    { view: 'Received Date', value: 'moglixReceivedDate' },
-  ]
-
-  globalFilterList: any = {};
   customerDetailsListOptions: Array<any> = [];
   plantIdsListOptions: Array<string> = [];
   broadStagesListOptions: Array<string> = [];
@@ -437,25 +370,13 @@ export class PrSheetComponent implements OnInit {
   autocompleteList: Array<any> = [];
   hasRoleforDeletion: boolean;
 
-  constructor(
-    private alertMessageService: AlertMessageService,
-    private paasHelperService: PaasHelperService,
-    private prService: PrService,
-    private validationService: ValidationService,
-    private poService: PoService,
-    private prExcelHelperService:PrExcelValidationHelperService,
-    private productService: ProductService,
-    private rfqService: RfqService
-  ) {
+  constructor() {
     this.initFormroup();
     this.initFilterCtrlFormGroup();
     this.getGlbalFilterList();
   }
 
-  ngOnInit(): void {
-    this.nestedHeaders = this.paasHelperService.getHeaders(this.defaultSelectedSheetGroups, 'PAAS-SHEET');
-    this.hasRoleforDeletion = this.paasHelperService.roleAccessData
-  }
+  ngOnInit(): void {}
 
   initFormroup() {
     this.formGroup = new FormGroup({
