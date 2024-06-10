@@ -501,4 +501,103 @@ export class PrSheetComponent implements OnInit {
 }
 ```
 
+**Example 2:**
+
+```html
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="firstName" />
+
+    <div
+        *ngIf="signUpForm.controls.firstName.invalid && (signUpForm.controls.firstName.dirty || signUpForm.controls.firstName.touched)">
+        <div *ngIf="signUpForm.controls.firstName.errors?.required">
+            First name is required.
+        </div>
+        <div *ngIf="signUpForm.controls.firstName.errors?.minlength">
+            First name must be at least 5 characters long.
+        </div>
+    </div>
+    <br />
+
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName" />
+
+    <div
+        *ngIf="signUpForm.controls.lastName.invalid && (signUpForm.controls.firstName.dirty || signUpForm.controls.lastName.touched)">
+        <div *ngIf="signUpForm.controls.lastName.errors?.required">
+            Last name is required.
+        </div>
+        <div *ngIf="signUpForm.controls.lastName.errors?.minlength">
+            Last name must be at least 5 characters long.
+        </div>
+    </div>
+    <br />
+
+    <div formGroupName="address">
+        <h2>Address</h2>
+
+        <label for="street">Street: </label>
+        <input id="street" type="text" formControlName="street" />
+        <br />
+
+        <div
+            *ngIf="signUpForm.controls.address.controls.street.invalid && (signUpForm.controls.address.controls.street.dirty || signUpForm.controls.address.controls.street.touched)">
+            <div *ngIf="signUpForm.controls.address.controls.street.errors?.required">
+                Last name is required.
+            </div>
+            <div *ngIf="signUpForm.controls.address.controls.street.errors?.minlength">
+                Last name must be at least 5 characters long.
+            </div>
+        </div>
+
+        <label for="city">City: </label>
+        <input id="city" type="text" formControlName="city" />
+        <br />
+
+        <label for="region">Region: </label>
+        <input id="region" type="text" formControlName="region" />
+        <br />
+
+        <button type="button" (click)="updateProfile()">Update Profile</button>
+        <button type="submit" [disabled]="!signUpForm.valid">Submit Profile</button>
+    </div>
+</form>
+```
+```ts
+import { Component } from "@angular/core";
+import { FormGroup, FormControl } from "@angular/forms";
+import { Validators } from "@angular/forms";
+
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
+})
+export class AppComponent {
+  signUpForm = new FormGroup({
+    firstName: new FormControl("", [Validators.required, Validators.minLength(5)]),
+    lastName: new FormControl("", [Validators.required, Validators.minLength(5)]),
+    address: new FormGroup({
+      street: new FormControl("", [Validators.required, Validators.minLength(5)]),
+      city: new FormControl("", [Validators.required, Validators.minLength(5)]),
+      region: new FormControl("", [Validators.required])
+    })
+  });
+
+  updateProfile() {
+    this.signUpForm.patchValue({
+      firstName: "Jane",
+      lastName: "Smith",
+      address: {
+        street: "123 1st Street"
+      }
+    });
+  }
+
+  onSubmit() {
+    console.log(this.signUpForm.value);
+  }
+}
+```
+
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
