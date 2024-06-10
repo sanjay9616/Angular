@@ -26,7 +26,7 @@ Angular has three types of directives
 2. Attribute Directives
 3. Components Directives
 
-<h3>Structural directives</h3>
+<h3>1. Structural directives</h3>
 
 Structural directives are used to modify the structure of the DOM by adding, removing, or manipulating elements. Structural directives are identified by an asterisk (*) prefix before the directive name.
 
@@ -67,7 +67,7 @@ Some of the most commonly used structural directives in Angular are: `*ngIf, *ng
 </div>
 ```
 
-<h3>Attribute Directives</h3>
+<h3>2. Attribute Directives</h3>
 
 
 
