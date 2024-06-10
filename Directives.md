@@ -1,27 +1,24 @@
 <h1>Angular Directives</h1>
 
-### Table of Contents
+How to generate directive - `ng generate directive directive-name`, or `ng g d directive-name`
 
-[Introduction to Angular Directives](#introduction-to-angular-directives) </br>
-[Types of directives](#types-of-directives) </br>
-[Creating Custom Directives](#Creating-Custom-Directives) </br>
-[Importance of directivess](#Importance-of-directivess) </br>
-[Best practices for using directives](#Best-practices-for-using-directives) </br>
-[Conclusion](#Conclusion) </br>
+**Table of Contents**
 
+1. Introduction to Angular Directives
+2. Types of directives
+3. Creating Custom Directives
+4. Importance of directivess
+5. Best practices for using directives
+6. Conclusion
 
-
-
-### <h2>Introduction to Angular Directives</h2>
+<h2>Introduction to Angular Directives</h2>
 
 - Angular directives are a powerful feature of the Angular framework that allow developers to extend and modify the behavior of HTML elements.
 - Directives can be used to create reusable code that can be shared across multiple components and templates, and they can also provide a way to communicate between components and the DOM.
 
 `Angular framework that allow developers to adding new elements, removing elements, or changing the appearance of the DOM.`
 
-**[⬆ Back to Top](#table-of-contents)**
-
-### <h2>Types of directives<h2>
+<h2>Types of directives<h2>
 
 Angular has two types of directives
 
@@ -71,9 +68,6 @@ Some of the most commonly used structural directives in Angular are: `*ngIf, *ng
 ```
 
 <h3>Attribute Directives</h3>
-
-
-**[⬆ Back to Top](#table-of-contents)**
 
 
 
