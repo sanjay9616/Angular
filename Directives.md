@@ -112,5 +112,47 @@ export class HeaderComponent { }
 <app-component></app-component>
 ```
 
+<h3>Creating Custom Directives</h3>
+
+In Angular, we can create custom directives to extend the behavior of HTML elements or components or perform a different task.
+
+Here is a step-by-step guide to creating a custom directive in Angular:
+
+- First, create a new directive using the @Directive decorator, `ng generate directive directive-name`:
+
+```ts
+import { Directive } from '@angular/core';
+@Directive({
+  selector: '[appHighlight]'
+})
+export class HighlightDirective {
+}
+```
+The selector property defines the name of the directive and specifies that it should be used as an attribute directive with the [] syntax.
+
+- Next, we can add behavior to the directive by using the @HostListener decorator to listen for events on the host element. In this example, we'll add a mouseenter event listener that sets the background color of the element to yellow:
+
+```ts
+import { Directive, ElementRef, HostListener } from '@angular/core';
+@Directive({
+  selector: '[appHighlight]'
+})
+export class HighlightDirective {
+  constructor(private el: ElementRef) { }
+  @HostListener('mouseenter') onMouseEnter() {
+    this.highlight('yellow');
+  }
+  private highlight(color: string) {
+    this.el.nativeElement.style.backgroundColor = color;
+  }
+}
+```
+
+- Finally, we can use the directive in our component templates by adding the appHighlight attribute to an HTML element:
+
+```html
+<p appHighlight>Hover over me to highlight!</p>
+```
+
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
