@@ -94,7 +94,7 @@ Some of the most commonly used Attribute Directives in Angular are:
 <input type="text" [(ngModel)]="name">
 ```
 
-<h3>Component Directive</h3>
+<h3>3. Component Directive</h3>
 
 - Component directives enable developers to create reusable UI components with their own template, styles, and behavior for a consistent and modular application structure.
 -  the most basic building block of angular, is a directive. It is a special kind of detective with template tag. It adds elements in the DOM as per the definition of the component.
