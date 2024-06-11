@@ -1,4 +1,4 @@
-<h1>Angular Directives</h1> - https://www.linkedin.com/pulse/directives-angular-aqeel-abbas/
+<h1>Angular Directives</h1>
 
 How to generate directive - `ng generate directive directive-name`, or `ng g d directive-name`
 
