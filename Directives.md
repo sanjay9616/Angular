@@ -8,8 +8,6 @@ How to generate directive - `ng generate directive directive-name`, or `ng g d d
 2. Types of directives
 3. Creating Custom Directives
 4. Importance of directivess
-5. Best practices for using directives
-6. Conclusion
 
 <h2>Introduction to Angular Directives</h2>
 
@@ -112,13 +110,13 @@ export class HeaderComponent { }
 <app-component></app-component>
 ```
 
-<h3>Creating Custom Directives</h3>
+<h2>Creating Custom Directives</h2>
 
 In Angular, we can create custom directives to extend the behavior of HTML elements or components or perform a different task.
 
 Here is a step-by-step guide to creating a custom directive in Angular:
 
-- First, create a new directive using the @Directive decorator, `ng generate directive directive-name`:
+1. First, create a new directive using the @Directive decorator, `ng generate directive directive-name`:
 
 ```ts
 import { Directive } from '@angular/core';
@@ -130,7 +128,7 @@ export class HighlightDirective {
 ```
 The selector property defines the name of the directive and specifies that it should be used as an attribute directive with the [] syntax.
 
-- Next, we can add behavior to the directive by using the @HostListener decorator to listen for events on the host element. In this example, we'll add a mouseenter event listener that sets the background color of the element to yellow:
+2. Next, we can add behavior to the directive by using the @HostListener decorator to listen for events on the host element. In this example, we'll add a mouseenter event listener that sets the background color of the element to yellow:
 
 ```ts
 import { Directive, ElementRef, HostListener } from '@angular/core';
@@ -148,11 +146,25 @@ export class HighlightDirective {
 }
 ```
 
-- Finally, we can use the directive in our component templates by adding the appHighlight attribute to an HTML element:
+3. Finally, we can use the directive in our component templates by adding the appHighlight attribute to an HTML element:
 
 ```html
 <p appHighlight>Hover over me to highlight!</p>
 ```
+When this component is rendered, the HighlightDirective will be applied to the <p> element, and hovering over the element will trigger the mouseenter event listener, causing the background color to change to yellow.
+
+Overall, custom directives provide a powerful way to extend the behavior of HTML elements and components in Angular, and can be used to create reusable components, add custom attributes to elements, or modify the behavior of existing elements.
+
+<h2>Importance of Directives</h2>
+
+Here are some of the key benefits and importance of directives in Angular:
+
+1. **Reusability** — Directives can be used to create reusable components that can be easily added to multiple templates. This makes it easy to create consistent UI elements across an application, and reduces the amount of duplicated code.
+2. **Separation of concerns** — Directives enable developers to separate the presentation and behavior of UI elements from the underlying application logic. This makes it easier to maintain and modify the code and improves the overall structure of the application.
+3. **Extensibility** — Directives can be used to extend the behavior of existing HTML elements or components, enabling developers to add new functionality without modifying the underlying code.
+4. **Customization** — Directives can be used to create custom attributes that can be used to modify the behavior or appearance of HTML elements. This enables developers to create highly customizable UI components that can be easily adapted to meet the needs of different users or use cases.
+5. Improved performance: Directives can be used to optimize the rendering of large or complex UI elements, enabling developers to improve the performance and responsiveness of their applications.
+
 
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
