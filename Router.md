@@ -9,6 +9,7 @@ Angular routing is a mechanism that allows you to navigate between different com
 3. **Router Outlet**: The <router-outlet> directive is a placeholder where the routed component will be displayed. It acts as the container for the component associated with the current route.
 4. **Route Configuration**: This is where you define your application's routes. The configuration includes the path, component to be displayed, and optional data.
 5. **RouterLink**: The [routerLink] directive is used in templates to create links for navigating to specific routes. It's a handy way to navigate without writing out the full URL.
+6. **RouterModule**: The RouterModule is an Angular module that provides the necessary directives, services, and functionality for implementing routing in an application.
 
 Let's Break It Down...
 
