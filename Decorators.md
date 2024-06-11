@@ -93,6 +93,6 @@ In this example, the @Injectable decorator is applied to the MyService class, wh
 
 To create a custom decorator, you can define a function that takes the target class or its member as an argument and then adds the desired behavior or metadata. Here's an example of a custom decorator that logs a message when a method is called:
 
-<a href="https://sagarsnath.medium.com/understanding-custom-decorators-in-angular-bbd023d141eb#:~:text=Creating%20Custom%20Decorators%3A,the%20target%20element%20being%20decorated.">GO</a>
+<a href="https://sagarsnath.medium.com/understanding-custom-decorators-in-angular-bbd023d141eb#:~:text=Creating%20Custom%20Decorators%3A,the%20target%20element%20being%20decorated.">IMPLEMENTATION</a>
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
