@@ -66,4 +66,35 @@ The <router-outlet> serves as a placeholder where the content of the routed comp
 ```
 Clicking the link triggers navigation to the 'about' route.
 
+<h2>Accessing query parameters and fragments</h2>
+
+```ts
+import { Component, OnInit } from '@angular/core';
+import {  ActivatedRoute } from '@angular/router';
+
+@Component({
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']
+})
+
+export class AboutComponent implements OnInit {
+
+constructor(private route: ActivatedRoute) { }
+
+ngOnInit(): void {
+    console.log(this.route.snapshot.queryParams);
+    console.log(this.route.snapshot.fragment);
+    console.log(this.route.snapshot.params);
+  }
+}
+```
+```ts
+ngOnInit(): void {
+    this.activatedRoute.params.subscribe((routeParams: any) => {
+      this.params = routeParams?.itemId;
+    })
+  }
+```
+
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
