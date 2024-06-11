@@ -96,7 +96,22 @@ Some of the most commonly used Attribute Directives in Angular are:
 
 - Component directives enable developers to create reusable UI components with their own template, styles, and behavior for a consistent and modular application structure.
 -  the most basic building block of angular, is a directive. It is a special kind of detective with template tag. It adds elements in the DOM as per the definition of the component.
+-  Components are directives with templates. Component directives have templates whereas Structural and Attribute directives don’t have templates. Instead, they’re tailored to DOM manipulation. The component directive comes with template or template URLs that represent something in DOM. So we can say that the component directive is a cleaner version of the Directive as it comes with a template, which is easier to use.
 
+In component directives, you’ll find three main parameters which include:
+
+1. **selector**: It represents the template tag which specifies the starting and end of the Component.
+2. **templateUrl**: It defines which particular template is for the component.
+3. **styleUrls**: It includes all the types of fashion formats for the actual component.
+
+```ts
+@Component({
+    selector: 'app-pr-dashboard',
+    templateUrl: './pr-dashboard.component.html',
+    styleUrls: ['./pr-dashboard.component.scss']
+})
+export class PrDashboardComponent implements OnInit {}
+```
 ```ts
 import { Component } from '@angular/core';
 
