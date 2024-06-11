@@ -18,6 +18,7 @@
 | 12  | <a href="https://github.com/sanjay9616/Angular/blob/master/Dependency-Injection.md">Dependency Injection in Angular</a>                            |
 | 13  | <a href="https://github.com/sanjay9616/Angular/blob/master/HttpClient-Module.md">HttpClient Module in Angular</a>                                  |
 | 14  | <a href="">SSR (Universal) in Angular</a>                                                                                                          |
+| 14  | <a href="">ng-template, ng-container, ng-content, and ngTemplateOutlet</a>                                                                         |
 | 15  | <a href="https://github.com/sanjay9616/JavaScript/blob/master/JavaScript-Technologies/RxJS/README.md">RxJS Concepts</a>                            |
 | 16  | <a href="https://github.com/sanjay9616/Angular/blob/master/Angular-Versions-History.md">Angular Versions History - Evolution</a>                   |
 | 17  | <a href="https://github.com/sanjay9616/Angular/blob/master/Interview.md">Angular Interview Questions and Answers</a>                               |

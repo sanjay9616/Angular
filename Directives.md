@@ -1,4 +1,4 @@
-<h1>Angular Directives</h1>
+<h1>Angular Directives</h1> - https://www.linkedin.com/pulse/directives-angular-aqeel-abbas/
 
 How to generate directive - `ng generate directive directive-name`, or `ng g d directive-name`
 
@@ -32,16 +32,16 @@ Structural directives are used to modify the structure of the DOM by adding, rem
 
 Some of the most commonly used structural directives in Angular are: `*ngIf, *ngFor, *ngSwitch`
 
-**ngIf** directive is a structural directive in Angular that adds or removes elements from the DOM based on a given expression. If the expression evaluates to true, the element is added to the DOM; if it evaluates to false, the element is removed from the DOM.
+1. **ngIf** directive is a structural directive in Angular that adds or removes elements from the DOM based on a given expression. If the expression evaluates to true, the element is added to the DOM; if it evaluates to false, the element is removed from the DOM.
 
-**ngFor** directive is a structural directive in Angular that is used to render a list of items based on a collection in the component. The ngFor directive iterates over each product in the collection and generates a template for each product.
+2. **ngFor** directive is a structural directive in Angular that is used to render a list of items based on a collection in the component. The ngFor directive iterates over each product in the collection and generates a template for each product.
 
-**ngSwitch** directive is a structural directive in Angular that allows us to conditionally render content based on a set of conditions.
+3. **ngSwitch** directive is a structural directive in Angular that allows us to conditionally render content based on a set of conditions.
 
 **Examples:**
 
 ```html
-<!-- ngIf -->
+<!-- ngIf Directive -->
 <div *ngIf="loggedIn; else notLoggedIn">
   Welcome, {{username}}!
 </div>
@@ -51,14 +51,14 @@ Some of the most commonly used structural directives in Angular are: `*ngIf, *ng
   </div>
 </ng-template>
 
-<!-- ngFor -->
+<!-- ngFor Directive -->
 <ul>
   <li *ngFor="let product of products">
     {{product}}
   </li>
 </ul>
 
-<!-- ngSwitch -->
+<!-- ngSwitch Directive -->
 <div [ngSwitch]="color">
   <p *ngSwitchCase="'red'">The color is red.</p>
   <p *ngSwitchCase="'blue'">The color is blue.</p>
@@ -68,6 +68,31 @@ Some of the most commonly used structural directives in Angular are: `*ngIf, *ng
 ```
 
 <h3>2. Attribute Directives</h3>
+
+Attribute Directives are used to manipulate the behavior and appearance of the DOM elements. They are used to add, remove, or modify the attributes of the HTML elements.
+
+Some of the most commonly used Attribute Directives in Angular are:
+
+1. **ngClass** directive in Angular is used to add or remove CSS classes dynamically based on the expressions evaluated in the template. We can use the ngClass directive to add or remove classes based on certain conditions, such as user interactions, component properties, and so on.
+
+**Syntax**
+
+- `[ngClass]="{'class': true}"`
+- `[ngClass]="[condiion ? 'class1' : 'class2']"`
+- `[ngClass]="{'class1': true, 'class2': true, 'class3': true}"`
+
+2. **ngStyle** directive in Angular is used to add or remove styles dynamically based on the expressions evaluated in the template. We can use the ngStyle directive to add or remove styles based on certain conditions, such as user interactions, component properties, and so on.
+
+**Syntax**
+
+- `[ngStyle]="{'background-color':'green'}"`
+- `[ngStyle]="{'background-color': condition ? 'green' : ‘red’}"`
+
+3. **ngModel** directive is a key feature of Angular that allows two-way data binding between the model and view. It's commonly used in forms where the user input needs to be reflected in the model and vice versa.
+
+```html
+<input type="text" [(ngModel)]="name">
+```
 
 
 

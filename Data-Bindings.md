@@ -58,6 +58,8 @@ ngModel directive comes with property and event binding. The short form of this 
 <input type="user" name="user" [(ngModel)]="user">
 ```
 
+In this example, we have an input element with the ngModel directive bound to a variable called name. The square brackets around ngModel indicate that it's a property binding, and the parentheses indicate that it's a two-way binding. The two-way binding means that any changes made to the input element will be reflected in the name variable, and any changes made to the name variable will be reflected in the input element.
+
 
 **Interpolation:**
 
