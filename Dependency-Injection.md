@@ -1,4 +1,4 @@
-<h1>Dependency Injection in Angular</h1> - https://www.linkedin.com/pulse/dependency-injection-service-angular-manikanta-jnsvv-rhsyf/
+<h1>Dependency Injection in Angular</h1>
 
 The @Injectable decorator is used to define a service in an Angular application. It indicates that the service can be injected into other components or services.
 
