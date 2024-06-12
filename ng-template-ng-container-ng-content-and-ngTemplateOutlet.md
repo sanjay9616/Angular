@@ -1,6 +1,6 @@
 <h1>Difference between ng-template, ng-container, ng-content, and ngTemplateOutlet</h1>
 
-<h2>1. <ng-container></ng-container></h2>
+<h2>1. ng-container</h2>
 
 - ng-container is an extremely simple directive that allows you to group elements in a template that doesn’t interfere with styles or layout because Angular doesn’t put it in the DOM
 - This is helpful if you don’t want any extra div on DOM, you can simply use ng-container. For eg: If there are two structural directives being called on one div as below:
@@ -35,7 +35,7 @@ Or we can use <ng-container> without adding any extra element to the DOM at runt
 </ng-container>
 ```
 
-<h2>2. <ng-template></ng-template></h2>
+<h2>2. ng-template</h2>
 
 As the name suggests the <ng-template> is a template element that Angular uses with structural directives ( *ngIf, *ngFor, [ngSwitch], and custom directives). These template elements only work in the presence of structural directives, which help us to define a template that doesn’t render anything by itself, but conditionally renders them to the DOM. It helps us create dynamic templates that can be customized and configured.
 
@@ -53,7 +53,7 @@ As the name suggests the <ng-template> is a template element that Angular uses w
 ```
 In the above example, If the condition is false then we will show the text as `Shouldn't be displayed` else will show ng-template content as `Should be displayed`
 
-<h2>3. <ng-content></ng-content></h2>
+<h2>3. ng-content</h2>
 
 ng-content is used to project content into Angular components. You use the <ng-content></ng-content> tag as a placeholder for that dynamic content, then when the template is parsed Angular will replace that placeholder tag with your content.
 
