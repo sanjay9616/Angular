@@ -201,7 +201,140 @@ Angular 7 is a TypeScript based front-end web framework by Google. It enables yo
 
 <h1>Angular 13 - 03 Nov 2021</h1>
 
+- **Ivy Improvements**: Angular 13 introduces several Ivy improvements, including better diagnostics, improved AOT (Ahead of Time) compilation, and better tree shaking. Ivy is the new rendering engine in Angular that provides improved performance, smaller bundle sizes, and better error messages. For instance, you can now use dynamic imports with Ivy like this:
+```ts
+import("./my-component").then(module => {
+    // use the component here
+});
+```
+- **Strict Mode**: Angular 13 introduces a new strict mode that enforces strict type checking, improves error messages, and helps catch common mistakes. This can help developers write more reliable and maintainable code.
+- Updated Dependencies: Angular 13 updates its dependencies, including TypeScript 4.5, RxJS 7, and Zone.js 0.11. This provides developers with the latest features and improvements in these libraries. For instance, you might be able to use the new “never” type to indicate a function that never returns:
+```ts
+function handleError(): never {
+    throw new Error("Something went wrong");
+}
+```
+- **Angular Material Updates**: Angular Material is a UI component library for Angular that provides a set of pre-built UI components. Angular 13 introduces several updates to Angular Material, including new typography options, improved theming capabilities, and accessibility improvements.
+- **Improved Router Performance**: Angular 13 introduces several improvements to the router’s performance, including better support for preloading, improved route reuse strategy, and better query parameter handling. This can help improve the overall performance of Angular applications.
+- **Improved DevTools Support & Testing Support**: Angular 13 introduces several improvements to the Angular DevTools, including better support for debugging change detection, improved performance profiling, and better support for testing. On another hand, in Testing Support, Angular 13 includes better support for TestBed, improved error messages, and improved test coverage reporting. This can help developers write more comprehensive and effective tests for their applications.
+- **Improved Localization Support**: Angular 13 introduces several improvements to localization support, including better support for date and time formatting, better support for pluralization, and better support for ICU expressions. This can help developers build applications that can support multiple languages and regions.
+- **Improved Accessibility**: Angular 13 introduces several accessibility improvements, including better support for aria-label and aria-labelledby attributes, better support for keyboard navigation, and better support for screen readers. This can help developers build more accessible applications that can be used by all users, including those with disabilities. For example, you might be able to use the aria-label attribute like this:
+```html
+<button aria-label="Submit">Submit</button>
+```
+- **Faster recompilation**: The Angular team is working on making recompilation faster, particularly for large projects with many components. For example, changes to a component’s HTML template might now take only a few seconds to update, rather than tens of seconds or even minutes.
+- **Improved error messages**: The error messages in Angular 13 are expected to be clearer and more informative, making it easier for developers to troubleshoot issues. For example, instead of a cryptic error like “TypeError: Cannot read property ‘foo’ of undefined”, you might see a message like “Error: Could not find data for user ID 123”.
+- **Better support for Webpack 5**: Angular 13 is expected to have better compatibility with Webpack 5, which should improve build times and overall performance.
+- **Support for TypeScript 4.5**: Angular 13 supports the latest version of TypeScript, which includes several new features and improvements. For example, you can now use recursive type aliases like this:
+```ts
+type JSONValue = string | number | boolean | null | JSONArray | JSONObject;
+type JSONArray = JSONValue[];
+type JSONObject = { [key: string]: JSONValue; };
+```
+- **Angular Package Format (APF)**: The Angular Package Format (APF) is a new feature introduced in Angular v13 that allows developers to create and distribute libraries in a new format that reduces the size of the final bundle by removing unnecessary code. With APF, developers can create packages that contain only the necessary code to run their libraries, resulting in faster loading times for applications that use these libraries.
+- **RxJS, TypeScript & Node.js versions supported**: Angular v13 supports RxJS version 7, TypeScript version 4.4, and Node.js version 14 or later. These updated versions bring new features and improvements to the framework, including faster build times and improved performance.
+- **Changes made to the Router**: Angular v13 includes several changes to the Router module, including improved support for lazy loading and better handling of route changes. These changes improve the performance and usability of the Router module, making it easier for developers to create complex routing configurations.
+- **Enhancements in Angular CLI & Angular testing**: Angular v13 introduces several enhancements to the Angular CLI, including new commands for generating components and services, improved support for building and deploying applications, and better integration with third-party tools. Additionally, the framework now supports faster and more reliable testing, with improvements to the TestBed API and the addition of new testing utilities.
+- **Dynamic Components creation**: Finally, Angular v13 includes new features for creating and managing dynamic components. Developers can now create and load components dynamically at runtime, giving them more flexibility in building complex UIs.
+
 <h1>Angular 14 - 02 Jun 2022</h1>
+
+<h3>1. Standalone components, directives, and pipes</h3>
+
+- In Angular 14, you can create a module-less Angular application using the standalone flag. Right now, this feature is in the developer preview state.
+- In Angular 13 and older, the NgModule contained component configurations like imports, declarations, pipes, and directives, so there was a need to add NgModule as a separate file. However, in Angular 14, you can create standalone components without NgModule.
+- To enable creating a standalone component, you must add the standalone flag (standalone: true) inside the @component decorator and add all the configurations inside the decorator. The root component should be passed as an argument to the bootstrapApplication function provided by @angular/platform-browsers.
+```ts
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { bootstrapApplication } from '@angular/platform-browser';
+@Component({
+    selector: 'app-root',
+    standalone: true,
+    imports: [
+        // import standalone Components, Directives, and Pipes
+        CommonModule // and NgModules
+    ],
+    template: `
+        <div>{{name}}</div>
+})
+export class SampleComponent {
+    name = "Angular 14";
+}
+// Bootstrap a new Angular application using our `SampleComponent` as a root component.
+bootstrapApplication(SampleComponent);
+```
+
+<h3>2. Typed Angular forms</h2>
+
+- Typed forms ensure that the values inside form controls, groups, and arrays are type-safe across the entire API surface. This enables safer forms, especially for deeply nested complex cases. The schematic ng update provides backward compatibility for your existing forms. Syncfusion’s Angular Forms components are compatible with the typed Angular forms functionality.
+```ts
+export class SampleComponent {
+    var contactForm = new FormGroup({
+     name: new FormControl<string>('', { nonNullable: true }),
+     email: new FormControl<string>('', { nonNullable: true }),
+     contactNumber: new FormControl<number>(0, { nonNullable: false })
+    });
+}
+```
+
+<h3>3. Streamlined page title accessibility</h3>
+
+- In Angular 14, we can add the router title without any additional import on the page. Refer to the following code example.
+```ts
+const routes: Routes = [
+    {
+        path: 'home',
+        component: HomeComponent
+        title: 'Home page'  // <-- Page title
+    },
+    {
+        path: 'about',
+        component: AboutComponent,
+        title: 'About page'  // <-- Page title
+    }
+];
+```
+
+<h3>4. Extended developer diagnostics</h3>
+
+- The extendable developer diagnostics feature provides extendable frameworks that help developers better understand the templates and display suggestions for potential enhancements. It helps improve caching before runtime, provide actionable suggestions for a template, and helps diagnose warnings at compile time.
+
+<h3>5. More built-in improvements</h3>
+
+- Angular 14 also includes support for the latest TypeScript 4.7 release and now targets ES2020 by default, which allows the CLI to ship smaller code without paring down features.
+
+<h3>6. Bind to protected component members</h3>
+
+- Now you can bind protected component members directly from the template. Refer to the following code example.
+
+```ts
+@Component({
+    selector: 'app-root',
+    template: '{{ title }}',  // Now compiles!
+})
+export class SampleComponent {
+    protected title: string = 'Angular 14';
+}
+```
+- This feature provides more control over the public API surface of your reusable components.
+
+<h3>7. Optional injectors in embedded Views</h3>
+
+- Angular 14 supports passing in an optional injector when creating an embedded view through ViewContainerRef.createEmbeddedView and TemplateRef.createEmbeddedView. This injector enables customization of dependency injection behavior within the specific template.
+
+```ts
+viewContainer.createEmbeddedView(templateRef, context, {
+    injector: injector,
+})
+```
+
+<h3>How to upgrade to Angular 14</h3>
+
+- If you are using Angular 13, run the command `ng update @angular/core@14 @angular/cli@14` to update all Angular dependencies to Angular 14. Also, Angular 14 requires some new prerequisites to build an application.
+- Angular 14 prerequisites
+  - Typescript 4.7.
+  - Node version 14.15.0 or later.
 
 <h1>Angular 15 - 16 Nov 2022</h1>
 
