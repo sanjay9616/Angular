@@ -100,9 +100,9 @@ In this article, we will see What’s New and Improved in Angular 6.0. Angular 6
 - **Use of ng add, ng update**: Angular 6.0 comes with new commands for managing dependencies. The ng add command allows developers to easily add new features and libraries to their application, while the ng update command simplifies the process of updating existing dependencies. These commands make it easier to keep your application up-to-date and take advantage of the latest features and improvements.
 - **Multiple Validators for Form Builder Array**: Angular 6.0 introduces a new feature for form builders. Developers can now add multiple validators to form builder arrays, making it easier to validate user input and improve the accuracy of the data collected. This feature is particularly useful for applications that rely heavily on user input, such as e-commerce sites or social media platforms.
 - **Other Changes**: In addition to the changes mentioned above, Angular 6.0 includes several other updates and improvements. Some of the notable changes include:
-    1. Support for TypeScript 2.7 and 2.8
-    2. mproved performance and reduced bundle sizes
-    3. Better support for animations and transitions
+    - Support for TypeScript 2.7 and 2.8
+    - mproved performance and reduced bundle sizes
+    - Better support for animations and transitions
 
 Angular 6.0 introduces several significant improvements to the framework, including the new Angular Elements feature, updates to RxJS and Angular Material, and improvements to the Angular CLI. The framework also includes several smaller updates and improvements that help to improve performance, reduce bundle sizes, and improve developer productivity. With the introduction of ng-template, simplified service providers, new dependency management commands, and improved form builders, developers can create faster and more reliable applications than ever before.
 
