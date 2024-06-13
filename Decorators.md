@@ -65,6 +65,7 @@ import { NgModule } from '@angular/core';
 
 export class MyNgModule { }
 ```
+- Here, declarations is the array of components, directives, and pipes that belong to this module, imports is the array of other modules that this module depends on, exports is the array of declarations that should be visible and accessible to components in other modules, providers are the array of services available for injection within this module and bootstrap is the array containing the root component(s) to bootstrap when this module is loaded.
 **add definition of above ngModlue keywords**
 
 <h2>@HostListener</h2>
