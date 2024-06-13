@@ -45,6 +45,28 @@ export class AppComponent {
 
 In this example, the `@Input` decorator is applied to the message property of the ChildComponent class, which indicates that the message property can be bound to a value passed from the parent component.
 
+<h2>@NgModule</h2>
+
+- The NgModule decorator in Angular is like a blueprint for organizing and configuring different parts of your application. It’s like a set of instructions that tells Angular how to assemble the various components, directives, pipes, and services into cohesive units called modules. These modules help in managing dependencies, defining routing rules, and configuring providers.
+- Essentially, the NgModule decorator serves as a central hub for defining and organizing the building blocks of an Angular application, making it easier to develop, maintain, and scale complex web applications.
+- Angular NgModules are also classes with ‘@NgModule’ and it has metadata that describes how the different parts of the application will work together. Like javascript modules have their own files but NgModule does not have their own file, they only include metadata. it also helps to organize the components and services of the angular application.
+
+```ts
+import { NgModule } from '@angular/core';
+
+@NgModule({
+    declarations: [ /* Components, directives, and pipes */],
+    imports: [ /* Other modules */],
+    exports: [ /* Exports of this module */],
+    providers: [ /* Services */],
+    bootstrap: [ /* Root component */],
+    entryComponents: []
+})
+
+export class MyNgModule { }
+```
+**add definition of above ngModlue keywords**
+
 <h2>@HostListener</h2>
 
 The `@HostListener` decorator in Angular is a function that allows you to bind a host element event to a component method. It is used to listen for events that are triggered on the host element, such as mouse events, keyboard events, and touch events.
