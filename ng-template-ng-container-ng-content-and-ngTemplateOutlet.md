@@ -103,4 +103,49 @@ In child.component.html:
 <div class="second"> Child Component Second Details </div>
 ```
 
+<h2>4. ngTemplateOutlet</h2>
+
+- In the world of web development, being able to change the look and feel of a page on the fly is crucial. You want your app to be responsive to user interactions and data changes. That’s where Angular’s `ng-template` and `ngTemplateOutlet` come to the rescue.
+- The `ngTemplateOutlet` directive allows you to render different templates dynamically based on conditions or data, making your templates more flexible and reusable.
+
+```html
+<ng-template #hip>
+  <p>Hip!</p>
+</ng-template>
+
+<ng-template #hooray>
+  <p>Hooray!</p>
+</ng-template>
+```
+```html
+<ng-container *ngTemplateOutlet="myTemplate;context:MyContext"></ng-container>
+```
+- `myTemplate` is the reference to the template you defined.
+- `myContext` is an optional context object that can be used to pass data to the template.
+- when the `ng-template` is rendered inside the `ng-container`, it will have access to the data variable, and you can use it within the template to display the passed data.
+
+```html
+<ng-container *ngTemplateOutlet="hip;context:MyContext"></ng-container>
+```
+**Example**
+
+```html
+<ng-container *ngTemplateOutlet="selectedCompaignType"></ng-container>
+
+<ng-template #banner>
+  <p>Banner</p>
+</ng-template>
+
+<ng-template #title>
+  <p>Title</p>
+</ng-template>
+
+<ng-template #carousel>
+  <p>Carousel</p>
+</ng-template>
+```
+
+- In the provided code, the `selectedCampaignType` variable is used to determine which of the three templates (banner, tile, or carousel) will be dynamically rendered inside the `<ng-container>`. The content of the selected template is inserted into the `<ng-container>` using `ngTemplateOutlet`.
+- For example, if `selectedCampaignType` is set to “banner,” the content of the “banner” template will be rendered inside the `<ng-container>`. Similarly, changing the value of `selectedCampaignType` will dynamically switch the content displayed within the `<ng-container`. This mechanism allows you to conditionally render different views based on the value of `selectedCampaignType`.
+
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
