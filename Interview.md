@@ -71,6 +71,8 @@
 | 4   | [How do you detect route change in Angular](#How-do-you-detect-route-change-in-Angular)                                                                 |
 | 4   | [How can I use SASS in angular project](#How-can-I-use-SASS-in-angular-project)                                                                         |
 | 4   | [How do you get the current route](#How-do-you-get-the-current-route)                                                                                   |
+| 4   | [Is Angular supports dynamic imports](#Is-Angular-supports-dynamic-imports)                                                                             |
+| 4   | [What is lazy loading](#What-is-lazy-loading)                                                                                                           |
 
 ### <h2>What is a data binding</h2>
 
@@ -1574,10 +1576,47 @@ console.log(this.router.url); //  /routename
 
 **[⬆ Back to Top](#table-of-contents)**
 
+### <h2>Is Angular supports dynamic imports</h2>
 
+Yes, Angular 8 supports dynamic imports in router configuration. i.e, You can use the import statement for lazy loading the module using `loadChildren` method and it will be understood by the IDEs(VSCode and WebStorm), webpack, etc.
 
+Previously, you have been written as below to lazily load the feature module. By mistake, if you have typo in the module name it still accepts the string and throws an error during build time.
 
+```javascript
+{path: ‘user’, loadChildren: ‘./users/user.module#UserModulee’},
+```
 
+This problem is resolved by using dynamic imports and IDEs are able to find it during compile time itself.
+
+```javascript
+{path: ‘user’, loadChildren: () => import(‘./users/user.module’).then(m => m.UserModule)};
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is lazy loading</h2>
+
+Lazy loading is one of the most useful concepts of Angular Routing. It helps us to download the web pages in chunks instead of downloading everything in a big bundle. It is used for lazy loading by asynchronously loading the feature module for routing whenever required using the property `loadChildren`. Let's load both `Customer` and `Order` feature modules lazily as below,
+
+```javascript
+const routes: Routes = [
+    {
+        path: 'customers',
+        loadChildren: () => import('./customers/customers.module').then(module => module.CustomersModule)
+    },
+    {
+        path: 'orders',
+        loadChildren: () => import('./orders/orders.module').then(module => module.OrdersModule)
+    },
+    {
+        path: '',
+        redirectTo: '',
+        pathMatch: 'full'
+    }
+];
+```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 
 
