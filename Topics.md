@@ -7,25 +7,10 @@
 ### ----------------------------------------------------------------------------------------------------------------------- ###
 
 **DECORATORS - Class Decorators, Property Decorators, Method Decorators, Parameter Decorators**
-What is metadata?
-What are class field decorators?
-What are the class decorators in Angular?
-Is it possible to do aliasing for inputs and outputs?
 
 ### ----------------------------------------------------------------------------------------------------------------------- ###
 
 **PIPES ( PURE, IMPURE ), Chani Pipes**
-What is the purpose of async pipe?
-What are pipes?
-What is a parameterized pipe?
-How do you chain pipes?
-What is a custom pipe?
-Give an example of custom pipe?
-What is the difference between pure and impure pipe?
-What is slice pipe?
-What are the list of template expression operators?
-What is the precedence between pipe and ternary operators?
-How does angular finds components, directives and pipes?
 ### ----------------------------------------------------------------------------------------------------------------------- ###
 
 **GUARDS - CanActivate, CanDeactivate, CanActivateChild, Resolve, CanLoad**

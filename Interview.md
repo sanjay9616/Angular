@@ -25,6 +25,21 @@
 | 4   | [What is the purpose of ngSwitch directive](#What-is-the-purpose-of-ngSwitch-directive)                                               |
 | 4   | [How to set ngFor and ngIf on the same element](#How-to-set-ngFor-and-ngIf-on-the-same-element)                                       |
 | 4   | [What is host property in css](#What-is-host-property-in-css)                                                                         |
+| 4   | [What is metadata](#What-is-metadata)                                                                                                 |
+| 4   | [What are class field decorators](#What-are-class-field-decorators)                                                                   |
+| 4   | [What are the class decorators in Angular](#What-are-the-class-decorators-in-Angular)                                                 |
+| 4   | [Is it possible to do aliasing for inputs and outputs](#Is-it-possible-to-do-aliasing-for-inputs-and-outputs)                         |
+| 4   | [What are pipes](#What-are-pipes)                                                                                                     |
+| 4   | [What is the purpose of async pipe](#What-is-the-purpose-of-async-pipe)                                                               |
+| 4   | [What is a parameterized pipe](#What-is-a-parameterized-pipe)                                                                         |
+| 4   | [How do you chain pipes](#How-do-you-chain-pipes)                                                                                     |
+| 4   | [What is a custom pipe](#What-is-a-custom-pipe)                                                                                       |
+| 4   | [Give an example of custom pipe](#Give-an-example-of-custom-pipe)                                                                     |
+| 4   | [What is the difference between pure and impure pipe](#What-is-the-difference-between-pure-and-impure-pipe)                           |
+| 4   | [What is slice pipe](#What-is-slice-pipe)                                                                                             |
+| 4   | [What are the list of template expression operators](#What-are-the-list-of-template-expression-operators)                             |
+| 4   | [What is the precedence between pipe and ternary operators](#What-is-the-precedence-between-pipe-and-ternary-operators)               |
+| 4   | [How does angular finds components, directives and pipes](#How-does-angular-finds-components,-directives-and-pipes)                   |
 
 ### <h2>What is a data binding</h2>
 
@@ -442,7 +457,318 @@ For example, you can create a border for parent element as below,
 
 **[⬆ Back to Top](#table-of-contents)**
 
+### <h2>What is metadata</h2>
 
+Metadata is used to decorate a class so that it can configure the expected behavior of the class. The metadata is represented by decorators
+
+1. **Class decorators**, e.g. `@Component` and `@NgModule`
+
+```typescript
+import { NgModule, Component } from '@angular/core';
+
+@Component({
+    selector: 'my-component',
+    template: '<div>Class decorator</div>',
+})
+export class MyComponent {
+    constructor() {
+        console.log('Hey I am a component!');
+    }
+}
+
+@NgModule({
+    imports: [],
+    declarations: [],
+})
+export class MyModule {
+    constructor() {
+        console.log('Hey I am a module!');
+    }
+}
+```
+2. **Property decorators** Used for properties inside classes, e.g. `@Input` and `@Output`
+
+```typescript
+import { Component, Input } from '@angular/core';
+
+@Component({
+    selector: 'my-component',
+    template: '<div>Property decorator</div>'
+})
+
+export class MyComponent {
+    @Input()
+    title: string;
+}
+```
+3. **Method decorators** Used for methods inside classes, e.g. `@HostListene`r
+
+```typescript
+import { Component, HostListener } from '@angular/core';
+
+@Component({
+    selector: 'my-component',
+    template: '<div>Method decorator</div>'
+})
+
+export class MyComponent {
+    @HostListener('click', ['$event'])
+    onHostClick(event: Event) {
+    // clicked, `event` available
+    }
+}
+```
+4. **Parameter decorators** Used for parameters inside class constructors, e.g. `@Inject`, `@Optional`
+
+```typescript
+import { Component, Inject } from '@angular/core';
+import { MyService } from './my-service';
+
+@Component({
+    selector: 'my-component',
+    template: '<div>Parameter decorator</div>'
+})
+export class MyComponent {
+    constructor(@Inject(MyService) myService) {
+        console.log(myService); // MyService
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are class field decorators</h2>
+
+The class field decorators are the statements declared immediately before a field in a class definition that defines the type of that field. Some of the examples are: @input and @output,
+
+```javascript
+@Input() myProperty;
+@Output() myEvent = new EventEmitter();
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the class decorators in Angular</h2>
+
+A class decorator is a decorator that appears immediately before a class definition, which declares the class to be of the given type, and provides metadata suitable to the type
+
+The following list of decorators comes under class decorators,
+
+1. @Component()
+2. @Directive()
+3. @Pipe()
+4. @Injectable()
+5. @NgModule()
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Is it possible to do aliasing for inputs and outputs</h2>
+
+Yes, it is possible to do aliasing for inputs and outputs in two ways.
+
+1. **Aliasing in metadata:** The inputs and outputs in the metadata aliased using a colon-delimited (:) string with the directive property name on the left and the public alias on the right. i.e. It will be in the format of propertyName:alias.
+
+```ts
+    inputs: ['input1: buyItem'],
+    outputs: ['outputEvent1: completedEvent']
+```
+2. **Aliasing with @Input()/@Output() decorator:** The alias can be specified for the property name by passing the alias name to the @Input()/@Output() decorator.i.e. It will be in the form of @Input(alias) or @Output(alias).
+
+```ts
+    @Input('buyItem') input1: string;
+    @Output('completedEvent') outputEvent1 = new EventEmitter<string>();
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are pipes</h2>
+
+Pipes are simple functions that use [template expressions](#what-are-template-expressions) to accept data as input and transform it into a desired output. For example, let us take a pipe to transform a component's birthday property into a human-friendly date using **date** pipe.
+
+```javascript
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'app-birthday',
+    template: `<p>Birthday is {{ birthday | date }}</p>`
+})
+export class BirthdayComponent {
+    birthday = new Date(1987, 6, 18); // June 18, 1987
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of async pipe</h2>
+
+The AsyncPipe subscribes to an observable or promise and returns the latest value it has emitted. When a new value is emitted, the pipe marks the component to be checked for changes.
+
+Let's take a time observable which continuously updates the view for every 2 seconds with the current time.
+
+```typescript
+@Component({
+    selector: 'async-observable-pipe',
+    template: `<div><code>observable|async</code>:
+        Time: {{ time | async }}</div>`
+})
+export class AsyncObservablePipeComponent {
+    time: Observable<string>;
+    constructor() {
+        this.time = new Observable((observer) => {
+            setInterval(() => {
+            observer.next(new Date().toString());
+            }, 2000);
+        });
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a parameterized pipe</h2>
+
+A pipe can accept any number of optional parameters to fine-tune its output. The parameterized pipe can be created by declaring the pipe name with a colon ( : ) and then the parameter value. If the pipe accepts multiple parameters, separate the values with colons. Let's take a birthday example with a particular format(dd/MM/yyyy):
+
+```javascript
+import { Component } from '@angular/core';
+
+    @Component({
+        selector: 'app-birthday',
+        template: `<p>Birthday is {{ birthday | date:'dd/MM/yyyy'}}</p>` // 18/06/1987
+    })
+    export class BirthdayComponent {
+        birthday = new Date(1987, 6, 18);
+    }
+```
+**Note:** The parameter value can be any valid template expression, such as a string literal or a component property.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you chain pipes</h2>
+
+You can chain pipes together in potentially useful combinations as per the needs. Let's take a birthday property which uses date pipe(along with parameter) and uppercase pipes as below
+
+```javascript
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'app-birthday',
+    template: `<p>Birthday is {{  birthday | date:'fullDate' | uppercase}} </p>` // THURSDAY, JUNE 18, 1987
+})
+export class BirthdayComponent {
+    birthday = new Date(1987, 6, 18);
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a custom pipe</h2>
+
+Apart from built-in pipes, you can write your own custom pipe with the below key characteristics:
+
+1. A pipe is a class decorated with pipe metadata `@Pipe` decorator, which you import from the core Angular library
+
+For example,
+
+```javascript
+@Pipe({name: 'myCustomPipe'})
+```
+
+1. The pipe class implements the **PipeTransform** interface's transform method that accepts an input value followed by optional parameters and returns the transformed value.
+
+The structure of `PipeTransform` would be as below,
+
+```javascript
+interface PipeTransform {
+    transform(value: any, ...args: any[]): any
+}
+```
+
+1. The `@Pipe` decorator allows you to define the pipe name that you'll use within template expressions. It must be a valid JavaScript identifier.
+
+```javascript
+template: `{{someInputValue | myCustomPipe: someOtherValue}}`
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Give an example of custom pipe</h2>
+
+You can create custom reusable pipes for the transformation of existing value. For example, let us create a custom pipe for finding file size based on an extension,
+
+```javascript
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({name: 'customFileSizePipe'})
+    export class FileSizePipe implements PipeTransform {
+    transform(size: number, extension: string = 'MB'): string {
+        return (size / (1024 * 1024)).toFixed(2) + extension;
+    }
+}
+```
+Now you can use the above pipe in template expression as below,
+
+```javascript
+template: `
+<h2>Find the size of a file</h2>
+<p>Size: {{288966 | customFileSizePipe: 'GB'}}</p>
+`
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the difference between pure and impure pipe</h2>
+
+A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe. For example, any changes to a primitive input value (String, Number, Boolean, Symbol) or a changed object reference (Date, Array, Function, Object). An impure pipe is called for every change detection cycle no matter whether the value or parameters changes. i.e, An impure pipe is called often, as often as every keystroke or mouse-move.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is slice pipe</h2>
+
+The slice pipe is used to create a new Array or String containing a subset (slice) of the elements. The syntax looks like as below,
+
+```javascript
+{{ value_expression | slice : start [ : end ] }}
+```
+
+For example, you can provide 'hello' list based on a greeting array,
+
+```javascript
+@Component({
+    selector: 'list-pipe',
+    template: `<ul>
+    <li *ngFor="let i of greeting | slice:0:5">{{i}}</li>
+    </ul>`
+})
+
+export class PipeListComponent {
+    greeting: string[] = ['h', 'e', 'l', 'l', 'o', 'm','o', 'r', 'n', 'i', 'n', 'g'];
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the list of template expression operators</h2>
+
+The Angular template expression language supports three special template expression operators.
+
+1. Pipe operator
+2. Safe navigation operator
+3. Non-null assertion operator
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the precedence between pipe and ternary operators</h2>
+
+The pipe operator has a higher precedence than the ternary operator (?:). For example, the expression `first ? second : third | fourth` is parsed as `first ? second : (third | fourth)`.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How does angular finds components, directives and pipes</h2>
+
+The Angular compiler finds a component or directive in a template when it can match the selector of that component or directive in that template. Whereas it finds a pipe if the pipe's name appears within the pipe syntax of the template HTML.
+
+**[⬆ Back to Top](#table-of-contents)**
 
 
 
