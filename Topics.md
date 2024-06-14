@@ -23,18 +23,6 @@
 
 **FORMS - Reactive forms, Template-driven forms**
 
-256	What are reactive forms?
-257	What are dynamic forms?
-258	What are template driven forms?
-259	What are the differences between reactive forms and template driven forms?
-260	What are the different ways to group form controls?
-261	How do you update specific properties of a form model?
-262	What is the purpose of FormBuilder?
-263	How do you verify the model changes in forms?
-What are the state CSS classes provided by ngModel?
-265	How do you reset the form?
-266	What are the types of validator functions?
-267	Can you give an example of built-in validators?
 268	How do you optimize the performance of async validators?
 
 ### ----------------------------------------------------------------------------------------------------------------------- ###
