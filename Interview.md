@@ -40,6 +40,9 @@
 | 4   | [What are the list of template expression operators](#What-are-the-list-of-template-expression-operators)                             |
 | 4   | [What is the precedence between pipe and ternary operators](#What-is-the-precedence-between-pipe-and-ternary-operators)               |
 | 4   | [How does angular finds components, directives and pipes](#How-does-angular-finds-components,-directives-and-pipes)                   |
+| 4   | [What are Http Interceptors](#What-are-Http-Interceptors)                                                                             |
+| 4   | [What are the applications of HTTP interceptors](#What-are-the-applications-of-HTTP-interceptors)                                     |
+| 4   | [How can I use interceptor for an entire application](#How-can-I-use-interceptor-for-an-entire-application)                           |
 
 ### <h2>What is a data binding</h2>
 
@@ -769,6 +772,102 @@ The pipe operator has a higher precedence than the ternary operator (?:). For ex
 The Angular compiler finds a component or directive in a template when it can match the selector of that component or directive in that template. Whereas it finds a pipe if the pipe's name appears within the pipe syntax of the template HTML.
 
 **[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are Http Interceptors</h2>
+
+Http Interceptors are part of @angular/common/http, which inspect and transform HTTP requests from your application to the server and vice-versa on HTTP responses. These interceptors can perform a variety of implicit tasks, from authentication to logging.
+
+The syntax of HttpInterceptor interface looks like as below,
+
+```javascript
+interface HttpInterceptor {
+intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>
+}
+```
+You can use interceptors by declaring a service class that implements the intercept() method of the HttpInterceptor interface.
+
+```javascript
+@Injectable()
+export class MyInterceptor implements HttpInterceptor {
+    constructor() {}
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        ...
+    }
+}
+```
+After that you can use it in your module,
+
+```javascript
+@NgModule({
+    ...
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: MyInterceptor,
+            multi: true
+        }
+    ]
+    ...
+})
+export class AppModule {}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the applications of HTTP interceptors</h2>
+
+The HTTP Interceptors can be used for different variety of tasks,
+
+1. Authentication
+2. Logging
+3. Caching
+4. Fake backend
+5. URL transformation
+6. Modifying headers
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How can I use interceptor for an entire application</h2>
+
+You can use same instance of `HttpInterceptors` for the entire app by importing the `HttpClientModule` only in your AppModule, and add the interceptors to the root application injector.
+
+For example, let's define a class that is injectable in root application.
+
+```ts
+@Injectable()
+export class MyInterceptor implements HttpInterceptor {
+    intercept(
+        req: HttpRequest<any>,
+        next: HttpHandler
+    ): Observable<HttpEvent<any>> {
+
+        return next.handle(req).do(event => {
+            if (event instanceof HttpResponse) {
+                    // Code goes here
+            }
+        });
+
+    }
+}
+```
+After that import HttpClientModule in AppModule
+
+```ts
+@NgModule({
+    declarations: [AppComponent],
+    imports: [BrowserModule, HttpClientModule],
+    providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true }
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+
+
 
 
 

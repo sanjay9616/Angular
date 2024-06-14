@@ -18,10 +18,6 @@
 ### ----------------------------------------------------------------------------------------------------------------------- ###
 
 **HTTP INTERCEPTERS**
-What are Http Interceptors?
-What are the applications of HTTP interceptors?
-Is multiple interceptors supported in Angular?
-How can I use interceptor for an entire application?
 
 ### ----------------------------------------------------------------------------------------------------------------------- ###
 
