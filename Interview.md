@@ -56,6 +56,21 @@
 | 4   | [What are the types of validator functions](#What-are-the-types-of-validator-functions)                                                                 |
 | 4   | [Can you give an example of built-in validators](#Can-you-give-an-example-of-built-in-validators)                                                       |
 | 4   | [How do you optimize the performance of async validators](#How-do-you-optimize-the-performance-of-async-validators)                                     |
+| 4   | [What is Angular Router](#What-is-Angular-Router)                                                                                                       |
+| 4   | [What is the purpose of base href tag](#What-is-the-purpose-of-base-href-tag)                                                                           |
+| 4   | [What are the router imports](#What-are-the-router-imports)                                                                                             |
+| 4   | [What is router outlet](#What-is-router-outlet)                                                                                                         |
+| 4   | [What are router links](#What-are-router-links)                                                                                                         |
+| 4   | [What are active router links](#What-are-active-router-links)                                                                                           |
+| 4   | [What is router state](#What-is-router-state)                                                                                                           |
+| 4   | [What are router events](#What-are-router-events)                                                                                                       |
+| 4   | [What is activated route](#What-is-activated-route)                                                                                                     |
+| 4   | [How do you define routes](#How-do-you-define-routes)                                                                                                   |
+| 4   | [What is the purpose of Wildcard route](#What-is-the-purpose-of-Wildcard-route)                                                                         |
+| 4   | [Do I need a Routing Module always](#Do-I-need-a-Routing-Module-always)                                                                                 |
+| 4   | [How do you detect route change in Angular](#How-do-you-detect-route-change-in-Angular)                                                                 |
+| 4   | [How can I use SASS in angular project](#How-can-I-use-SASS-in-angular-project)                                                                         |
+| 4   | [How do you get the current route](#How-do-you-get-the-current-route)                                                                                   |
 
 ### <h2>What is a data binding</h2>
 
@@ -1301,6 +1316,266 @@ name = new FormControl('', {updateOn: 'blur'});
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Angular Router</h2>
+
+Angular Router is a mechanism in which navigation happens from one view to the next as users perform application tasks. It borrows the concepts or model of browser's application navigation. It enables developers to build Single Page Applications with multiple views and allow navigation between these views.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of base href tag</h2>
+
+The routing application should add <base> element to the index.html as the first child in the <head> tag in order to indicate how to compose navigation URLs. If app folder is the application root then you can set the href value as below
+
+```html
+<base href="/">
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the router imports</h2>
+
+The Angular Router which represents a particular component view for a given URL is not part of Angular Core. It is available in library named `@angular/router` to import required router components. For example, we import them in app module as below,
+
+```javascript
+import { RouterModule, Routes } from '@angular/router';
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is router outlet</h2>
+
+The RouterOutlet is a directive from the router library and it  acts as a placeholder that marks the spot in the template where the router should display the components for that outlet. Router outlet is used like a component,
+
+```html
+<router-outlet></router-outlet>
+<!-- Routed components go here -->
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are router links</h2>
+
+The RouterLink is a directive on the anchor tags give the router control over those elements. Since the navigation paths are fixed, you can assign string values to router-link directive as below,
+
+```html
+<h1>Angular Router</h1>
+<nav>
+    <a routerLink="/todosList" >List of todos</a>
+    <a routerLink="/completed" >Completed todos</a>
+</nav>
+<router-outlet></router-outlet>
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are active router links</h2>
+
+RouterLinkActive is a directive that toggles css classes for active RouterLink bindings based on the current RouterState. i.e, The Router will add CSS classes when this link is active and remove when the link is inactive. For example, you can add them to RouterLinks as below.
+
+```html
+<h1>Angular Router</h1>
+<nav>
+    <a routerLink="/todosList" routerLinkActive="active">List of todos</a>
+    <a routerLink="/completed" routerLinkActive="active">Completed todos</a>
+</nav>
+<router-outlet></router-outlet>
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is router state</h2>
+
+RouterState is a tree of activated routes. Every node in this tree knows about the "consumed" URL segments, the extracted parameters, and the resolved data. You can access the current RouterState from anywhere in the application using the `Router service` and the `routerState` property.
+
+```javascript
+@Component({templateUrl:'template.html'})
+class MyComponent {
+    constructor(router: Router) {
+    const state: RouterState = router.routerState;
+    const root: ActivatedRoute = state.root;
+    const child = root.firstChild;
+    const id: Observable<string> = child.params.map(p => p.id);
+    //...
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are router events</h2>
+
+During each navigation, the Router emits navigation events through the Router.events property allowing you to track the lifecycle of the route.
+
+The sequence of router events is as below,
+
+1. NavigationStart,
+2. RouteConfigLoadStart,
+3. RouteConfigLoadEnd,
+4. RoutesRecognized,
+5. GuardsCheckStart,
+6. ChildActivationStart,
+7. ActivationStart,
+8. GuardsCheckEnd,
+9. ResolveStart,
+10. ResolveEnd,
+11. ActivationEnd
+12. ChildActivationEnd
+13. NavigationEnd,
+14. NavigationCancel,
+15. NavigationError
+16. Scroll
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is activated route</h2>
+
+ActivatedRoute contains the information about a route associated with a component loaded in an outlet. It can also be used to traverse the router state tree. The ActivatedRoute will be injected as a router service to access the information. In the below example, you can access route path and parameters,
+
+```javascript
+@Component({...})
+class MyComponent {
+    constructor(route: ActivatedRoute) {
+        const id: Observable<string> = route.params.pipe(map(p => p.id));
+        const url: Observable<string> = route.url.pipe(map(segments => segments.join('')));
+        // route.data includes both `data` and `resolve`
+        const user = route.data.pipe(map(d => d.user));
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you define routes</h2>
+
+A router must be configured with a list of route definitions. You configures the router with routes via the `RouterModule.forRoot()` method, and adds the result to the AppModule's `imports` array.
+
+```javascript
+const appRoutes: Routes = [
+    { path: 'todo/:id',      component: TodoDetailComponent },
+    { path: 'todos', component: TodosListComponent, data: { title: 'Todos List' }},
+    { path: '', redirectTo: '/todos', pathMatch: 'full' },
+    { path: '**', component: PageNotFoundComponent }
+];
+
+@NgModule({
+    imports: [
+        RouterModule.forRoot(
+            appRoutes,
+            { enableTracing: true } // <-- debugging purposes only
+        )
+        // other imports here
+    ],
+    ...
+})
+export class AppModule { }
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of Wildcard route</h2>
+
+If the URL doesn't match any predefined routes then it causes the router to throw an error and crash the app. In this case, you can use wildcard route. A wildcard route has a path consisting of two asterisks to match every URL.
+
+For example, you can define PageNotFoundComponent for wildcard route as below
+
+```javascript
+{ path: '**', component: PageNotFoundComponent }
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Do I need a Routing Module always</h2>
+
+No, the Routing Module is a design choice. You can skip routing Module (for example, AppRoutingModule) when the configuration is simple and merge the routing configuration directly into the companion module (for example, AppModule). But it is recommended when the configuration is complex and includes specialized guard and resolver services.
+
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you detect route change in Angular</h2>
+
+In Angular7, you can subscribe to router to detect the changes. The subscription for router events would be as below,
+
+```javascript
+this.router.events.subscribe((event: Event) => {})
+```
+Let's take a simple component to detect router changes
+
+```javascript
+import { Component } from '@angular/core';
+import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+
+@Component({
+    selector: 'app-root',
+    template: `<router-outlet></router-outlet>`
+})
+export class AppComponent {
+
+    constructor(private router: Router) {
+
+        this.router.events.subscribe((event: Event) => {
+            if (event instanceof NavigationStart) {
+                // Show loading indicator and perform an action
+            }
+
+            if (event instanceof NavigationEnd) {
+                // Hide loading indicator and perform an action
+            }
+
+            if (event instanceof NavigationError) {
+                // Hide loading indicator and perform an action
+                console.log(event.error); // It logs an error for debugging
+            }
+        });
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How can I use SASS in angular project</h2>
+
+When you are creating your project with angular cli, you can use `ng new`command. It generates all your components with predefined sass files.
+
+```javascript
+ng new My_New_Project --style=sass
+```
+
+But if you are changing your existing style in your project then use `ng set` command,
+
+```javascript
+ng set defaults.styleExt scss
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you get the current route</h2>
+
+In Angular, there is an `url` property of router package to get the current route. You need to follow the below few steps,
+
+1. Import Router from @angular/router
+
+```js
+import { Router } from '@angular/router';
+```
+
+2. Inject router inside constructor
+
+```js
+constructor(private router: Router ) {
+
+}
+```
+3. Access url parameter
+
+```js
+console.log(this.router.url); //  /routename
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+
+
 
 
 

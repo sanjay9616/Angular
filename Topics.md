@@ -23,26 +23,8 @@
 
 **FORMS - Reactive forms, Template-driven forms**
 
-268	How do you optimize the performance of async validators?
-
 ### ----------------------------------------------------------------------------------------------------------------------- ###
 **ROUTER**
-What is Angular Router?
-What is the purpose of base href tag?
-What are the router imports?
-What is router outlet?
-What are router links?
-What are active router links?
-What is router state?
-What are router events?
-What is activated route?
-How do you define routes?
-What is the purpose of Wildcard route?
-Do I need a Routing Module always?
-How do you detect route change in Angular?
-What is router state?
-How can I use SASS in angular project?
-How do you get the current route?
 
 ### ----------------------------------------------------------------------------------------------------------------------- ###
 **LAZY LOADING**
