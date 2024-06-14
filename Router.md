@@ -98,4 +98,16 @@ ngOnInit(): void {
   }
 ```
 
+<h2>9 ways to pass data through Angular RouterState</h2>
+
+1. URL or route parameters
+2. Query parameters using router. navigate
+3. Query parameters using queryParamsHandling
+4. Query parameters using RouterLink
+5. URL fragment
+6. Data property
+7. RouterLink for dynamic data
+8. Dynamic data using navigateByURL
+9. Wildcard routes
+
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>

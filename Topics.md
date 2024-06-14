@@ -3,13 +3,6 @@
 **DATA SHARING BETWEEN COMPONENTS - Parent to child: via Input(), Child to Parent: via Output() and EventEmitter, Child to Parent: via ViewChild, Unrelated Components: via Service**
 
 ### ----------------------------------------------------------------------------------------------------------------------- ###
-
-**LIFECYCLE HOOKS - ngOnChanges(), ngOnInit(), ngDoCheck(), ngAfterContentInit(), ngAfterContentInitChecked(), ngAfterViewInit(), ngAfterViewChecked(), NgOnDestroy()**
-What are lifecycle hooks available?
-What is the difference between constructor and ngOnInit?
-What are the lifecycle hooks of a zone?
-
-### ----------------------------------------------------------------------------------------------------------------------- ###
 **DIRECTIVES - Attribute, Structural, Custom/components**
 What are directives?
 What are the differences between Component and Directive?
