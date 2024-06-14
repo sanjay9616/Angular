@@ -4,26 +4,12 @@
 
 ### ----------------------------------------------------------------------------------------------------------------------- ###
 **DIRECTIVES - Attribute, Structural, Custom/components**
-What are directives?
-What are the differences between Component and Directive?
-What is the purpose of *ngFor directive?
-What is the purpose of ngIf directive?
-What are the various kinds of directives?
-How do you create directives using CLI?
-Give an example for attribute directives?
-200	What is the purpose of hidden property?
-201	What is the difference between ngIf and hidden property?
-What is index property in ngFor directive?
-What is the purpose of ngFor trackBy?
-What is the purpose of ngSwitch directive?
-How to set ngFor and ngIf on the same element?
-What is host property in css?
-
 ### ----------------------------------------------------------------------------------------------------------------------- ###
 
 **DECORATORS - Class Decorators, Property Decorators, Method Decorators, Parameter Decorators**
 What is metadata?
 What are class field decorators?
+What are the class decorators in Angular?
 Is it possible to do aliasing for inputs and outputs?
 
 ### ----------------------------------------------------------------------------------------------------------------------- ###
@@ -181,7 +167,6 @@ What is a builder?
 How do you invoke a builder?
 How do you create app shell in Angular?
 What are the case types in Angular?
-What are the class decorators in Angular?
 What are the restrictions on declarable classes?
 What is a DI token?
 What is Angular DSL?

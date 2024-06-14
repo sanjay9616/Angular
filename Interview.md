@@ -11,6 +11,20 @@
 | 4   | [What are lifecycle hooks available](#What-are-lifecycle-hooks-available)                                                             |
 | 4   | [What is the difference between constructor and ngOnInit](#What-is-the-difference-between-constructor-and-ngOnInit)                   |
 | 4   | [What are the lifecycle hooks of a zone](#What-are-the-lifecycle-hooks-of-a-zone)                                                     |
+| 4   | [What are directives](#What-are-directives)                                                                                           |
+| 4   | [What are the differences between Component and Directive](#What-are-the-differences-between-Component-and-Directive)                 |
+| 4   | [What is the purpose of *ngFor directive](#What-is-the-purpose-of-*ngFor-directive)                                                   |
+| 4   | [What is the purpose of *ngIf directive](#What-is-the-purpose-of-*ngIf-directive)                                                     |
+| 4   | [What are the various kinds of directives](#What-are-the-various-kinds-of-directives)                                                 |
+| 4   | [How do you create directives using CLI](#How-do-you-create-directives-using-CLI)                                                     |
+| 4   | [Give an example for attribute directives](#Give-an-example-for-attribute-directives)                                                 |
+| 4   | [What is the purpose of hidden property](#What-is-the-purpose-of-hidden-property)                                                     |
+| 4   | [What is the difference between ngIf and hidden property](#What-is-the-difference-between-ngIf-and-hidden-property)                   |
+| 4   | [What is index property in ngFor directive](#What-is-index-property-in-ngFor-directive)                                               |
+| 4   | [What is the purpose of ngFor trackBy](#What-is-the-purpose-of-ngFor-trackBy)                                                         |
+| 4   | [What is the purpose of ngSwitch directive](#What-is-the-purpose-of-ngSwitch-directive)                                               |
+| 4   | [How to set ngFor and ngIf on the same element](#How-to-set-ngFor-and-ngIf-on-the-same-element)                                       |
+| 4   | [What is host property in css](#What-is-host-property-in-css)                                                                         |
 
 ### <h2>What is a data binding</h2>
 
@@ -187,6 +201,242 @@ onInvoke: function(delegate, curr, target, callback, applyThis, applyArgs) {
 
 **[⬆ Back to Top](#table-of-contents)**
 
+### <h2>What are directives</h2>
+
+Directives add behaviour to an existing DOM element or an existing component instance.
+
+```typescript
+import { Directive, ElementRef, Input } from '@angular/core';
+
+@Directive({ selector: '[myHighlight]' })
+export class HighlightDirective {
+    constructor(el: ElementRef) {
+        el.nativeElement.style.backgroundColor = 'yellow';
+    }
+}
+```
+
+Now this directive extends HTML element behavior with a yellow background as below
+
+```html
+<p myHighlight>Highlight me!</p>
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the differences between Component and Directive</h2>
+
+In a short note, A component(@component) is a directive-with-a-template.
+
+Some of the major differences are mentioned in a tabular form
+
+| Component                                                               | Directive                                                      |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------- |
+| To register a component we use @Component meta-data annotation          | To register a directive we use @Directive meta-data annotation |
+| Components are typically used to create UI widgets                      | Directives are used to add behavior to an existing DOM element |
+| Component is used to break down the application into smaller components | Directive is used to design re-usable components               |
+| Only one component can be present per DOM element                       | Many directives can be used per DOM element                    |
+| @View decorator or templateurl/template are mandatory                   | Directive doesn't use View                                     |
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of *ngFor directive</h2>
+
+We use Angular `*ngFor` directive in the template to display each item in the list. For example, here we can iterate over a list of users:
+
+```html
+<li *ngFor="let user of users">
+    {{ user }}
+</li>
+```
+The user variable in the `*ngFor` double-quoted instruction is a **template input variable**.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of *ngIf directive</h2>
+
+Sometimes an app needs to display a view or a portion of a view only under specific circumstances. The Angular `*ngIf` directive inserts or removes an element based on a truthy/falsy condition. Let's take an example to display a message if the user age is more than 18:
+
+```html
+<p *ngIf="user.age > 18">You are not eligible for student pass!</p>
+```
+**Note:** Angular isn't showing and hiding the message. It is adding and removing the paragraph element from the DOM. That improves performance, especially in the larger projects with many data bindings.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the various kinds of directives</h3>
+
+There are mainly three kinds of directives:
+
+1. **Components** — These are directives with a template.
+
+```typescript
+import { Directive } from '@angular/core';
+@Directive({
+    selector: '[changeUser]'
+})
+
+export class ChangeUserDirective {
+    constructor() { }
+}
+```
+1. **Structural directives** — These directives change the DOM **layout** by adding and removing DOM elements, ex - *ngIf, *ngFor, *ngSwitch.
+2. **Attribute directives** — These directives change the appearance or behavior of an element, component, or another directive, ex - ngClass, ngStyle, ngModel.
+
+**Syntax for ngClass** - `[ngClass]="{'class': true}"`, `[ngClass]="[condiion ? 'class1' : 'class2']"`, `[ngClass]="{'class1': true, 'class2': true, 'class3': true}"`
+
+**Syntax for ngStyle** - `[ngStyle]="{'background-color':'green'}"`, `[ngStyle]="{'background-color': condition ? 'green' : ‘red’}"`
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you create directives using CLI</h2>
+
+You can use CLI command `ng generate directive` to create the directive class file. It creates the source file(`src/app/components/directivename.directive.ts`), the respective test file `.spec.ts` and declare the directive class file in root module.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Give an example for attribute directives</h2>
+
+Let's take simple highlighter behavior as a example directive for DOM element. You can create and apply the attribute directive using below step:
+
+1. Create HighlightDirective class with the file name `src/app/highlight.directive.ts`. In this file, we need to import **Directive** from core library to apply the metadata and **ElementRef** in the directive's constructor to inject a reference to the host DOM element ,
+
+```javascript
+import { Directive, ElementRef } from '@angular/core';
+
+@Directive({
+    selector: '[appHighlight]'
+})
+export class HighlightDirective {
+    constructor(el: ElementRef) {
+        el.nativeElement.style.backgroundColor = 'red';
+    }
+}
+```
+2. Apply the attribute directive as an attribute to the host element(for example, <p>)
+
+```javascript
+<p appHighlight>Highlight me!</p>
+```
+
+3. Run the application to see the highlight behavior on paragraph element
+
+```javascript
+ng serve
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of hidden property</h2>
+
+The hidden property is used  to show or hide the associated DOM element, based on an expression. It can be compared close to `ng-show` directive in AngularJS. Let's say you want to show user name based on the availability of user using `hidden` property.
+
+```html
+<div [hidden]="!user.name">
+    My name is: {{user.name}}
+</div>
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the difference between ngIf and hidden property</h2>
+
+The main difference is that *ngIf will remove the element from the DOM, while [hidden] actually plays with the CSS style by setting `display:none`. Generally it is expensive to add and remove stuff from the DOM for frequent actions.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is index property in ngFor directive</h2>
+
+The index property of the NgFor directive is used to return the zero-based index of the item in each iteration. You can capture the index in a template input variable and use it in the template.
+
+For example, you can capture the index in a variable named indexVar and displays it with the todo's name using ngFor directive as below.
+
+```html
+<div *ngFor="let todo of todos; let i=index">{{i + 1}} - {{todo.name}}</div>
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of ngFor trackBy</h2>
+
+The main purpose of using *ngFor with trackBy option is performance optimization. Normally if you use NgFor with large data sets, a small change to one item by removing or adding an item, can trigger a cascade of DOM manipulations. In this case, Angular sees only a fresh list of new object references and to replace the old DOM elements with all new DOM elements. You can help Angular to track which items added or removed by providing a `trackBy` function which takes the index and the current item as arguments and needs to return the unique identifier for this item.
+
+For example, lets set trackBy to the trackByTodos() method
+```html
+<div *ngFor="let todo of todos; trackBy: trackByTodos">
+    ({{todo.id}}) {{todo.name}}
+</div>
+```
+and define the trackByTodos method,
+
+```javascript
+trackByTodos(index: number, item: Todo): number { return todo.id; }
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of ngSwitch directive</h2>
+
+**NgSwitch** directive is similar to JavaScript switch statement which displays one element from among several possible elements, based on a switch condition. In this case only the selected element placed into the DOM. It has been used along with `NgSwitch`, `NgSwitchCase` and `NgSwitchDefault` directives.
+
+For example, let's display the browser details based on selected browser using ngSwitch directive.
+```html
+<div [ngSwitch]="currentBrowser.name">
+    <chrome-browser *ngSwitchCase="'chrome'" [item]="currentBrowser"></chrome-browser>
+    <firefox-browser *ngSwitchCase="'firefox'" [item]="currentBrowser"></firefox-browser>
+    <opera-browser *ngSwitchCase="'opera'" [item]="currentBrowser"></opera-browser>
+    <safari-browser *ngSwitchCase="'safari'" [item]="currentBrowser"></safari-browser>
+    <ie-browser *ngSwitchDefault [item]="currentItem"></ie-browser>
+</div>
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How to set ngFor and ngIf on the same element</h2>
+
+Sometimes you may need to both ngFor and ngIf on the same element but unfortunately you are going to encounter below template error.
+
+```cmd
+Template parse errors: Can't have multiple template bindings on one element.
+```
+In this case, You need to use either ng-container or ng-template.
+
+Let's say if you try to loop over the items only when the items are available, the below code throws an error in the browser
+
+```html
+<ul *ngIf="items" *ngFor="let item of items">
+    <li></li>
+</ul>
+```
+and it can be fixed by
+
+```html
+<ng-container *ngIf="items">
+    <ul *ngFor="let item of items">
+        <li></li>
+    </ul>
+</ng-container>
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is host property in css</h2>
+
+The `:host` pseudo-class selector is used to target styles in the element that hosts the component. Since the host element is in a parent component's template, you can't reach the host element from inside the component by other means.
+
+For example, you can create a border for parent element as below,
+
+```js
+//Other styles for app.component.css
+//...
+:host {
+    display: block;
+    border: 1px solid black;
+    padding: 20px;
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 
 
