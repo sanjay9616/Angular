@@ -1,13 +1,5 @@
 ### ----------------------------------------------------------------------------------------------------------------------- ###
 
-**DATA BINDING - Interpolation, Property Binding, Class Binding, Style Binding, Attrinute Binding, Event Binding, Two-way Binding**
-What is a data binding?
-What is interpolation?
-How do you categorize data binding types?
-What is the difference between interpolated content and innerHTML?
-
-### ----------------------------------------------------------------------------------------------------------------------- ###
-
 **DATA SHARING BETWEEN COMPONENTS - Parent to child: via Input(), Child to Parent: via Output() and EventEmitter, Child to Parent: via ViewChild, Unrelated Components: via Service**
 
 ### ----------------------------------------------------------------------------------------------------------------------- ###
