@@ -283,9 +283,13 @@ export class ChangeUserDirective {
 1. **Structural directives** — These directives change the DOM **layout** by adding and removing DOM elements, ex - *ngIf, *ngFor, *ngSwitch.
 2. **Attribute directives** — These directives change the appearance or behavior of an element, component, or another directive, ex - ngClass, ngStyle, ngModel.
 
-**Syntax for ngClass** - `[ngClass]="{'class': true}"`, `[ngClass]="[condiion ? 'class1' : 'class2']"`, `[ngClass]="{'class1': true, 'class2': true, 'class3': true}"`
+**Syntax for ngClass**
 
-**Syntax for ngStyle** - `[ngStyle]="{'background-color':'green'}"`, `[ngStyle]="{'background-color': condition ? 'green' : ‘red’}"`
+`[ngClass]="{'class': true}"`, `[ngClass]="[condiion ? 'class1' : 'class2']"`, `[ngClass]="{'class1': true, 'class2': true, 'class3': true}"`
+
+**Syntax for ngStyle**
+
+`[ngStyle]="{'background-color':'green'}"`, `[ngStyle]="{'background-color': condition ? 'green' : ‘red’}"`
 
 **[⬆ Back to Top](#table-of-contents)**
 
