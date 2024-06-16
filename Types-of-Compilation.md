@@ -17,11 +17,13 @@ Angular offers two ways to compiler your application:
 <h3>3 Phases of AOT Compilation</h3>
 
 **1. Code Analysis:** In this phase, the typescript compiler and AOT collector creates a representation of the source. The collector doesn't attempt to interpret the metadata it collects. It represents the metadata as best it can and records errors when detects a metadata syntax violation.
+
     - Exression Syntaxes
     - No Arrow Functions
     - Code Folding
 
 **2. Code Generation**: In this phase, the compiler's StaticReflector interprets the metadata collected in phase 1, performs additional validation of the metadata, and throws an error if it detects a metadata restrictios violation.
+
     - Generating classs
     - Functions
     - Metadata rewriting
