@@ -287,10 +287,11 @@ At the very top, the next parent injector in the hierarchy is the `NullInjector(
 <img src="https://media.licdn.com/dms/image/D5622AQG87_LQY3-BTw/feedshare-shrink_800/0/1690728701291?e=1721260800&v=beta&t=Z_gCyPlio-_yIbLJ15fCThe8IQmrxLquKxHWfhf7Eh0">
 
 
-#### ElementInjector
+**5. ElementInjector**
+
 Angular creates `ElementInjector` hierarchies implicitly for each DOM element. `ElementInjector` injector is being created for any tag that matches the angular component, or any tag on which directive is applied, and you can configure it in component and directive annotations inside the provider's property, thus, it creates its own hierarchy likewise the upper one.
 
-![Screenshot](images/element%20injector%20hieracrhy.png)![element injector hieracrhy](https://github.com/sanjay9616/Angular/assets/87460579/8bfb714d-d709-4b56-890d-c49b94c301ad)
+[element injector hieracrhy](https://github.com/sanjay9616/Angular/assets/87460579/8bfb714d-d709-4b56-890d-c49b94c301ad)
 
 
 **[⬆ Back to Top](#table-of-contents)**
