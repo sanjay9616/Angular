@@ -38,16 +38,6 @@
 **Angular vs AnjularJS**
 **Jquery vs Angular**
 **Angular expressions vs JavaScript expressions**
-What are different types of compilation in Angular?
-What is JIT?
-What is AOT?
-What is AOT compiler?
-Why do we need compilation process?
-What are the advantages with AOT?
-What are the ways to control AOT compilation?
-What are the three phases of AOT?
-Can I use arrow functions in AOT?
-Can I use any javascript feature for expression syntax in AOT?
 
 What is folding?
 What are macros?
