@@ -14,6 +14,20 @@
 | 1   | [What is Angular CLI](#What-is-Angular-CLI)                                                                                                             |
 | 1   | [What is dependency injection in Angular](#What-is-dependency-injection-in-Angular)                                                                     |
 | 1   | [How is Dependency Hierarchy formed](#How-is-Dependency-Hierarchy-formed)                                                                               |
+| 1   | [What is the option to choose between inline and external template file](#What-is-the-option-to-choose-between-inline-and-external-template-file)       |
+| 1   | [What happens if you use script tag inside template](#What-happens-if-you-use-script-tag-inside-template)                                               |
+| 1   | [What are template expressions](#What-are-template-expressions)                                                                                         |
+| 1   | [What are template statements](#What-are-template-statements)                                                                                           |
+| 1   | [What are Angular elements](#What-are-Angular-elements)                                                                                                 |
+| 1   | [What is the browser support of Angular Elements](#What-is-the-browser-support-of-Angular-Elements)                                                     |
+| 1   | [What are custom elements](#What-are-custom-elements)                                                                                                   |
+| 1   | [Do I need to bootstrap custom elements](#Do-I-need-to-bootstrap-custom-elements)                                                                       |
+| 1   | [Explain how custom elements works internally](#Explain-how-custom-elements-works-internally)                                                           |
+| 1   | [How to transfer components to custom elements](#How-to-transfer-components-to-custom-elements)                                                         |
+| 1   | [What are the mapping rules between Angular component and custom element](#What-are-the-mapping-rules-between-Angular-component-and-custom-element)     |
+| 1   | [How do you define typings for custom elements](#How-do-you-define-typings-for-custom-elements)                                                         |
+| 1   | [What are dynamic components](#What-are-dynamic-components)                                                                                             |
+| 1   | [What is Angular Universal](#What-is-Angular-Universal)                                                                                                 |
 | 1   | [What is a data binding](#What-is-a-data-binding)                                                                                                       |
 | 2   | [What is interpolation](#What-is-interpolation)                                                                                                         |
 | 3   | [How do you categorize data binding types](#How-do-you-categorize-data-binding-types)                                                                   |
@@ -294,6 +308,177 @@ Angular creates `ElementInjector` hierarchies implicitly for each DOM element. `
 <img src="https://github.com/sanjay9616/Angular/assets/87460579/8bfb714d-d709-4b56-890d-c49b94c301ad">
 
 
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the option to choose between inline and external template file</h2>
+
+You can store your component's template in one of two places. You can define it inline using the **template** property, or you can define the template in a separate HTML file and link to it in the component metadata using the **@Component** decorator's **templateUrl** property.
+
+The choice between inline and separate HTML is a matter of taste, circumstances, and organization policy. But normally we use inline template for small portion of code and external template file for bigger views. By default, the Angular CLI generates components with a template file. But you can override that with the below command,
+```
+ng generate component hero -it
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What happens if you use script tag inside template</h2>
+
+Angular recognizes the value as unsafe and automatically sanitizes it, which removes the `script` tag but keeps safe content such as the text content of the `script` tag. This way it eliminates the risk of script injection attacks. If you still use it then it will be ignored and a warning appears in the browser console.
+
+Let's take an example of innerHtml property binding which causes XSS vulnerability,
+
+```typescript
+export class InnerHtmlBindingComponent {
+    // For example, a user/attacker-controlled value from a URL.
+    htmlSnippet = 'Template <script>alert("0wned")</script> <b>Syntax</b>';
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are template expressions</h2>
+
+A template expression produces a value similar to any Javascript expression. Angular executes the expression and assigns it to a property of a binding target; the target might be an HTML element, a component, or a directive. In the property binding, a template expression appears in quotes to the right of the = symbol as in `[property]="expression"`.
+
+In interpolation syntax, the template expression is surrounded by double curly braces. For example, in the below interpolation, the template expression is `{{username}}`,
+
+```html
+<h3>{{username}}, welcome to Angular</h3>
+```
+
+The below javascript expressions are prohibited in template expression
+1. assignments (=, +=, -=, ...)
+2. new
+3. chaining expressions with ; or ,
+4. increment and decrement operators (++ and --)
+
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are template statements</h2>
+
+ A template statement responds to an event raised by a binding target such as an element, component, or directive. The template statements appear in quotes to the right of the = symbol like `(event)="statement"`.
+
+Let's take an example of button click event's statement
+
+```html
+<button (click)="editProfile()">Edit Profile</button>
+```
+
+In the above expression, editProfile is a template statement. The below JavaScript syntax expressions are not allowed.
+
+1. new
+2. increment and decrement operators, ++ and --
+3. operator assignment, such as += and -=
+4. the bitwise operators | and &
+5. the template expression operators
+
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are Angular elements</h2>
+
+Angular elements are Angular components packaged as **custom elements** (a web standard for defining new HTML elements in a framework-agnostic way). Angular Elements host an Angular component, providing a bridge between the data and the logic defined in the component and the standard DOM APIs, thus, providing a way to use Angular components in `non-Angular environments`.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the browser support of Angular Elements</h2>
+
+Since Angular elements are packaged as custom elements the browser support of angular elements is same as custom elements support.
+
+This feature is is currently supported natively in a number of browsers and pending for other browsers.
+
+| Browser | Angular Element Support                                                                                                                                 |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Chrome  | Natively supported                                                                                                                                      |
+| Opera   | Natively supported                                                                                                                                      |
+| Safari  | Natively supported                                                                                                                                      |
+| Firefox | Natively supported from 63 version onwards. You need to enable dom.webcomponents.enabled and dom.webcomponents.customelements.enabled in older browsers |
+| Edge    | Currently it is in progress                                                                                                                             |
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are custom elements</h2>
+
+Custom elements (or Web Components) are a Web Platform feature which extends HTML by allowing you to define a tag whose content is created and controlled by JavaScript code. The browser maintains a `CustomElementRegistry` of defined custom elements, which maps an instantiable JavaScript class to an HTML tag. Currently this feature is supported by Chrome, Firefox, Opera, and Safari, and available in other browsers through polyfills.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Do I need to bootstrap custom elements</h2>
+
+No, custom elements bootstrap (or start) automatically when they are added to the DOM, and are automatically destroyed when removed from the DOM. Once a custom element is added to the DOM for any page, it looks and behaves like any other HTML element, and does not require any special knowledge of Angular.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Explain how custom elements works internally</h2>
+
+Below are the steps in an order about custom elements functionality,
+
+1. **App registers custom element with browser:** Use the `createCustomElement()` function to convert a component into a class that can be registered with the browser as a custom element.
+2. **App adds custom element to DOM:**  Add custom element just like a built-in HTML element directly into the DOM.
+3. **Browser instantiate component based class:** Browser creates an instance of the registered class and adds it to the DOM.
+4. **Instance provides content with data binding and change detection:** The content with in template is rendered using the component and DOM data.
+
+The flow chart of the custom elements functionality would be as follows,
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How to transfer components to custom elements</h2>
+
+Transforming components to custom elements involves **two** major steps,
+
+1. **Build custom element class:** Angular provides the `createCustomElement()` function for converting an Angular component (along with its dependencies) to a custom element. The conversion process implements `NgElementConstructor` interface, and creates a constructor class which is used to produce a self-bootstrapping instance of Angular component.
+2. **Register element class with browser:** It uses `customElements.define()` JS function, to register the configured constructor and its associated custom-element tag with the browser's `CustomElementRegistry`. When the browser encounters the tag for the registered element, it uses the constructor to create a custom-element instance.
+
+The detailed structure would be as follows,
+
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the mapping rules between Angular component and custom element</h2>
+
+The Component properties and logic maps directly into HTML attributes and the browser's event system. Let us describe them in two steps,
+
+1. The createCustomElement() API parses the component input properties with corresponding attributes for the custom element. For example, component @Input('myInputProp') converted as custom element attribute `my-input-prop`.
+2. The Component outputs are dispatched as HTML Custom Events, with the name of the custom event matching the output name. For example, component @Output() valueChanged = new EventEmitter() converted as custom element with dispatch event as "valueChanged".
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you define typings for custom elements</h2>
+
+You can use the `NgElement` and `WithProperties` types exported from @angular/elements.
+
+Let's see how it can be applied by comparing with Angular component.
+
+1. The simple container with input property would be as below,
+
+```javascript
+@Component(...)
+class MyContainer {
+    @Input() message: string;
+}
+```
+
+2. After applying types typescript validates input value and their types,
+
+```javascirpt
+const container = document.createElement('my-container') as NgElement & WithProperties<{message: string}>;
+container.message = 'Welcome to Angular elements!';
+container.message = true;  // <-- ERROR: TypeScript knows this should be a string.
+container.greet = 'News';  // <-- ERROR: TypeScript knows there is no `greet` property on `container`.
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are dynamic components</h2>
+
+Dynamic components are the components in which the component's location in the application is not defined at build time i.e. they are not used in any angular template. Instead, the component is instantiated and placed in the application at runtime.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Angular Universal</h2>
+
+Angular Universal is a server-side rendering module for Angular applications in various scenarios. This is a community driven project and available under @angular/platform-server package. Recently Angular Universal is integrated with Angular CLI.
 
 **[⬆ Back to Top](#table-of-contents)**
 

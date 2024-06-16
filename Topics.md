@@ -38,30 +38,17 @@
 **Angular vs AnjularJS**
 **Jquery vs Angular**
 **Angular expressions vs JavaScript expressions**
-What is the option to choose between inline and external template file?
-What happens if you use script tag inside template?
-What are template expressions?
-What are template statements?
-What are Angular elements?
-What is the browser support of Angular Elements?
-What are custom elements?
-Do I need to bootstrap custom elements?
-Explain how custom elements works internally?
-How to transfer components to custom elements?
-What are the mapping rules between Angular component and custom element?
-How do you define typings for custom elements?
-What are dynamic components?
-What is Angular Universal?
 What are different types of compilation in Angular?
-
 What is JIT?
 What is AOT?
+What is AOT compiler?
 Why do we need compilation process?
 What are the advantages with AOT?
 What are the ways to control AOT compilation?
 What are the three phases of AOT?
 Can I use arrow functions in AOT?
 Can I use any javascript feature for expression syntax in AOT?
+
 What is folding?
 What are macros?
 How do you provide configuration inheritance?
@@ -158,7 +145,6 @@ What is select ICU expression?
 How do you report missing translations?
 How do you provide build configuration for multiple locales?
 What is an angular library?
-What is AOT compiler?
 How do you select an element in component template?
 192	What is TestBed?
 193	What is protractor?
