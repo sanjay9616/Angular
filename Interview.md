@@ -4,28 +4,44 @@
 
 | No. | Questions                                                                                                                                               |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | [What is Angular Framework](#What-is-Angular-Framework)                                                                                                 |
+| 1   | [What is the difference between AngularJS and Angular](#What-is-the-difference-between-AngularJS-and-Angular)                                           |
+| 1   | [What is TypeScript](#What-is-TypeScript)                                                                                                               |
+| 1   | [Write a pictorial diagram of Angular architecture](#Write-a-pictorial-diagram-of-Angular-architecture)                                                 |
+| 1   | [What are the key components of Angular](#What-are-the-key-components-of-Angular)                                                                       |
+| 1   | [What are components](#What-are-components)                                                                                                             |
+| 1   | [What is a template](#What-is-a-template)                                                                                                               |
+| 1   | [What is Angular CLI](#What-is-Angular-CLI)                                                                                                             |
+| 1   | [What is dependency injection in Angular](#What-is-dependency-injection-in-Angular)                                                                     |
+| 1   | [How is Dependency Hierarchy formed](#How-is-Dependency-Hierarchy-formed)                                                                               |
 | 1   | [What is a data binding](#What-is-a-data-binding)                                                                                                       |
 | 2   | [What is interpolation](#What-is-interpolation)                                                                                                         |
 | 3   | [How do you categorize data binding types](#How-do-you-categorize-data-binding-types)                                                                   |
 | 4   | [What is the difference between interpolated content and innerHTM](#What-is-the-difference-between-interpolated-content-and-innerHTM)                   |
-| 4   | [What are lifecycle hooks available](#What-are-lifecycle-hooks-available)                                                                               |
-| 4   | [What is the difference between constructor and ngOnInit](#What-is-the-difference-between-constructor-and-ngOnInit)                                     |
-| 4   | [What are the lifecycle hooks of a zone](#What-are-the-lifecycle-hooks-of-a-zone)                                                                       |
-| 4   | [What are directives](#What-are-directives)                                                                                                             |
-| 4   | [What are the differences between Component and Directive](#What-are-the-differences-between-Component-and-Directive)                                   |
-| 4   | [What is the purpose of *ngFor directive](#What-is-the-purpose-of-*ngFor-directive)                                                                     |
-| 4   | [What is the purpose of *ngIf directive](#What-is-the-purpose-of-*ngIf-directive)                                                                       |
-| 4   | [What are the various kinds of directives](#What-are-the-various-kinds-of-directives)                                                                   |
-| 4   | [How do you create directives using CLI](#How-do-you-create-directives-using-CLI)                                                                       |
-| 4   | [Give an example for attribute directives](#Give-an-example-for-attribute-directives)                                                                   |
-| 4   | [What is the purpose of hidden property](#What-is-the-purpose-of-hidden-property)                                                                       |
-| 4   | [What is the difference between ngIf and hidden property](#What-is-the-difference-between-ngIf-and-hidden-property)                                     |
-| 4   | [What is index property in ngFor directive](#What-is-index-property-in-ngFor-directive)                                                                 |
-| 4   | [What is the purpose of ngFor trackBy](#What-is-the-purpose-of-ngFor-trackBy)                                                                           |
-| 4   | [What is the purpose of ngSwitch directive](#What-is-the-purpose-of-ngSwitch-directive)                                                                 |
-| 4   | [How to set ngFor and ngIf on the same element](#How-to-set-ngFor-and-ngIf-on-the-same-element)                                                         |
+| 5   | [What are lifecycle hooks available](#What-are-lifecycle-hooks-available)                                                                               |
+| 6   | [What is the difference between constructor and ngOnInit](#What-is-the-difference-between-constructor-and-ngOnInit)                                     |
+| 7   | [What are the lifecycle hooks of a zone](#What-are-the-lifecycle-hooks-of-a-zone)                                                                       |
+| 8   | [What are directives](#What-are-directives)                                                                                                             |
+| 9   | [What are the differences between Component and Directive](#What-are-the-differences-between-Component-and-Directive)                                   |
+| 10  | [What is the purpose of *ngFor directive](#What-is-the-purpose-of-*ngFor-directive)                                                                     |
+| 11  | [What is the purpose of *ngIf directive](#What-is-the-purpose-of-*ngIf-directive)                                                                       |
+| 12  | [What are the various kinds of directives](#What-are-the-various-kinds-of-directives)                                                                   |
+| 13  | [How do you create directives using CLI](#How-do-you-create-directives-using-CLI)                                                                       |
+| 14  | [Give an example for attribute directives](#Give-an-example-for-attribute-directives)                                                                   |
+| 15  | [What is the purpose of hidden property](#What-is-the-purpose-of-hidden-property)                                                                       |
+| 16  | [What is the difference between ngIf and hidden property](#What-is-the-difference-between-ngIf-and-hidden-property)                                     |
+| 17  | [What is index property in ngFor directive](#What-is-index-property-in-ngFor-directive)                                                                 |
+| 18  | [What is the purpose of ngFor trackBy](#What-is-the-purpose-of-ngFor-trackBy)                                                                           |
+| 19  | [What is the purpose of ngSwitch directive](#What-is-the-purpose-of-ngSwitch-directive)                                                                 |
+| 20  | [How to set ngFor and ngIf on the same element](#How-to-set-ngFor-and-ngIf-on-the-same-element)                                                         |
 | 4   | [What is host property in css](#What-is-host-property-in-css)                                                                                           |
 | 4   | [What is metadata](#What-is-metadata)                                                                                                                   |
+| 4   | [What are the restrictions of metadata](#What-are-the-restrictions-of-metadata)                                                                         |
+| 4   | [What is the purpose of metadata json files](#What-is-the-purpose-of-metadata-json-files)                                                               |
+| 4   | [Give an example of few metadata errors](#Give-an-example-of-few-metadata-errors)                                                                       |
+| 4   | [What is metadata rewriting](#What-is-metadata-rewriting)                                                                                               |
+| 4   | [What is the role of ngModule metadata in compilation process](#What-is-the-role-of-ngModule-metadata-in-compilation-process)                           |
+| 4   | [What is a service](#What-is-a-service)                                                                                                                 |
 | 4   | [What are class field decorators](#What-are-class-field-decorators)                                                                                     |
 | 4   | [What are the class decorators in Angular](#What-are-the-class-decorators-in-Angular)                                                                   |
 | 4   | [Is it possible to do aliasing for inputs and outputs](#Is-it-possible-to-do-aliasing-for-inputs-and-outputs)                                           |
@@ -73,6 +89,210 @@
 | 4   | [How do you get the current route](#How-do-you-get-the-current-route)                                                                                   |
 | 4   | [Is Angular supports dynamic imports](#Is-Angular-supports-dynamic-imports)                                                                             |
 | 4   | [What is lazy loading](#What-is-lazy-loading)                                                                                                           |
+
+### <h2>What is Angular Framework</h2>
+
+Angular is a **TypeScript-based open-source** front-end platform that makes it easy to build web, mobile and desktop applications. The major features of this framework include declarative templates, dependency injection, end to end tooling which ease application development.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the difference between AngularJS and Angular</h2>
+
+Angular is a completely revived component-based framework in which an application is a tree of individual components.
+
+Here are some of the major differences in tabular format:-
+
+| AngularJS                                   | Angular                                  |
+| ------------------------------------------- | ---------------------------------------- |
+| It is based on MVC architecture             | This is based on Service/Controller      |
+| It uses JavaScript to build the application | Uses TypeScript to build the application |
+| Based on controllers concept                | This is a component based UI approach    |
+| No support for mobile platforms             | Fully supports mobile platforms          |
+| Difficult to build SEO friendly application | Ease to build SEO friendly applications  |
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is TypeScript</h2>
+
+TypeScript is a strongly typed superset of JavaScript created by Microsoft that adds optional types, classes, async/await and many other features, and compiles to plain JavaScript. Angular is written entirely in TypeScript as a primary language.
+
+You can install TypeScript globally as
+
+```cmd
+npm install -g typescript
+```
+
+Let's see a simple example of TypeScript usage:-
+
+```typescript
+function greeter(person: string) {
+    return "Hello, " + person;
+}
+
+let user = "Sudheer";
+
+document.body.innerHTML = greeter(user);
+```
+
+The greeter method allows only string type as argument.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Write a pictorial diagram of Angular architecture</h2>
+
+The main building blocks of an Angular application are shown in the diagram below:-
+
+<img src="https://v2.angular.io/resources/images/devguide/architecture/overview2.png">
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the key components of Angular</h2>
+
+Angular has the key components below,
+
+1. **Component:** These are the basic building blocks of an Angular application to control HTML views.
+2. **Modules:** An Angular module is a set of angular basic building blocks like components, directives, services etc. An application is divided into logical pieces and each piece of code is called as "module" which perform a single task.
+3. **Templates:** These represent the views of an Angular application.
+4. **Services:** Are used to create components which can be shared across the entire application.
+5. **Metadata:** This can be used to add more data to an Angular class.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are components</h2>
+
+Components are the most basic UI building block of an Angular app, which form a tree of Angular components. These components are a subset of directives. Unlike directives, components always have a template, and only one component can be instantiated per element in a template.
+
+Let's see a simple example of Angular component
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component ({
+    selector: 'my-app',
+    template: ` <div>
+        <h1>{{title}}</h1>
+        <div>Learn Angular6 with examples</div>
+    </div> `,
+})
+
+export class AppComponent {
+    title: string = 'Welcome to Angular world';
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a template</h2>
+
+A template is a HTML view where you can display data by binding controls to properties of an Angular component. You can store your component's template in one of two places. You can define it inline using the template property, or you can define the template in a separate HTML file and link to it in the component metadata using the @Component decorator's templateUrl property.
+
+**Using inline template with template syntax,**
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component ({
+    selector: 'my-app',
+    template: '
+        <div>
+            <h1>{{title}}</h1>
+            <div>Learn Angular</div>
+        </div>
+    '
+})
+
+export class AppComponent {
+    title: string = 'Hello World';
+}
+```
+
+**Using separate template file such as app.component.html**
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component ({
+    selector: 'my-app',
+    templateUrl: 'app/app.component.html'
+})
+
+export class AppComponent {
+    title: string = 'Hello World';
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Angular CLI</h2>
+
+Angular CLI(**Command Line Interface**) is a command line interface to scaffold and build angular apps using nodejs style (commonJs) modules.
+
+You need to install using below npm command,
+
+```
+npm install @angular/cli@latest
+```
+
+Below are the list of few commands, which will come handy while creating angular projects
+
+1. **Creating New Project:** ng new <project-name>
+
+2. **Generating Components, Directives & Services:** ng generate/g <feature-name>
+
+The different types of commands would be,
+
+- ng generate class my-new-class: add a class to your application
+- ng generate component my-new-component: add a component to your application
+- ng generate directive my-new-directive: add a directive to your application
+- ng generate enum my-new-enum: add an enum to your application
+- ng generate module my-new-module: add a module to your application
+- ng generate pipe my-new-pipe: add a pipe to your application
+- ng generate service my-new-service: add a service to your application
+
+3. **Running the Project:** ng serve
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is dependency injection in Angular</h2>
+
+Dependency injection (DI), is an important application design pattern in which a class asks for dependencies from external sources rather than creating them itself. Angular comes with its own dependency injection framework for resolving dependencies( services or objects that a class needs to perform its function).So you can have your services depend on other services throughout your application.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How is Dependency Hierarchy formed</h2>
+
+Injectors in Angular have rules that can be leveraged to achieve the desired visibility of injectables in your applications. By understanding these rules, you can determine in which NgModule, Component, or Directive you should declare a provider.
+
+**1. Angular has two injector hierarchies:**
+
+| Injecter Hierarchies        | Details                                                                                                                                     |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ModuleInjector` Hierarchy  | Configure a ModuleInjector in this hoerarchy using an @NgModule or @Injectable annotation.                                                  |
+| `ElementInjector` Hierarchy | Created a implicitly at each DOM element. An ElementInjector is empty by default it in the providers property on @Directive or @Component() |
+
+**2. Module injector**
+
+When angular starts, it creates a root injector where the services will be registered, these are provided via injectable annotation. All services provided in the `ng-model` property are called providers (if those modules are not lazy-loaded).
+
+Angular recursively goes through all models which are being used in the application and creates instances for provided services in the root injector. If you provide some service in an eagerly-loaded model, the service will be added to the root injector, which makes it available across the whole application.
+
+**3. Platform Module**
+
+During application bootstrapping angular creates a few more injectors, above the root injector goes the platform injector, this one is created by the platform browser dynamic function inside the `main.ts` file, and it provides some platform-specific features like `DomSanitizer`. 
+
+**4. NullInjector()**
+
+At the very top, the next parent injector in the hierarchy is the `NullInjector()`.The responsibility of this injector is to throw the error if something tries to find dependencies there, unless you've used `@Optional()` because ultimately, everything ends at the `NullInjector()` and it returns an error or, in the case of `@Optional()`, `null`.
+
+<img src="https://media.licdn.com/dms/image/D5622AQG87_LQY3-BTw/feedshare-shrink_800/0/1690728701291?e=1721260800&v=beta&t=Z_gCyPlio-_yIbLJ15fCThe8IQmrxLquKxHWfhf7Eh0">
+
+
+#### ElementInjector
+Angular creates `ElementInjector` hierarchies implicitly for each DOM element. `ElementInjector` injector is being created for any tag that matches the angular component, or any tag on which directive is applied, and you can configure it in component and directive annotations inside the provider's property, thus, it creates its own hierarchy likewise the upper one.
+
+![Screenshot](images/element%20injector%20hieracrhy.png)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ### <h2>What is a data binding</h2>
 
@@ -567,6 +787,147 @@ export class MyComponent {
     }
 }
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the restrictions of metadata</h2>
+
+In Angular, You must write metadata with the following general constraints,
+
+1. Write expression syntax with in the supported range of javascript features
+2. The compiler can only reference symbols which are exported
+3. Only call the functions supported by the compiler
+4. Decorated and data-bound class members must be public.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of metadata json files</h2>
+
+The metadata.json file can be treated as a diagram of the overall structure of a decorator's metadata, represented as an abstract syntax tree(AST). During the analysis phase, the AOT collector scan the metadata recorded in the Angular decorators and outputs metadata information in .metadata.json files, one per .d.ts file.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Give an example of few metadata errors</h2>
+
+Below are some of the errors encountered in metadata,
+
+1. **Expression form not supported:** Some of the language features outside of the compiler's restricted expression syntax used in angular metadata can produce this error.
+Let's see some of these examples,
+
+```javascript
+1. export class User { ... }
+    const prop = typeof User; // typeof is not valid in metadata
+2. { provide: 'token', useValue: { [prop]: 'value' } }; // bracket notation is not valid in metadata
+```
+
+2. **Reference to a local (non-exported) symbol:** The compiler encountered a referenced to a locally defined symbol that either wasn't exported or wasn't initialized.
+Let's take example of this error,
+
+```javascript
+// ERROR
+let username: string; // neither exported nor initialized
+
+@Component({
+    selector: 'my-component',
+    template: ... ,
+    providers: [
+        { provide: User, useValue: username }
+    ]
+})
+export class MyComponent {}
+```
+
+You can fix this by either exporting or initializing the value,
+
+```javascript
+export let username: string; // exported
+(or)
+let username = 'John'; // initialized
+```
+
+3. **Function calls are not supported:** The compiler does not currently support function expressions or lambda functions. For example, you cannot set a provider's useFactory to an anonymous function or arrow function as below.
+
+```javascript
+providers: [
+    { provide: MyStrategy, useFactory: function() { ... } },
+    { provide: OtherStrategy, useFactory: () => { ... } }
+]
+```
+
+You can fix this with exported function
+
+```javascript
+export function myStrategy() { ... }
+export function otherStrategy() { ... }
+... // metadata
+providers: [
+    { provide: MyStrategy, useFactory: myStrategy },
+    { provide: OtherStrategy, useFactory: otherStrategy },
+```
+4. **Destructured variable or constant not supported:** The compiler does not support references to variables assigned by destructuring.
+For example, you cannot write something like this:
+
+```javascript
+import { user } from './user';
+
+// destructured assignment to name and age
+const {name, age} = user;
+... //metadata
+providers: [
+    {provide: Name, useValue: name},
+    {provide: Age, useValue: age},
+]
+```
+
+You can fix this by non-destructured values
+
+```ts
+import { user } from './user';
+... //metadata
+providers: [
+    {provide: Name, useValue: user.name},
+    {provide: Age, useValue: user.age},
+]
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is metadata rewriting</h2>
+
+Metadata rewriting is the process in which the compiler converts the expression initializing the fields such as useClass, useValue, useFactory, and data into an exported variable, which replaces the expression. Remember that the compiler does this rewriting during the emit of the .js file but not in definition files( .d.ts file).
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the role of ngModule metadata in compilation process</h2>
+
+The `@NgModule` metadata is used to tell the Angular compiler what components to be compiled for this module and how to link this module with other modules.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a service</h2>
+
+A service is used when a common functionality needs to be provided to various modules. Services allow for greater separation of concerns for your application and better modularity by allowing you to extract common functionality out of components.
+
+Let's create a repoService which can be used across components,
+
+```typescript
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+
+@Injectable({ // The Injectable decorator is required for dependency injection to work
+    // providedIn option registers the service with a specific NgModule
+    providedIn: 'root',  // This declares the service with the root app (AppModule)
+})
+export class RepoService{
+    constructor(private http: Http){
+    }
+
+    fetchAll(){
+    return this.http.get('https://api.github.com/repositories');
+    }
+}
+```
+The above service uses Http service as a dependency.
 
 **[⬆ Back to Top](#table-of-contents)**
 

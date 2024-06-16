@@ -38,17 +38,6 @@
 **Angular vs AnjularJS**
 **Jquery vs Angular**
 **Angular expressions vs JavaScript expressions**
-What is Angular Framework?
-What is the difference between AngularJS and Angular?
-What is TypeScript?
-Write a pictorial diagram of Angular architecture?
-What are the key components of Angular?
-What are components?
-What is a template?
-What is Angular CLI?
-What is a service
-What is dependency injection in Angular?
-How is Dependency Hierarchy formed?
 What is the option to choose between inline and external template file?
 What happens if you use script tag inside template?
 What are template expressions?
@@ -64,20 +53,17 @@ How do you define typings for custom elements?
 What are dynamic components?
 What is Angular Universal?
 What are different types of compilation in Angular?
+
 What is JIT?
 What is AOT?
 Why do we need compilation process?
 What are the advantages with AOT?
 What are the ways to control AOT compilation?
-What are the restrictions of metadata?
 What are the three phases of AOT?
 Can I use arrow functions in AOT?
-What is the purpose of metadata json files?
 Can I use any javascript feature for expression syntax in AOT?
 What is folding?
 What are macros?
-Give an example of few metadata errors?
-What is metadata rewriting?
 How do you provide configuration inheritance?
 How do you specify angular template compiler options?
 How do you enable binding expression validation?
@@ -193,7 +179,6 @@ Why is not necessary to use entryComponents array every time?
 Do I still need to use entryComponents array in Angular9?
 Is it all components generated in production build?
 What is Angular compiler?
-What is the role of ngModule metadata in compilation process?
 What are the possible errors with declarations?
 What are the steps to use declaration elements?
 
