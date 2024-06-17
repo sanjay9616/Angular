@@ -23,9 +23,6 @@ What are the design goals of service workers?
 How do you add web workers in your application?
 What are the limitations with web workers?
 
-What is Angular CLI Builder?
-What is a builder?
-How do you invoke a builder?
 How do you create app shell in Angular?
 What are the case types in Angular?
 What is a DI token?

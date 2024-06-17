@@ -14,6 +14,9 @@
 | 1   | [What are components](#What-are-components)                                                                                                                                                 |
 | 1   | [What is a template](#What-is-a-template)                                                                                                                                                   |
 | 1   | [What is Angular CLI](#What-is-Angular-CLI)                                                                                                                                                 |
+| 1   | [What is Angular CLI Builder](#What-is-Angular-CLI-Builder)                                                                                                                                 |
+| 1   | [What is a builder](#What-is-a-builder)                                                                                                                                                     |
+| 1   | [How do you invoke a builder](#How-do-you-invoke-a-builder)                                                                                                                                 |
 | 1   | [What is dependency injection in Angular](#What-is-dependency-injection-in-Angular)                                                                                                         |
 | 1   | [How is Dependency Hierarchy formed](#How-is-Dependency-Hierarchy-formed)                                                                                                                   |
 | 1   | [What is the option to choose between inline and external template file](#What-is-the-option-to-choose-between-inline-and-external-template-file)                                           |
@@ -375,6 +378,24 @@ The different types of commands would be,
 - ng generate service my-new-service: add a service to your application
 
 3. **Running the Project:** ng serve
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Angular CLI Builder</h2>
+
+In Angular8, the CLI Builder API is stable and available to developers who want to customize the `Angular CLI` by adding or modifying commands. For example, you could supply a builder to perform an entirely new task, or to change which third-party tool is used by an existing command.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a builder</h2>
+
+A builder function is a function that uses the `Architect API` to perform a complex process such as "build" or "test". The builder code is defined in an npm package. For example, BrowserBuilder runs a webpack build for a browser target and KarmaBuilder starts the Karma server and runs a webpack build for unit tests.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you invoke a builder</h2>
+
+The Angular CLI command `ng run` is used to invoke a builder with a specific target configuration. The workspace configuration file, `angular.json`, contains default configurations for built-in builders.
 
 **[⬆ Back to Top](#table-of-contents)**
 
