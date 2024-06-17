@@ -178,6 +178,10 @@
 | 4   | [What are the advantages of Bazel tool](#What-are-the-advantages-of-Bazel-tool)                                                                                                             |
 | 4   | [How do you use Bazel with Angular CLI](#How-do-you-use-Bazel-with-Angular-CLI)                                                                                                             |
 | 4   | [How do you run Bazel directly](#How-do-you-run-Bazel-directly)                                                                                                                             |
+| 4   | [What is schematic](#What-is-schematic)                                                                                                                                                     |
+| 4   | [What is rule in Schematics](#What-is-rule-in-Schematics)                                                                                                                                   |
+| 4   | [What is Schematics CLI](#What-is-Schematics-CLI)                                                                                                                                           |
+| 4   | [How do you create schematics for libraries](#How-do-you-create-schematics-for-libraries)                                                                                                   |
 
 ### <h2>What is Angular Framework</h2>
 
@@ -3487,6 +3491,40 @@ bazel build [targets] // Compile the default output artifacts of the given targe
 bazel test [targets] // Run the tests with *_test targets found in the pattern.
 bazel run [target]: Compile the program represented by target and then run it.
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is schematic</h2>
+
+It's a scaffolding library that defines how to generate or transform a programming project by creating, modifying, refactoring, or moving files and code. It defines rules that operate on a virtual file system called a tree.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is rule in Schematics</h2>
+
+In schematics world, it's a function that operates on a file tree to create, delete, or modify files in a specific manner.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Schematics CLI</h2>
+
+Schematics come with their own command-line tool known as Schematics CLI. It is used to install the schematics executable, which you can use to create a new schematics collection with an initial named schematic. The collection folder is a workspace for schematics. You can also use the schematics command to add a new schematic to an existing collection, or extend an existing schematic. You can install Schematic CLI globally as below,
+
+```bash
+npm install -g @angular-devkit/schematics-cli
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you create schematics for libraries</h2>
+
+You can create your own schematic collections to integrate your library with the Angular CLI. These collections are classified as 3 main schematics,
+
+1. **Add schematics:** These schematics are used to install library in an Angular workspace using `ng add` command. For example, @angular/material schematic tells the add command to install and set up Angular Material and theming.
+
+2. **Generate schematics**: These schematics are used to modify projects, add configurations and scripts, and scaffold artifacts in library using `ng generate` command. For example, @angular/material generation schematic supplies generation schematics for the UI components. Let's say the table component is generated using `ng generate @angular/material:table `.
+
+3. **Update schematics:** These schematics are used to update library's dependencies and adjust for breaking changes in a new library release using `ng update` command. For example, @angular/material update schematic updates material and cdk dependencies using `ng update @angular/material` command.
 
 **[⬆ Back to Top](#table-of-contents)**
 

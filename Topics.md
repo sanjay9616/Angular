@@ -45,9 +45,7 @@ What is the reason to deprecate Web Tracing Framework?
 What is the reason to deprecate web worker packages?
 What is the browser support for Angular?
 
-What is schematic
-What is rule in Schematics?
-What is Schematics CLI?
+
 What are the best practices for security in angular?
 What is Angular security model for preventing XSS attacks?
 What is the role of template compiler for prevention of XSS attacks?
@@ -78,7 +76,6 @@ What is an angular library?
 192	What is TestBed?
 193	What is protractor?
 194	What is collection?
-195	How do you create schematics for libraries?
 196	How do you use jquery in Angular?
 What is safe navigation operator?
 Is any special configuration required for Angular9?
