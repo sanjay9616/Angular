@@ -116,6 +116,7 @@
 | 4   | [What is angular animation](#What-is-angular-animation)                                                                                                                                     |
 | 4   | [What are the steps to use animation module](#What-are-the-steps-to-use-animation-module)                                                                                                   |
 | 4   | [How do you trigger an animation](#How-do-you-trigger-an-animation)                                                                                                                         |
+| 4   | [What is an optional dependency](#What-is-an-optional-dependency)                                                                                                                           |
 | 4   | [What are pipes](#What-are-pipes)                                                                                                                                                           |
 | 4   | [What is the purpose of async pipe](#What-is-the-purpose-of-async-pipe)                                                                                                                     |
 | 4   | [What is a parameterized pipe](#What-is-a-parameterized-pipe)                                                                                                                               |
@@ -185,6 +186,84 @@
 | 4   | [What is rule in Schematics](#What-is-rule-in-Schematics)                                                                                                                                   |
 | 4   | [What is Schematics CLI](#What-is-Schematics-CLI)                                                                                                                                           |
 | 4   | [How do you create schematics for libraries](#How-do-you-create-schematics-for-libraries)                                                                                                   |
+| 4   | [What is folding](#What-is-folding)                                                                                                                                                         |
+| 4   | [What are macros](#What-are-macros)                                                                                                                                                         |
+| 4   | [How do you provide configuration inheritance](#How-do-you-provide-configuration-inheritance)                                                                                               |
+| 4   | [How do you specify angular template compiler options](#How-do-you-specify-angular-template-compiler-options)                                                                               |
+| 4   | [How do you enable binding expression validation](#How-do-you-enable-binding-expression-validation)                                                                                         |
+| 4   | [What is the purpose of any type cast function](#What-is-the-purpose-of-any-type-cast-function)                                                                                             |
+| 4   | [What is Non null type assertion operator](#What-is-Non-null-type-assertion-operator)                                                                                                       |
+| 4   | [What is type narrowing](#What-is-type-narrowing)                                                                                                                                           |
+| 4   | [How do you describe various dependencies in angular application](#How-do-you-describe-various-dependencies-in-angular-application)                                                         |
+| 4   | [What is zone](#What-is-zone)                                                                                                                                                               |
+| 4   | [What is codelyzer](#What-is-codelyzer)                                                                                                                                                     |
+| 4   | [What is Style function](#What-is-Style-function)                                                                                                                                           |
+| 4   | [What is the purpose of animate function](#What-is-the-purpose-of-animate-function)                                                                                                         |
+| 4   | [What is transition function](#What-is-transition-function)                                                                                                                                 |
+| 4   | [What is a service worker and its role in Angular](#What-is-a-service-worker-and-its-role-in-Angular)                                                                                       |
+| 4   | [What are the design goals of service workers](#What-are-the-design-goals-of-service-workers)                                                                                               |
+| 4   | [How do you add web workers in your application](#How-do-you-add-web-workers-in-your-application)                                                                                           |
+| 4   | [What are the limitations with web workers](#What-are-the-limitations-with-web-workers)                                                                                                     |
+| 4   | [How do you create app shell in Angular](#How-do-you-create-app-shell-in-Angular)                                                                                                           |
+| 4   | [What are the case types in Angular](#What-are-the-case-types-in-Angular)                                                                                                                   |
+| 4   | [What is a DI token](#What-is-a-DI-token)                                                                                                                                                   |
+| 4   | [What is Angular DSL](#What-is-Angular-DSL)                                                                                                                                                 |
+| 4   | [What is platform in Angular](#What-is-platform-in-Angular)                                                                                                                                 |
+| 4   | [How do you select an element with in a component template](#How-do-you-select-an-element-with-in-a-component-template)                                                                     |
+| 4   | [What is the purpose of differential loading in CLI](#What-is-the-purpose-of-differential-loading-in-CLI)                                                                                   |
+| 4   | [What are workspace APIs](#What-are-workspace-APIs)                                                                                                                                         |
+| 4   | [How do you upgrade location service of angularjs](#How-do-you-upgrade-location-service-of-angularjs)                                                                                       |
+| 4   | [What is NgUpgrade](#What-is-NgUpgrade)                                                                                                                                                     |
+| 4   | [How do you test Angular application using CLI](#How-do-you-test-Angular-application-using-CLI)                                                                                             |
+| 4   | [How to use polyfills in Angular application](#How-to-use-polyfills-in-Angular-application)                                                                                                 |
+| 4   | [What are the differences of various versions of Angular](#What-are-the-differences-of-various-versions-of-Angular)                                                                         |
+| 4   | [What are the security principles in angular](#What-are-the-security-principles-in-angular)                                                                                                 |
+| 4   | [What is the reason to deprecate Web Tracing Framework](#What-is-the-reason-to-deprecate-Web-Tracing-Framework)                                                                             |
+| 4   | [What is the reason to deprecate web worker packages](#What-is-the-reason-to-deprecate-web-worker-packages)                                                                                 |
+| 4   | [What is the browser support for Angular](#What-is-the-browser-support-for-Angular)                                                                                                         |
+| 4   | [What are the best practices for security in angular](#What-are-the-best-practices-for-security-in-angular)                                                                                 |
+| 4   | [What is Angular security model for preventing XSS attacks](#What-is-Angular-security-model-for-preventing-XSS-attacks)                                                                     |
+| 4   | [What is the role of template compiler for prevention of XSS attacks](#What-is-the-role-of-template-compiler-for-prevention-of-XSS-attacks)                                                 |
+| 4   | [What are the various security contexts in Angular](#What-are-the-various-security-contexts-in-Angular)                                                                                     |
+| 4   | [What is Sanitization? Is angular supports it](#What-is-Sanitization?-Is-angular-supports-it)                                                                                               |
+| 4   | [What is the purpose of innerHTML](#What-is-the-purpose-of-innerHTML)                                                                                                                       |
+| 4   | [How do you prevent automatic sanitization](#How-do-you-prevent-automatic-sanitization)                                                                                                     |
+| 4   | [Is safe to use direct DOM API methods in terms of security](#Is-safe-to-use-direct-DOM-API-methods-in-terms-of-security)                                                                   |
+| 4   | [What is DOM sanitize](#What-is-DOM-sanitize)                                                                                                                                               |
+| 4   | [How do you support server side XSS protection in Angular application](#How-do-you-support-server-side-XSS-protection-in-Angular-application)                                               |
+| 4   | [How does Angular simplifies Internationalization](#How-does-Angular-simplifies-Internationalization)                                                                                       |
+| 4   | [How do you manually register locale data](#How-do-you-manually-register-locale-data)                                                                                                       |
+| 4   | [What are the four phases of template translation](#What-are-the-four-phases-of-template-translation)                                                                                       |
+| 4   | [What is the purpose of i18n attribute](#What-is-the-purpose-of-i18n-attribute)                                                                                                             |
+| 4   | [What is the purpose of custom id](#What-is-the-purpose-of-custom-id)                                                                                                                       |
+| 4   | [What happens if the custom id is not unique](#What-happens-if-the-custom-id-is-not-unique)                                                                                                 |
+| 4   | [Can I translate text without creating an element](#Can-I-translate-text-without-creating-an-element)                                                                                       |
+| 4   | [How can I translate attribute](#How-can-I-translate-attribute)                                                                                                                             |
+| 4   | [List down the pluralization categories](#List-down-the-pluralization-categories)                                                                                                           |
+| 4   | [What is select ICU expression](#What-is-select-ICU-expression)                                                                                                                             |
+| 4   | [How do you report missing translations](#How-do-you-report-missing-translations)                                                                                                           |
+| 4   | [How do you provide build configuration for multiple locales](#How-do-you-provide-build-configuration-for-multiple-locales)                                                                 |
+| 4   | [What is an angular library](#What-is-an-angular-library)                                                                                                                                   |
+| 4   | [What is TestBed](#What-is-TestBed)                                                                                                                                                         |
+| 4   | [What is protractor](#What-is-protractor)                                                                                                                                                   |
+| 4   | [What is collection](#What-is-collection)                                                                                                                                                   |
+| 4   | [How do you use jquery in Angular](#How-do-you-use-jquery-in-Angular)                                                                                                                       |
+| 4   | [What is safe navigation operator](#What-is-safe-navigation-operator)                                                                                                                       |
+| 4   | [Is any special configuration required for Angular9](#Is-any-special-configuration-required-for-Angular9)                                                                                   |
+| 4   | [What are type safe TestBed API changes in Angular9](#What-are-type-safe-TestBed-API-changes-in-Angular9)                                                                                   |
+| 4   | [Is mandatory to pass static flag for ViewChild](#Is-mandatory-to-pass-static-flag-for-ViewChild)                                                                                           |
+| 4   | [Is it all components generated in production build](#Is-it-all-components-generated-in-production-build)                                                                                   |
+| 4   | [What is Angular compiler](#What-is-Angular-compiler)                                                                                                                                       |
+| 4   | [How do you get current direction for locales](#How-do-you-get-current-direction-for-locales)                                                                                               |
+| 4   | [What is ngcc](#What-is-ngcc)                                                                                                                                                               |
+| 4   | [What is ngzone](#What-is-ngzone)                                                                                                                                                           |
+| 4   | [What is NoopZone](#What-is-NoopZone)                                                                                                                                                       |
+| 4   | [How do you create displayBlock components](#How-do-you-create-displayBlock-components)                                                                                                     |
+| 4   | [What are the possible data change scenarios for change detection](#What-are-the-possible-data-change-scenarios-for-change-detection)                                                       |
+| 4   | [What is a zone context](#What-is-a-zone-context)                                                                                                                                           |
+| 4   | [How do you change the settings of zonejs](#How-do-you-change-the-settings-of-zonejs)                                                                                                       |
+| 4   | [What is Component Test Harnesses](#What-is-Component-Test-Harnesses)                                                                                                                       |
+| 4   | [What is the benefit of Automatic Inlining of Fonts](#What-is-the-benefit-of-Automatic-Inlining-of-Fonts)                                                                                   |
 
 ### <h2>What is Angular Framework</h2>
 
@@ -2248,6 +2327,25 @@ toggle() {
 
 **[⬆ Back to Top](#table-of-contents)**
 
+### <h2>What is an optional dependency</h2>
+
+The optional dependency is a parameter decorator to be used on constructor parameters, which marks the parameter as being an optional dependency. Due to this, the DI framework provides null if the dependency is not found.
+For example, If you don't register a logger provider anywhere, the injector sets the value of logger(or logger service) to null in the below class.
+
+```js
+import { Optional } from '@angular/core';
+
+constructor(@Optional() private logger?: Logger) {
+    if (this.logger) {
+        this.logger.log('This is an optional dependency message');
+    } else {
+        console.log('The logger is not registered');
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ### <h2>What are pipes</h2>
 
 Pipes are simple functions that use [template expressions](#what-are-template-expressions) to accept data as input and transform it into a desired output. For example, let us take a pipe to transform a component's birthday property into a human-friendly date using **date** pipe.
@@ -3549,8 +3647,1186 @@ You can create your own schematic collections to integrate your library with the
 
 **[⬆ Back to Top](#table-of-contents)**
 
+### <h2>What is folding</h2>
 
+The compiler can only resolve references to exported symbols in the metadata. Where as some of the non-exported members are folded while generating the code. i.e Folding is a process in which the collector evaluate an expression during collection and record the result in the .metadata.json instead of the original expression.
 
+For example, the compiler couldn't refer selector reference because it is not exported
+
+```javascript
+let selector = 'app-root';
+@Component({
+    selector: selector
+})
+```
+Will be folded into inline selector
+
+```javascript
+@Component({
+        selector: 'app-root'
+    })
+```
+Remember that the compiler can’t fold everything. For example, spread operator on arrays, objects created using new keywords and function calls.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are macros</h2>
+
+The AOT compiler supports macros in the form of functions or static methods that return an expression in a `single return expression`.
+
+For example, let us take a below macro function,
+
+```javascript
+export function wrapInArray<T>(value: T): T[] {
+    return [value];
+}
+```
+
+You can use it inside metadata as an expression,
+
+```javascript
+@NgModule({
+    declarations: wrapInArray(TypicalComponent)
+})
+export class TypicalModule {}
+```
+
+The compiler treats the macro expression as it written directly
+
+```javascript
+@NgModule({
+    declarations: [TypicalComponent]
+})
+export class TypicalModule {}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you provide configuration inheritance</h2>
+
+Angular Compiler supports configuration inheritance through extends in the tsconfig.json on angularCompilerOptions. i.e, The configuration from the base file(for example, tsconfig.base.json) are loaded first, then overridden by those in the inheriting config file.
+
+```javascript
+{
+    "extends": "../tsconfig.base.json",
+    "compilerOptions": {
+    "experimentalDecorators": true,
+    ...
+    },
+    "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "preserveWhitespaces": true,
+    ...
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you specify angular template compiler options</h2>
+
+The angular template compiler options are specified as members of the **angularCompilerOptions** object in the tsconfig.json file. These options will be specified adjecent to typescript compiler options.
+
+```javascript
+{
+    "compilerOptions": {
+    "experimentalDecorators": true,
+                ...
+    },
+    "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "preserveWhitespaces": true,
+                ...
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you enable binding expression validation</h2>
+
+You can enable binding expression validation explicitly by adding the compiler option **fullTemplateTypeCheck** in the "angularCompilerOptions" of the project's tsconfig.json. It produces error messages when a type error is detected in a template binding expression.
+
+For example, consider the following component:
+
+```javascript
+@Component({
+    selector: 'my-component',
+    template: '{{user.contacts.email}}'
+})
+class MyComponent {
+    user?: User;
+}
+```
+This will produce the following error:
+```javascript
+my.component.ts.MyComponent.html(1,1): : Property 'contacts' does not exist on type 'User'. Did you mean 'contact'?
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of any type cast function</h2>
+
+You can disable binding expression type checking using $any() type cast function(by surrounding the expression). In the following example, the error Property contacts does not exist is suppressed by casting user to the any type.
+
+```ts
+template: '{{ $any(user).contacts.email }}'
+```
+The $any() cast function also works with this to allow access to undeclared members of the component.
+
+```ts
+template: '{{ $any(this).contacts.email }}'
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Non null type assertion operator</h2>
+
+You can use the non-null type assertion operator to suppress the Object is possibly 'undefined' error. In the following example, the user and contact properties are always set together, implying that contact is always non-null if user is non-null. The error is suppressed in the example by using contact!.email.
+
+```javascript
+@Component({
+    selector: 'my-component',
+    template: '<span *ngIf="user"> {{user.name}} contacted through {{contact!.email}} </span>'
+})
+class MyComponent {
+    user?: User;
+    contact?: Contact;
+
+    setData(user: User, contact: Contact) {
+    this.user = user;
+    this.contact = contact;
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is type narrowing</h2>
+
+The expression used in an ngIf directive is used to narrow type unions in the Angular template compiler similar to if expression in typescript. So *ngIf allows the typeScript compiler to infer that the data used in the binding expression will never be undefined.
+
+```javascript
+@Component({
+    selector: 'my-component',
+    template: '<span *ngIf="user"> {{user.contact.email}} </span>'
+})
+class MyComponent {
+    user?: User;
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you describe various dependencies in angular application</h2>
+
+The dependencies section of package.json with in an angular application can be divided as follow,
+
+1. **Angular packages:** Angular core and optional modules; their package names begin @angular/.
+2. **Support packages:** Third-party libraries that must be present for Angular apps to run.How do you describe various dependencies in angular application
+3. **Polyfill packages:** Polyfills plug gaps in a browser's JavaScript implementation.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is zone</h2>
+
+A Zone is an execution context that persists across async tasks. Angular relies on zone.js to run Angular's change detection processes when native JavaScript operations raise events
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is codelyzer</h2>
+
+Codelyzer provides set of tslint rules for static code analysis of Angular TypeScript projects. You can run the static code analyzer over web apps, NativeScript, Ionic etc. Angular CLI has support for this and it can be use as below,
+
+```bash
+ng new codelyzer
+ng lint
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Style function</h2>
+
+The style function is used to define a set of styles to associate with a given state name. You need to use it along with state() function to set CSS style attributes. For example, in the close state, the button has a height of 100 pixels, an opacity of 0.8, and a background color of green.
+
+```javascript
+state('close', style({
+    height: '100px',
+    opacity: 0.8,
+    backgroundColor: 'green'
+})),
+```
+**Note:** The style attributes must be in camelCase.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of animate function</h2>
+
+Angular Animations are a powerful way to implement sophisticated and compelling animations for your Angular single page web application.
+
+```javascript
+import { Component, OnInit, Input } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
+
+@Component({
+selector: 'app-animate',
+templateUrl: `<div [@changeState]="currentState" class="myblock mx-auto"></div>`,
+styleUrls: `.myblock {
+    background-color: green;
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    margin: 5rem;
+    }`,
+animations: [
+    trigger('changeState', [
+    state('state1', style({
+        backgroundColor: 'green',
+        transform: 'scale(1)'
+    })),
+    state('state2', style({
+        backgroundColor: 'red',
+        transform: 'scale(1.5)'
+    })),
+    transition('*=>state1', animate('300ms')),
+    transition('*=>state2', animate('2000ms'))
+    ])
+]
+})
+export class AnimateComponent implements OnInit {
+
+    @Input() currentState;
+
+    constructor() { }
+
+    ngOnInit() {
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is transition function</h2>
+
+The animation transition function is used to specify the changes that occur between one state and another over a period of time. It accepts two arguments: the first argument accepts an expression that defines the direction between two transition states, and the second argument accepts an animate() function.
+
+Let's take an example state transition from open to closed with an half second transition between states.
+
+```javascript
+transition('open => closed', [
+    animate('500ms')
+]),
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a service worker and its role in Angular</h2>
+
+A service worker is a script that runs in the web browser and manages caching for an application. Starting from 5.0.0 version, Angular ships with a service worker implementation. Angular service worker is designed to optimize the end user experience of using an application over a slow or unreliable network connection, while also minimizing the risks of serving outdated content.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the design goals of service workers</h2>
+
+Below are the list of design goals of Angular's service workers,
+
+1. It caches an application just like installing a native application
+2. A running application continues to run with the same version of all files without any incompatible files
+3. When you refresh the application, it loads the latest fully cached version
+4. When changes are published then it immediately updates in the background
+5. Service workers saves the bandwidth by downloading the resources only when they changed.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you add web workers in your application</h2>
+
+You can add web worker anywhere in your application. For example, If the file that contains your expensive computation is `src/app/app.component.ts`, you can add a Web Worker using `ng generate web-worker app` command which will create `src/app/app.worker.ts` web worker file. This command will perform below actions,
+
+1. Configure your project to use Web Workers
+2. Adds app.worker.ts to receive messages
+```javascript
+addEventListener('message', ({ data }) => {
+    const response = `worker response to ${data}`;
+    postMessage(response);
+});
+```
+3. The component `app.component.ts` file updated with web worker file
+```javascript
+if (typeof Worker !== 'undefined') {
+    // Create a new
+    const worker = new Worker('./app.worker', { type: 'module' });
+    worker.onmessage = ({ data }) => {
+    console.log('page got message: $\{data\}');
+    };
+    worker.postMessage('hello');
+} else {
+    // Web Workers are not supported in this environment.
+}
+```
+
+**Note:** You may need to refactor your initial scaffolding web worker code for sending messages to and from.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the limitations with web workers</h2>
+
+You need to remember two important things when using Web Workers in Angular projects,
+
+1. Some environments or platforms(like @angular/platform-server) used in Server-side Rendering, don't support Web Workers. In this case you need to provide a fallback mechanism to perform the computations to work in this environments.
+2. Running Angular in web worker using `@angular/platform-webworker` is not yet supported in Angular CLI.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you create app shell in Angular</h2>
+
+An App shell is a way to render a portion of your application via a route at build time. This is useful to first paint of your application that appears quickly because the browser can render static HTML and CSS without the need to initialize JavaScript. You can achieve this using Angular CLI which generates an app shell for running server-side of your app.
+
+```javascript
+ng generate appShell [options] (or)
+ng g appShell [options]
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the case types in Angular</h2>
+
+Angular uses capitalization conventions to distinguish the names of various types. Angular follows the list of the below case types.
+
+1. **camelCase :** Symbols, properties, methods, pipe names, non-component directive selectors, constants uses lowercase on the first letter of the item. For example, "selectedUser"
+2. **UpperCamelCase (or PascalCase):** Class names, including classes that define components, interfaces, NgModules, directives, and pipes uses uppercase on the first letter of the item.
+3. **dash-case (or "kebab-case"):** The descriptive part of file names, component selectors uses dashes between the words. For example, "app-user-list".
+4. **UPPER_UNDERSCORE_CASE:** All constants uses capital letters connected with underscores. For example, "NUMBER_OF_USERS".
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a DI token</h2>
+
+A DI token is a lookup token associated with a dependency provider in dependency injection system. The injector maintains an internal token-provider map that it references when asked for a dependency and the DI token is the key to the map. Let's take example of DI Token usage,
+
+```javascript
+const BASE_URL = new InjectionToken<string>('BaseUrl');
+const injector = Injector.create({providers: [{provide: BASE_URL, useValue: 'http://some-domain.com'}]});
+const url = injector.get(BASE_URL);
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Angular DSL</h2>
+
+A domain-specific language (DSL) is a computer language specialized to a particular application domain. Angular has its own Domain Specific Language (DSL) which allows us to write Angular specific html-like syntax on top of normal html. It has its own compiler that compiles this syntax to html that the browser can understand. This DSL is defined in NgModules such as animations, forms, and routing and navigation.
+
+Basically you will see 3 main syntax in Angular DSL.
+
+1. `()`: Used for Output and DOM events.
+2. `[]`: Used for Input and specific DOM element attributes.
+3. `*`: Structural directives(*ngFor or *ngIf) will affect/change the DOM structure.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is platform in Angular</h2>
+
+A platform is the context in which an Angular application runs. The most common platform for Angular applications is a web browser, but it can also be an operating system for a mobile device, or a web server. The runtime-platform is provided by the @angular/platform-* packages and these packages allow applications that make use of `@angular/core` and `@angular/common` to execute in different environments.
+
+i.e, Angular can be used as platform-independent framework in different environments, For example,
+
+1. While running in the browser, it uses `platform-browser` package.
+2. When SSR(server-side rendering ) is used, it uses `platform-server` package for providing web server implementation.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you select an element with in a component template</h2>
+
+You can use `@ViewChild` directive to access elements in the view directly. Let's take input element with a reference,
+
+```html
+<input #uname>
+```
+and define view child directive and access it in ngAfterViewInit lifecycle hook
+
+```javascript
+@ViewChild('uname') input;
+
+ngAfterViewInit() {
+    console.log(this.input.nativeElement.value);
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of differential loading in CLI</h2>
+
+From Angular8 release onwards, the applications are built using differential loading strategy from CLI to build two separate bundles as part of your deployed application.
+
+1. The first build contains ES2015 syntax which takes the advantage of built-in support in modern browsers, ships less polyfills, and results in a smaller bundle size.
+2. The second build contains old ES5 syntax to support older browsers with all necessary polyfills. But this results in a larger bundle size.
+
+**Note:** This strategy is used to support multiple browsers but it only load the code that the browser needs.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are workspace APIs</h2>
+
+Angular 8.0 release introduces Workspace APIs to make it easier for developers to read and modify the angular.json file instead of manually modifying it. Currently, the only supported storage3 format is the JSON-based format used by the Angular CLI. You can enable or add optimization option for build target as below,
+
+```javascript
+import { NodeJsSyncHost } from '@angular-devkit/core/node';
+import { workspaces } from '@angular-devkit/core';
+
+async function addBuildTargetOption() {
+    const host = workspaces.createWorkspaceHost(new NodeJsSyncHost());
+    const workspace = await workspaces.readWorkspace('path/to/workspace/directory/', host);
+
+    const project = workspace.projects.get('my-app');
+    if (!project) {
+    throw new Error('my-app does not exist');
+    }
+
+    const buildTarget = project.targets.get('build');
+    if (!buildTarget) {
+    throw new Error('build target does not exist');
+    }
+
+    buildTarget.options.optimization = true;
+
+    await workspaces.writeWorkspace(workspace, host);
+}
+
+addBuildTargetOption();
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you upgrade location service of angularjs</h2>
+
+If you are using `$location` service in your old AngularJS application, now you can use `LocationUpgradeModule`(unified location service) which puts the responsibilities of `$location` service to `Location` service in Angular. Let's add this module to `AppModule` as below,
+
+```javascript
+// Other imports ...
+import { LocationUpgradeModule } from '@angular/common/upgrade';
+
+@NgModule({
+imports: [
+    // Other NgModule imports...
+    LocationUpgradeModule.config()
+]
+})
+export class AppModule {}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is NgUpgrade</h2>
+
+NgUpgrade is a library put together by the Angular team, which you can use in your applications to mix and match AngularJS and Angular components and bridge the AngularJS and Angular dependency injection systems.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you test Angular application using CLI</h2>
+
+Angular CLI downloads and install everything needed with the Jasmine Test framework. You just need to run `ng test` to see the test results. By default this command builds the app in watch mode, and launches the `Karma test runner`. The output of test results would be as below,
+
+```bash
+10% building modules 1/1 modules 0 active
+...INFO [karma]: Karma v1.7.1 server started at http://0.0.0.0:9876/
+...INFO [launcher]: Launching browser Chrome ...
+...INFO [launcher]: Starting browser Chrome
+...INFO [Chrome ...]: Connected on socket ...
+Chrome ...: Executed 3 of 3 SUCCESS (0.135 secs / 0.205 secs)
+```
+**Note:** A chrome browser also opens and displays the test output in the "Jasmine HTML Reporter".
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How to use polyfills in Angular application</h2>
+
+The Angular CLI provides support for polyfills officially. When you create a new project with the ng new command, a `src/polyfills.ts` configuration file is created as part of your project folder. This file includes the mandatory and many of the optional polyfills as JavaScript import statements. Let's categorize the polyfills,
+
+1. **Mandatory polyfills:** These are installed automatically when you create your project with ng new command and the respective import statements enabled in 'src/polyfills.ts' file.
+2. **Optional polyfills:** You need to install its npm package and then create import statement in 'src/polyfills.ts' file.
+  For example, first you need to install below npm package for adding web animations (optional) polyfill.
+      ```bash
+       npm install --save web-animations-js
+      ```
+  and create import statement in polyfill file.
+      ```javascript
+      import 'web-animations-js';
+      ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the differences of various versions of Angular</h2>
+
+There are different versions of Angular framework. Let's see the features of all the various versions,
+
+1. **Angular 1:**
+  * Angular 1 (AngularJS) is the first angular framework released in the year 2010.
+  * AngularJS is not built for mobile devices.
+  * It is based on controllers with MVC architecture.
+2. **Angular 2:**
+  * Angular 2 was released in the year 2016. Angular 2 is a complete rewrite of Angular1 version.
+  * The performance issues that Angular 1 version had has been addressed in Angular 2 version.
+  * Angular 2 is built from scratch for mobile devices unlike Angular 1 version.
+  * Angular 2 is components based.
+3. **Angular 3:**
+  * The following are the different package versions in Angular 2:
+    * @angular/core v2.3.0
+    * @angular/compiler v2.3.0
+    * @angular/http v2.3.0
+    * @angular/router v3.3.0
+  * The router package is already versioned 3 so to avoid confusion switched to Angular 4 version and skipped 3 version.
+4. **Angular 4:**
+  * The compiler generated code file size in AOT mode is very much reduced.
+  * With Angular 4 the production bundles size is reduced by hundreds of KB’s.
+  * Animation features are removed from angular/core and formed as a separate package.
+  * Supports Typescript 2.1 and 2.2.
+  * Angular Universal
+  * New HttpClient
+5. **Angular 5:**
+  * Angular 5 makes angular faster. It improved the loading time and execution time.
+  * Shipped with new build optimizer.
+  * Supports Typescript 2.5.
+  * Service Worker
+6. **Angular 6:**
+  * It is released in May 2018.
+  * Includes Angular Command Line Interface (CLI), Component Development KIT (CDK), Angular Material Package, Angular Elements.
+  * Service Worker bug fixes.
+  * i18n
+  * Experimental mode for Ivy.
+  * RxJS 6.0
+  * Tree Shaking
+7. **Angular 7:**
+  * It is released in October 2018.
+  * TypeScript 3.1
+  * RxJS 6.3
+  * New Angular CLI
+  * CLI Prompts capability provide an ability to ask questions to the user before they run. It is like interactive dialog between the user and the CLI
+  * With the improved CLI Prompts capability, it helps developers to make the decision. New ng commands ask users for routing and CSS styles types(SCSS) and ng add @angular/material asks for themes and gestures or animations.
+8. **Angular 8:**
+   * It is released in May 2019.
+   * TypeScript 3.4
+9. **Angular 9:**
+   * It is released in February 2020.
+   * TypeScript 3.7
+   * Ivy enabled by default
+10. **Angular 10:**
+      * It is released in June 2020.
+      * TypeScript 3.9
+      * TSlib 2.0
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the security principles in angular</h2>
+
+Below are the list of security principles in angular,
+
+1.	You should avoid direct use of the DOM APIs.
+2.  You should enable Content Security Policy (CSP) and configure your web server to return appropriate CSP HTTP headers.
+3.  You should Use the offline template compiler.
+4.  You should Use Server Side XSS protection.
+5.  You should Use DOM Sanitizer.
+6.  You should Preventing CSRF or XSRF attacks.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the reason to deprecate Web Tracing Framework</h2>
+
+Angular has supported the integration with the Web Tracing Framework (WTF) for the purpose of performance testing. Since it is not well maintained and failed in majority of the applications, the support is deprecated in latest releases.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the reason to deprecate web worker packages</h2>
+
+Both `@angular/platform-webworker` and `@angular/platform-webworker-dynamic` are officially deprecated, the Angular team realized it's not good practice to run the Angular application on Web worker
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the browser support for Angular</h2>
+
+Angular supports most recent browsers which includes both desktop and mobile browsers.
+
+| Browser   | Version                                         |
+| --------- | ----------------------------------------------- |
+| Chrome    | latest                                          |
+| Firefox   | latest                                          |
+| Edge      | 2 most recent major versions                    |
+| IE        | 11, 10, 9 (Compatibility mode is not supported) |
+| Safari    | 2 most recent major versions                    |
+| IE Mobile | 11                                              |
+| iOS       | 2 most recent major versions                    |
+| Android   | 7.0, 6.0, 5.0, 5.1, 4.4                         |
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the best practices for security in angular</h2>
+
+Below are the best practices of security in angular,
+
+1. Use the latest Angular library releases
+2. Don't modify your copy of Angular
+3. Avoid Angular APIs marked in the documentation as “Security Risk.”
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Angular security model for preventing XSS attacks</h2>
+
+Angular treats all values as untrusted by default. i.e, Angular sanitizes and escapes untrusted values When a value is inserted into the DOM from a template, via property, attribute, style, class binding, or interpolation.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the role of template compiler for prevention of XSS attacks</h2>
+
+The offline template compiler prevents vulnerabilities caused by template injection, and greatly improves application performance. So it is recommended to use offline template compiler in production deployments without dynamically generating any template.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the various security contexts in Angular</h2>
+
+Angular defines the following security contexts for sanitization,
+
+1. **HTML:** It is used when interpreting a value as HTML such as binding to innerHtml.
+2. **Style:** It is used when binding CSS into the style property.
+3. **URL:** It is used for URL properties such as `<a href>`.
+4. **Resource URL:** It is a URL that will be loaded and executed as code such as `<script src>`.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Sanitization? Is angular supports it</h2>
+
+**Sanitization** is the inspection of an untrusted value, turning it into a value that's safe to insert into the DOM. Yes, Angular suppports sanitization. It sanitizes untrusted values for HTML, styles, and URLs but sanitizing resource URLs isn't possible because they contain arbitrary code.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of innerHTML<h2>
+
+The innerHtml is a property of HTML-Elements, which allows you to set it's html-content programmatically. Let's display the below html code snippet in a `<div>` tag as below using innerHTML binding,
+
+```html
+<div [innerHTML]="htmlSnippet"></div>
+```
+and define the htmlSnippet property from any component
+```javascript
+export class myComponent {
+    htmlSnippet: string = '<b>Hello World</b>, Angular';
+}
+```
+Unfortunately this property could cause Cross Site Scripting (XSS) security bugs when improperly handled.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you prevent automatic sanitization</h2>
+
+Sometimes the applications genuinely need to include executable code such as displaying `<iframe>` from an URL. In this case, you need to prevent automatic sanitization in Angular by saying that you inspected a value, checked how it was generated, and made sure it will always be secure. Basically it involves 2 steps,
+
+1. Inject DomSanitizer: You can inject DomSanitizer in component as parameter in constructor
+2. Mark the trusted value by calling some of the below methods
+
+    1. bypassSecurityTrustHtml
+    2. bypassSecurityTrustScript
+    3. bypassSecurityTrustStyle
+    4. bypassSecurityTrustUrl
+    5. bypassSecurityTrustResourceUrl
+
+For example,The  usage of dangerous url to trusted url would be as below,
+
+```javascript
+constructor(private sanitizer: DomSanitizer) {
+this.dangerousUrl = 'javascript:alert("XSS attack")';
+this.trustedUrl = sanitizer.bypassSecurityTrustUrl(this.dangerousUrl);
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Is safe to use direct DOM API methods in terms of security</h2>
+
+No,the built-in browser DOM APIs or methods don't automatically protect you from security vulnerabilities. In this case it is recommended to use Angular templates instead of directly interacting with DOM. If it is unavoidable then use the built-in Angular sanitization functions.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is DOM sanitize</h2>
+
+`DomSanitizer` is used to help preventing Cross Site Scripting Security bugs (XSS) by sanitizing values to be safe to use in the different DOM contexts.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you support server side XSS protection in Angular application</h2>
+
+The server-side XSS protection is supported in an angular application by using a templating language that automatically escapes values to prevent XSS vulnerabilities on the server. But don't use a templating language to generate Angular templates on the server side which creates a high risk of introducing template-injection vulnerabilities.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How does Angular simplifies Internationalization</h2>
+
+Angular simplifies the below areas of internationalization,
+
+1. Displaying dates, number, percentages, and currencies in a local format.
+2. Preparing text in component templates for translation.
+3. Handling plural forms of words.
+4. Handling alternative text.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you manually register locale data</h2>
+
+By default, Angular only contains locale data for en-US which is English as spoken in the United States of America . But if you want to set to another locale, you must import locale data for that new locale. After that you can register using `registerLocaleData` method and the syntax of this method looks like below,
+
+```javascript
+registerLocaleData(data: any, localeId?: any, extraData?: any): void
+```
+For example, let us import German locale and register it in the application
+```javascript
+import { registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
+
+registerLocaleData(localeDe, 'de');
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the four phases of template translation</h2>
+
+The i18n template translation process has four phases:
+
+1. **Mark static text messages in your component templates for translation:** You can place i18n on every element tag whose fixed text is to be translated. For example, you need i18n attribue for heading as below,
+   ```javascript
+   <h1 i18n>Hello i18n!</h1>
+   ```
+
+2. **Create a translation file:** Use the Angular CLI xi18n command to extract the marked text into an industry-standard translation source file. i.e, Open terminal window at the root of the app project and run the CLI command xi18n.
+   ```bash
+   ng xi18n
+   ```
+  The above command creates a file named `messages.xlf` in your project's root directory.
+
+  **Note:** You can supply command options to change the format, the name, the location, and the source locale of the extracted file.
+
+3. **Edit the generated translation file:** Translate the extracted text into the target language. In this step, create a localization folder (such as `locale`)under root directory(src) and then create target language translation file by copying and renaming the default messages.xlf file. You need to copy source text node and provide the translation under target tag.
+   For example, create the translation file(messages.de.xlf) for German language
+   ```javascript
+   <trans-unit id="greetingHeader" datatype="html">
+     <source>Hello i18n!</source>
+     <target>Hallo i18n !</target>
+     <note priority="1" from="description">A welcome header for this sample</note>
+     <note priority="1" from="meaning">welcome message</note>
+   </trans-unit>
+   ```
+
+4. **Merge the completed translation file into the app:** You need to use Angular CLI build command to compile the app, choosing a locale-specific configuration, or specifying the following command options.
+
+     1. --i18nFile=path to the translation file
+     2. --i18nFormat=format of the translation file
+     3. --i18nLocale= locale id
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of i18n attribute</h2>
+
+The Angular i18n attribute marks translatable content. It is a custom attribute, recognized by Angular tools and compilers. The compiler removes it after translation.
+
+**Note:** Remember that i18n is not an Angular directive.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of custom id</h2>
+
+When you change the translatable text, the Angular extractor tool generates a new id for that translation unit. Because of this behavior, you must then update the translation file with the new id every time.
+
+For example, the translation file `messages.de.xlf.html` has generated trans-unit for some text message as below
+```html
+<trans-unit id="827wwe104d3d69bf669f823jjde888" datatype="html">
+```
+You can avoid this manual update of `id` attribute by specifying a custom id in the i18n attribute by using the prefix @@.
+```javascript
+<h1 i18n="@@welcomeHeader">Hello i18n!</h1>
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What happens if the custom id is not unique</h2>
+
+You need to define custom ids as unique. If you use the same id for two different text messages then only the first one is extracted. But its translation is used in place of both original text messages.
+
+For example, let's define same custom id `myCustomId` for two messages,
+```html
+<h2 i18n="@@myCustomId">Good morning</h3>
+<!-- ... -->
+<h2 i18n="@@myCustomId">Good night</p>
+```
+and the translation unit generated for first text in for German language as
+```html
+<trans-unit id="myId" datatype="html">
+    <source>Good morning</source>
+    <target state="new">Guten Morgen</target>
+</trans-unit>
+```
+Since custom id is the same, both of the elements in the translation contain the same text as below
+```html
+<h2>Guten Morgen</h2>
+<h2>Guten Morgen</h2>
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Can I translate text without creating an element</h2>
+
+Yes, you can achieve using `<ng-container>` attribute. Normally you need to wrap a text content with i18n attribute for the translation. But if you don't want to create a new DOM element just for the sake of translation, you can wrap the text in an <ng-container> element.
+
+```html
+<ng-container i18n>I'm not using any DOM element for translation</ng-container>
+```
+Remember that `<ng-container>` is transformed into an html comment
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How can I translate attribute</h2>
+
+You can translate attributes by attaching `i18n-x` attribute  where x is the name of the attribute to translate. For example, you can translate image title attribute as below,
+
+```html
+<img [src]="example" i18n-title title="Internationlization" />
+```
+By the way, you can also assign meaning, description and id with the i18n-x="<meaning>|<description>@@<id>" syntax.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>List down the pluralization categories</h2>
+
+Pluralization has below categories depending on the language.
+
+1. =0 (or any other number)
+2. zero
+3. one
+4. two
+5. few
+6. many
+7. other
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is select ICU expression</h2>
+
+ICU expression is is similar to the plural expressions except that you choose among alternative translations based on a string value instead of a number. Here you define those string values.
+
+Let's take component binding with `residenceStatus` property which has "citizen", "permanent resident" and "foreigner" possible values and the message maps those values to the appropriate translations.
+```javascript
+<span i18n>The person is {residenceStatus, select, citizen {citizen} permanent resident {permanentResident} foreigner {foreigner}}</span>
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you report missing translations</h2>
+
+By default, When translation is missing, it generates a warning message such as "Missing translation for message 'somekey'". But you can configure with a different level of message in Angular compiler as below,
+
+1. **Error:** It throws an error. If you are using AOT compilation, the build will fail. But if you are using JIT compilation, the app will fail to load.
+2. **Warning (default):** It shows a 'Missing translation' warning in the console or shell.
+3. **Ignore:** It doesn't do anything.
+
+If you use AOT compiler then you need to perform changes in `configurations` section of your Angular CLI configuration file, angular.json.
+```javascript
+"configurations": {
+ ...
+ "de": {
+   ...
+   "i18nMissingTranslation": "error"
+ }
+}
+```
+If you use the JIT compiler, specify the warning level in the compiler config at bootstrap by adding the 'MissingTranslationStrategy' property as below,
+```javascript
+import { MissingTranslationStrategy } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule, {
+ missingTranslation: MissingTranslationStrategy.Error,
+ providers: [
+   // ...
+ ]
+});
+```
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you provide build configuration for multiple locales</h2>
+
+You can provide build configuration such as translation file path, name, format and application url in `configuration` settings of Angular.json file. For example, the German version of your application configured the build as follows,
+
+```javascript
+"configurations": {
+"de": {
+    "aot": true,
+    "outputPath": "dist/my-project-de/",
+    "baseHref": "/fr/",
+    "i18nFile": "src/locale/messages.de.xlf",
+    "i18nFormat": "xlf",
+    "i18nLocale": "de",
+    "i18nMissingTranslation": "error",
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is an angular library</h2>
+
+An Angular library is an Angular project that differs from an app in that it cannot run on its own. It must be imported and used in an app. For example,  you can import or add `service worker` library to an Angular application which turns an application into a Progressive Web App (PWA).
+
+**Note:** You can create own third party library and publish it as npm package to be used in an Application.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is TestBed</h2>
+
+TestBed is an api for writing unit tests for Angular applications and it's libraries. Even though We still write our tests in Jasmine and run using Karma, this API provides an easier way to create components, handle injection, test asynchronous behaviour and interact with our application.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is protractor</h2>
+
+Protractor is an end-to-end test framework for Angular and AngularJS applications. It runs tests against your application running in a real browser, interacting with it as a user would.
+
+```javascript
+npm install -g protractor
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is collection</h2>
+
+Collection is a set of related schematics collected in an npm package. For example, `@schematics/angular` collection is used in Angular CLI to apply transforms to a web-app project. You can create your own schematic collection for customizing angular projects.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you use jquery in Angular</h2>
+
+You can use jquery in Angular using 3 simple steps,
+
+1. **Install the dependency:** At first, install the jquery dependency using npm
+   ```cmd
+      npm install --save jquery
+   ```
+2. **Add the jquery script:** In Angular-CLI project, add the relative path to jquery in the angular.json file.
+   ```javascript
+   "scripts": [
+      "node_modules/jquery/dist/jquery.min.js"
+   ]
+   ```
+3. **Start using jquery:** Define the element in template. Whereas declare the jquery variable and apply CSS classes on the element.
+   ```html
+   <div id="elementId">
+     <h1>JQuery integration</h1>
+   </div>
+   ```
+   ```javascript
+   import {Component, OnInit} from '@angular/core';
+
+   declare var $: any; // (or) import * as $ from 'jquery';
+
+   @Component({
+     selector: 'app-root',
+     templateUrl: './app.component.html',
+     styleUrls: ['./app.component.css']
+   })
+   export class AppComponent implements OnInit {
+     ngOnInit(): void {
+       $(document).ready(() => {
+         $('#elementId').css({'text-color': 'blue', 'font-size': '150%'});
+       });
+     }
+   }
+   ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is safe navigation operator</h2>
+
+The safe navigation operator(?)(or known as Elvis Operator) is used to guard against `null` and `undefined` values in property paths when you are not aware whether a path exists or not. i.e. It returns value of the object path if it exists, else it returns the null value.
+
+For example, you can access nested properties of a user profile easily without null reference errors as below,
+```javascript
+<p>The user firstName is: {{user?.fullName.firstName}}</p>
+```
+Using this safe navigation operator, Angular framework stops evaluating the expression when it hits the first null value and renders the view without any errors.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Is any special configuration required for Angular9</h2>
+
+You don't need any special configuration. In Angular9, the Ivy renderer is the default Angular compiler. Even though Ivy is available Angular8 itself, you had to configure it in tsconfig.json file as below,
+
+```javascript
+"angularCompilerOptions": {    "enableIvy": true  }
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are type safe TestBed API changes in Angular9</h2>
+
+Angular 9 provides type safe changes in TestBed API changes by replacing the old get function with the new inject method. Because TestBed.get method is not type-safe. The usage would be as below,
+
+```javascript
+TestBed.get(ChangeDetectorRef) // returns any. It is deprecated now.
+
+TestBed.inject(ChangeDetectorRef) // returns ChangeDetectorRef
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Is mandatory to pass static flag for ViewChild</h2>
+
+In Angular 8, the static flag is required for ViewChild. Whereas in Angular9, you no longer need to pass this property. Once you updated to Angular9 using `ng update`, the migration will remove { static: false } script everywhere.
+
+```javascript
+@ViewChild(ChildDirective) child: ChildDirective; // Angular9 usage
+@ViewChild(ChildDirective, { static: false }) child: ChildDirective; //Angular8 usage
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Is it all components generated in production build</h2>
+
+No, only the entry components and template components appears in production builds. If a component isn't an entry component and isn't found in a template, the tree shaker will throw it away. Due to this reason, make sure to add only true entry components to reduce the bundle size.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Angular compiler</h2>
+
+The Angular compiler is used to convert the application code into JavaScript code. It reads the template markup, combines it with the corresponding component class code, and emits component factories which creates JavaScript representation of the component along with elements of @Component metadata.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you get current direction for locales</h2>
+
+In Angular 9.1, the API method `getLocaleDirection` can be used to get the current direction in your app. This method is useful to support Right to Left locales for your Internationalization based applications.
+
+```js
+import { getLocaleDirection, registerLocaleData } from '@angular/common';
+import { LOCALE_ID } from '@angular/core';
+import localeAr from '@angular/common/locales/ar';
+
+...
+
+constructor(@Inject(LOCALE_ID) locale) {
+
+    const directionForLocale = getLocaleDirection(locale); // Returns 'rtl' or 'ltr' based on the current locale
+    registerLocaleData(localeAr, 'ar-ae');
+    const direction = getLocaleDirection('ar-ae'); // Returns 'rtl'
+
+    // Current direction is used to provide conditional logic here
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is ngcc</h2>
+
+The ngcc(Angular Compatibility Compiler) is a tool which upgrades node_module compiled with non-ivy ngc into ivy compliant format. The `postinstall` script from package.json will make sure your node_modules will be compatible with the Ivy renderer.
+
+```js
+"scripts": {
+"postinstall": "ngcc"
+}
+```
+
+Whereas, Ivy compiler (ngtsc), which compiles Ivy-compatible code.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is ngzone</h2>
+
+Angular provides a service called NgZone which creates a zone named `angular` to automatically trigger change detection when the following conditions are satisfied.
+
+1. When a sync or async function is executed.
+2. When there is no microTask scheduled.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is NoopZone</h2>
+
+Zone is loaded/required by default in Angular applications and it helps Angular to know when to trigger the change detection. This way, it make sures developers focus on application development rather core part of Angular. You can also use Angular without Zone but the change detection need to be implemented on your own and `noop zone` need to be configured in bootstrap process.
+
+Let's follow the below two steps to remove zone.js,
+
+1. Remove the zone.js import from polyfills.ts.
+    ```js
+    /***************************************************************************************************
+    * Zone JS is required by default for Angular itself.
+    */
+    // import 'zone.js/dist/zone';  // Included with Angular CLI.
+    ```
+2. Bootstrap Angular with noop zone in src/main.ts.
+    ```js
+    platformBrowserDynamic().bootstrapModule(AppModule, {ngZone: 'noop'})
+    .catch(err => console.error(err));
+    ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you create displayBlock components</h2>
+
+By default, Angular CLI creates components in an inline displayed mode(i.e, display:inline). But it is possible to create components with display: block style using `displayBlock` option,
+
+```js
+ng generate component my-component --displayBlock
+```
+(OR) the option can be turned on by default in Angular.json with `schematics.@schematics/angular:component.displayBlock` key value as true.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the possible data change scenarios for change detection</h2>
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a zone context</h2>
+
+Execution Context is an abstract concept that holds information about the environment within the current code being executed. A zone provides an execution context that persists across asynchronous operations is called as zone context. For example, the zone context will be same in both outside and inside setTimeout callback function,
+
+```js
+zone.run(() => {
+// outside zone
+expect(zoneThis).toBe(zone);
+setTimeout(function() {
+    // the same outside zone exist here
+    expect(zoneThis).toBe(zone);
+});
+});
+```
+The current zone is retrieved through `Zone.current`.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you change the settings of zonejs</h2>
+
+You can change the settings of zone by configuring them in a separate file and import it just after zonejs import.
+For example, you can disable the requestAnimationFrame() monkey patch to prevent change detection for no data update as one setting and prevent DOM events(a mousemove or scroll event) to trigger change detection. Let's say the new file named zone-flags.js,
+
+```js
+// disable patching requestAnimationFrame
+(window as any).__Zone_disable_requestAnimationFrame = true;
+
+// disable patching specified eventNames
+(window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove'];
+```
+The above configuration file can be imported in a polyfill.ts file as below,
+```js
+/***************************************************************************************************
+* Zone JS is required by default for Angular.
+*/
+import `./zone-flags`;
+import 'zone.js/dist/zone';  // Included with Angular CLI.
+```
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Component Test Harnesses</h2>
+
+A component harness is a testing API around an Angular directive or component to make tests simpler by hiding implementation details from test suites. This can be shared between unit tests, integration tests, and end-to-end tests. The idea for component harnesses comes from the **PageObject** pattern commonly used for integration testing.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the benefit of Automatic Inlining of Fonts</h2>
+
+During compile time, Angular CLI will download and inline the fonts that your application is using. This performance update speed up the first contentful paint(FCP) and this feature is enabled by default in apps built with version 11.
+
+**[⬆ Back to Top](#table-of-contents)**
 
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
