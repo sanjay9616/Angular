@@ -5,265 +5,265 @@
 | No. | Questions                                                                                                                                                                                   |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | [What is Angular Framework](#What-is-Angular-Framework)                                                                                                                                     |
-| 1   | [How do you find angular CLI version](#How-do-you-find-angular-CLI-version)                                                                                                                 |
-| 1   | [How do you upgrade angular version](#How-do-you-upgrade-angular-version)                                                                                                                   |
-| 1   | [What is the difference between AngularJS and Angular](#What-is-the-difference-between-AngularJS-and-Angular)                                                                               |
-| 1   | [What is TypeScript](#What-is-TypeScript)                                                                                                                                                   |
-| 1   | [Write a pictorial diagram of Angular architecture](#Write-a-pictorial-diagram-of-Angular-architecture)                                                                                     |
-| 1   | [What are the key components of Angular](#What-are-the-key-components-of-Angular)                                                                                                           |
-| 1   | [What are components](#What-are-components)                                                                                                                                                 |
-| 1   | [What is a template](#What-is-a-template)                                                                                                                                                   |
-| 1   | [What is Angular CLI](#What-is-Angular-CLI)                                                                                                                                                 |
-| 1   | [What is Angular CLI Builder](#What-is-Angular-CLI-Builder)                                                                                                                                 |
-| 1   | [What is a builder](#What-is-a-builder)                                                                                                                                                     |
-| 1   | [How do you invoke a builder](#How-do-you-invoke-a-builder)                                                                                                                                 |
-| 1   | [What is dependency injection in Angular](#What-is-dependency-injection-in-Angular)                                                                                                         |
-| 1   | [How is Dependency Hierarchy formed](#How-is-Dependency-Hierarchy-formed)                                                                                                                   |
-| 1   | [What is the option to choose between inline and external template file](#What-is-the-option-to-choose-between-inline-and-external-template-file)                                           |
-| 1   | [What happens if you use script tag inside template](#What-happens-if-you-use-script-tag-inside-template)                                                                                   |
-| 1   | [What are template expressions](#What-are-template-expressions)                                                                                                                             |
-| 1   | [What are template statements](#What-are-template-statements)                                                                                                                               |
-| 1   | [What are Angular elements](#What-are-Angular-elements)                                                                                                                                     |
-| 1   | [What is the browser support of Angular Elements](#What-is-the-browser-support-of-Angular-Elements)                                                                                         |
-| 1   | [What are custom elements](#What-are-custom-elements)                                                                                                                                       |
-| 1   | [Do I need to bootstrap custom elements](#Do-I-need-to-bootstrap-custom-elements)                                                                                                           |
-| 1   | [Explain how custom elements works internally](#Explain-how-custom-elements-works-internally)                                                                                               |
-| 1   | [How to transfer components to custom elements](#How-to-transfer-components-to-custom-elements)                                                                                             |
-| 1   | [What are the mapping rules between Angular component and custom element](#What-are-the-mapping-rules-between-Angular-component-and-custom-element)                                         |
-| 1   | [How do you define typings for custom elements](#How-do-you-define-typings-for-custom-elements)                                                                                             |
-| 1   | [What are dynamic components](#What-are-dynamic-components)                                                                                                                                 |
-| 1   | [What is Angular Universal](#What-is-Angular-Universal)                                                                                                                                     |
-| 1   | [What is content projection](#What-is-content-projection)                                                                                                                                   |
-| 1   | [What is ng-content and its purpose](#What-is-ng-content-and-its-purpose)                                                                                                                   |
-| 1   | [How do you select an element in component template](#How-do-you-select-an-element-in-component-template)                                                                                   |
-| 1   | [What is standalone component](#What-is-standalone-component)                                                                                                                               |
-| 1   | [How to create a standalone component using CLI command](#How-to-create-a-standalone-component-using-CLI-command)                                                                           |
-| 1   | [What is hydration](#What-is-hydration)                                                                                                                                                     |
-| 1   | [What is a data binding](#What-is-a-data-binding)                                                                                                                                           |
-| 2   | [What is interpolation](#What-is-interpolation)                                                                                                                                             |
-| 3   | [How do you categorize data binding types](#How-do-you-categorize-data-binding-types)                                                                                                       |
-| 4   | [What is the difference between interpolated content and innerHTM](#What-is-the-difference-between-interpolated-content-and-innerHTM)                                                       |
-| 5   | [What are lifecycle hooks available](#What-are-lifecycle-hooks-available)                                                                                                                   |
-| 6   | [What is the difference between constructor and ngOnInit](#What-is-the-difference-between-constructor-and-ngOnInit)                                                                         |
-| 7   | [What are the lifecycle hooks of a zone](#What-are-the-lifecycle-hooks-of-a-zone)                                                                                                           |
-| 8   | [What are directives](#What-are-directives)                                                                                                                                                 |
-| 9   | [What are the differences between Component and Directive](#What-are-the-differences-between-Component-and-Directive)                                                                       |
-| 10  | [What is the purpose of *ngFor directive](#What-is-the-purpose-of-*ngFor-directive)                                                                                                         |
-| 11  | [What is the purpose of *ngIf directive](#What-is-the-purpose-of-*ngIf-directive)                                                                                                           |
-| 12  | [What are the various kinds of directives](#What-are-the-various-kinds-of-directives)                                                                                                       |
-| 13  | [How do you create directives using CLI](#How-do-you-create-directives-using-CLI)                                                                                                           |
-| 14  | [Give an example for attribute directives](#Give-an-example-for-attribute-directives)                                                                                                       |
-| 15  | [What is the purpose of hidden property](#What-is-the-purpose-of-hidden-property)                                                                                                           |
-| 16  | [What is the difference between ngIf and hidden property](#What-is-the-difference-between-ngIf-and-hidden-property)                                                                         |
-| 17  | [What is index property in ngFor directive](#What-is-index-property-in-ngFor-directive)                                                                                                     |
-| 18  | [What is the purpose of ngFor trackBy](#What-is-the-purpose-of-ngFor-trackBy)                                                                                                               |
-| 19  | [What is the purpose of ngSwitch directive](#What-is-the-purpose-of-ngSwitch-directive)                                                                                                     |
-| 20  | [How to set ngFor and ngIf on the same element](#How-to-set-ngFor-and-ngIf-on-the-same-element)                                                                                             |
-| 4   | [What is host property in css](#What-is-host-property-in-css)                                                                                                                               |
-| 4   | [What is metadata](#What-is-metadata)                                                                                                                                                       |
-| 4   | [What are the restrictions of metadata](#What-are-the-restrictions-of-metadata)                                                                                                             |
-| 4   | [What is the purpose of metadata json files](#What-is-the-purpose-of-metadata-json-files)                                                                                                   |
-| 4   | [Give an example of few metadata errors](#Give-an-example-of-few-metadata-errors)                                                                                                           |
-| 4   | [What is metadata rewriting](#What-is-metadata-rewriting)                                                                                                                                   |
-| 4   | [What is the role of ngModule metadata in compilation process](#What-is-the-role-of-ngModule-metadata-in-compilation-process)                                                               |
-| 4   | [What is a service](#What-is-a-service)                                                                                                                                                     |
-| 4   | [What are class field decorators](#What-are-class-field-decorators)                                                                                                                         |
-| 4   | [What are the class decorators in Angular](#What-are-the-class-decorators-in-Angular)                                                                                                       |
-| 4   | [Is it possible to do aliasing for inputs and outputs](#Is-it-possible-to-do-aliasing-for-inputs-and-outputs)                                                                               |
-| 4   | [What is a module](#What-is-a-module)                                                                                                                                                       |
-| 4   | [What are feature modules](#What-are-feature-modules)                                                                                                                                       |
-| 4   | [What are the types of feature modules](#What-are-the-types-of-feature-modules)                                                                                                             |
-| 4   | [What are the imported modules in CLI generated feature modules](#What-are-the-imported-modules-in-CLI-generated-feature-modules)                                                           |
-| 4   | [What is the purpose of common module](#What-is-the-purpose-of-common-module)                                                                                                               |
-| 4   | [What is Angular Material](#What-is-Angular-Material)                                                                                                                                       |
-| 4   | [What happens if browserModule used in feature module](#What-happens-if-browserModule-used-in-feature-module)                                                                               |
-| 4   | [What happens if I import the same module twice](#What-happens-if-I-import-the-same-module-twice)                                                                                           |
-| 4   | [How does forRoot method helpful to avoid duplicate router instances](#How-does-forRoot-method-helpful-to-avoid-duplicate-router-instances)                                                 |
-| 4   | [What are the differences between ngmodule and javascript module](#What-are-the-differences-between-ngmodule-and-javascript-module)                                                         |
-| 4   | [Give few examples for NgModules](#Give-few-examples-for-NgModules)                                                                                                                         |
-| 4   | [What is declarable in Angular](#What-is-declarable-in-Angular)                                                                                                                             |
-| 4   | [What are the restrictions on declarable classes](#What-are-the-restrictions-on-declarable-classes)                                                                                         |
-| 4   | [What classes should not be added to declarations](#What-classes-should-not-be-added-to-declarations)                                                                                       |
-| 4   | [What are the possible errors with declarations](#What-are-the-possible-errors-with-declarations)                                                                                           |
-| 4   | [What are the steps to use declaration elements](#What-are-the-steps-to-use-declaration-elements)                                                                                           |
-| 4   | [What is a provider](#What-is-a-provider)                                                                                                                                                   |
-| 4   | [What is the recommendation for provider scope](#What-is-the-recommendation-for-provider-scope)                                                                                             |
-| 4   | [How do you configure injectors with providers at different levels](#How-do-you-configure-injectors-with-providers-at-different-levels)                                                     |
-| 4   | [How do you restrict provider scope to a module](#How-do-you-restrict-provider-scope-to-a-module)                                                                                           |
-| 4   | [What is the reason for No provider for HTTP exception](#What-is-the-reason-for-No-provider-for-HTTP-exception)                                                                             |
-| 4   | [What is a bootstrapping module](#What-is-a-bootstrapping-module)                                                                                                                           |
-| 4   | [What is a bootstrapped component](#What-is-a-bootstrapped-component)                                                                                                                       |
-| 4   | [How do you manually bootstrap an application](#How-do-you-manually-bootstrap-an-application)                                                                                               |
-| 4   | [Is it necessary for bootstrapped component to be entry component](#Is-it-necessary-for-bootstrapped-component-to-be-entry-component)                                                       |
-| 4   | [Why is not necessary to use entryComponents array every time](#Why-is-not-necessary-to-use-entryComponents-array-every-time)                                                               |
-| 4   | [Do I still need to use entryComponents array in Angular9](#Do-I-still-need-to-use-entryComponents-array-in-Angular9)                                                                       |
-| 4   | [What is a routed entry component](#What-is-a-routed-entry-component)                                                                                                                       |
-| 4   | [What is an entry component](#What-is-an-entry-component)                                                                                                                                   |
-| 4   | [What is a shared module](#What-is-a-shared-module)                                                                                                                                         |
-| 4   | [Can I share services using modules](#Can-I-share-services-using-modules)                                                                                                                   |
-| 4   | [How do you provide a singleton service](#How-do-you-provide-a-singleton-service)                                                                                                           |
-| 4   | [What are the different ways to remove duplicate service registration](#What-are-the-different-ways-to-remove-duplicate-service-registration)                                               |
-| 4   | [Is it mandatory to use injectable on every service class](#Is-it-mandatory-to-use-injectable-on-every-service-class)                                                                       |
-| 4   | [What are the types of injector hierarchies](#What-are-the-types-of-injector-hierarchies)                                                                                                   |
-| 4   | [How to inject the dynamic script in angular](#How-to-inject-the-dynamic-script-in-angular)                                                                                                 |
-| 4   | [What are the differences between AngularJS and Angular with respect to dependency injection](#What-are-the-differences-between-AngularJS-and-Angular-with-respect-to-dependency-injection) |
-| 4   | [What is HttpClient and its benefits](#What-is-HttpClient-and-its-benefits)                                                                                                                 |
-| 4   | [Explain on how to use HttpClient with an example](#Explain-on-how-to-use-HttpClient-with-an-example)                                                                                       |
-| 4   | [How can you read full response](#How-can-you-read-full-response)                                                                                                                           |
-| 4   | [How do you perform Error handling](#How-do-you-perform-Error-handling)                                                                                                                     |
-| 4   | [How do you pass headers for HTTP client](#How-do-you-pass-headers-for-HTTP-client)                                                                                                         |
-| 4   | [Is angular prevents http level vulnerabilities](#Is-angular-prevents-http-level-vulnerabilities)                                                                                           |
-| 4   | [What is angular animation](#What-is-angular-animation)                                                                                                                                     |
-| 4   | [What are the steps to use animation module](#What-are-the-steps-to-use-animation-module)                                                                                                   |
-| 4   | [How do you trigger an animation](#How-do-you-trigger-an-animation)                                                                                                                         |
-| 4   | [What is an optional dependency](#What-is-an-optional-dependency)                                                                                                                           |
-| 4   | [What are pipes](#What-are-pipes)                                                                                                                                                           |
-| 4   | [What is the purpose of async pipe](#What-is-the-purpose-of-async-pipe)                                                                                                                     |
-| 4   | [What is a parameterized pipe](#What-is-a-parameterized-pipe)                                                                                                                               |
-| 4   | [How do you chain pipes](#How-do-you-chain-pipes)                                                                                                                                           |
-| 4   | [What is a custom pipe](#What-is-a-custom-pipe)                                                                                                                                             |
-| 4   | [Give an example of custom pipe](#Give-an-example-of-custom-pipe)                                                                                                                           |
-| 4   | [What is the difference between pure and impure pipe](#What-is-the-difference-between-pure-and-impure-pipe)                                                                                 |
-| 4   | [What is slice pipe](#What-is-slice-pipe)                                                                                                                                                   |
-| 4   | [What are the list of template expression operators](#What-are-the-list-of-template-expression-operators)                                                                                   |
-| 4   | [What is the precedence between pipe and ternary operators](#What-is-the-precedence-between-pipe-and-ternary-operators)                                                                     |
-| 4   | [How does angular finds components, directives and pipes](#How-does-angular-finds-components,-directives-and-pipes)                                                                         |
-| 4   | [What are Http Interceptors](#What-are-Http-Interceptors)                                                                                                                                   |
-| 4   | [What are the applications of HTTP interceptors](#What-are-the-applications-of-HTTP-interceptors)                                                                                           |
-| 4   | [How can I use interceptor for an entire application](#How-can-I-use-interceptor-for-an-entire-application)                                                                                 |
-| 4   | [What are reactive forms](#What-are-reactive-forms)                                                                                                                                         |
-| 4   | [What are dynamic forms](#What-are-dynamic-forms)                                                                                                                                           |
-| 4   | [What are template driven forms](#What-are-template-driven-forms)                                                                                                                           |
-| 4   | [What are the differences between reactive forms and template driven forms](#What-are-the-differences-between-reactive-forms-and-template-driven-forms)                                     |
-| 4   | [What are the different ways to group form controls](#What-are-the-different-ways-to-group-form-controls)                                                                                   |
-| 4   | [How do you update specific properties of a form model](#How-do-you-update-specific-properties-of-a-form-model)                                                                             |
-| 4   | [What is the purpose of FormBuilder](#What-is-the-purpose-of-FormBuilder)                                                                                                                   |
-| 4   | [How do you verify the model changes in forms](#How-do-you-verify-the-model-changes-in-forms)                                                                                               |
-| 4   | [What are the state CSS classes provided by ngModel](#What-are-the-state-CSS-classes-provided-by-ngModel)                                                                                   |
-| 4   | [How do you reset the form](#How-do-you-reset-the-form)                                                                                                                                     |
-| 4   | [What are the types of validator functions](#What-are-the-types-of-validator-functions)                                                                                                     |
-| 4   | [Can you give an example of built-in validators](#Can-you-give-an-example-of-built-in-validators)                                                                                           |
-| 4   | [How do you optimize the performance of async validators](#How-do-you-optimize-the-performance-of-async-validators)                                                                         |
-| 4   | [What is Angular Router](#What-is-Angular-Router)                                                                                                                                           |
-| 4   | [What is the purpose of base href tag](#What-is-the-purpose-of-base-href-tag)                                                                                                               |
-| 4   | [What are the router imports](#What-are-the-router-imports)                                                                                                                                 |
-| 4   | [What is router outlet](#What-is-router-outlet)                                                                                                                                             |
-| 4   | [What are router links](#What-are-router-links)                                                                                                                                             |
-| 4   | [What are active router links](#What-are-active-router-links)                                                                                                                               |
-| 4   | [What is router state](#What-is-router-state)                                                                                                                                               |
-| 4   | [What are router events](#What-are-router-events)                                                                                                                                           |
-| 4   | [What is activated route](#What-is-activated-route)                                                                                                                                         |
-| 4   | [How do you define routes](#How-do-you-define-routes)                                                                                                                                       |
-| 4   | [What is the purpose of Wildcard route](#What-is-the-purpose-of-Wildcard-route)                                                                                                             |
-| 4   | [Do I need a Routing Module always](#Do-I-need-a-Routing-Module-always)                                                                                                                     |
-| 4   | [How do you detect route change in Angular](#How-do-you-detect-route-change-in-Angular)                                                                                                     |
-| 4   | [How can I use SASS in angular project](#How-can-I-use-SASS-in-angular-project)                                                                                                             |
-| 4   | [How do you get the current route](#How-do-you-get-the-current-route)                                                                                                                       |
-| 4   | [Is Angular supports dynamic imports](#Is-Angular-supports-dynamic-imports)                                                                                                                 |
-| 4   | [What is lazy loading](#What-is-lazy-loading)                                                                                                                                               |
-| 4   | [What are different types of compilation in Angular](#What-are-different-types-of-compilation-in-Angular)                                                                                   |
-| 4   | [What is JIT](#What-is-JIT)                                                                                                                                                                 |
-| 4   | [What is AOT](#What-is-AOT)                                                                                                                                                                 |
-| 4   | [What is AOT compiler](#What-is-AOT-compiler)                                                                                                                                               |
-| 4   | [Why do we need compilation process](#Why-do-we-need-compilation-process)                                                                                                                   |
-| 4   | [What are the advantages with AOT](#What-are-the-advantages-with-AOT)                                                                                                                       |
-| 4   | [What are the ways to control AOT compilation](#What-are-the-ways-to-control-AOT-compilation)                                                                                               |
-| 4   | [What are the three phases of AOT](#What-are-the-three-phases-of-AOT)                                                                                                                       |
-| 4   | [Can I use arrow functions in AOT](#Can-I-use-arrow-functions-in-AOT)                                                                                                                       |
-| 4   | [Can I use any javascript feature for expression syntax in AOT](#Can-I-use-any-javascript-feature-for-expression-syntax-in-AOT)                                                             |
-| 4   | [What is Angular Ivy](#What-is-Angular-Ivy)                                                                                                                                                 |
-| 4   | [What are the features included in ivy preview](#What-are-the-features-included-in-ivy-preview)                                                                                             |
-| 4   | [Can I use AOT compilation with Ivy](#Can-I-use-AOT-compilation-with-Ivy)                                                                                                                   |
-| 4   | [What is Angular Language Service](#What-is-Angular-Language-Service)                                                                                                                       |
-| 4   | [How do you install angular language service in the project](#How-do-you-install-angular-language-service-in-the-project)                                                                   |
-| 4   | [Is there any editor support for Angular Language Service](#Is-there-any-editor-support-for-Angular-Language-Service)                                                                       |
-| 4   | [Explain the features provided by Angular Language Service](#Explain-the-features-provided-by-Angular-Language-Service)                                                                     |
-| 4   | [What is Bazel tool](#What-is-Bazel-tool)                                                                                                                                                   |
-| 4   | [What are the advantages of Bazel tool](#What-are-the-advantages-of-Bazel-tool)                                                                                                             |
-| 4   | [How do you use Bazel with Angular CLI](#How-do-you-use-Bazel-with-Angular-CLI)                                                                                                             |
-| 4   | [How do you run Bazel directly](#How-do-you-run-Bazel-directly)                                                                                                                             |
-| 4   | [What is schematic](#What-is-schematic)                                                                                                                                                     |
-| 4   | [What is rule in Schematics](#What-is-rule-in-Schematics)                                                                                                                                   |
-| 4   | [What is Schematics CLI](#What-is-Schematics-CLI)                                                                                                                                           |
-| 4   | [How do you create schematics for libraries](#How-do-you-create-schematics-for-libraries)                                                                                                   |
-| 4   | [What is folding](#What-is-folding)                                                                                                                                                         |
-| 4   | [What are macros](#What-are-macros)                                                                                                                                                         |
-| 4   | [How do you provide configuration inheritance](#How-do-you-provide-configuration-inheritance)                                                                                               |
-| 4   | [How do you specify angular template compiler options](#How-do-you-specify-angular-template-compiler-options)                                                                               |
-| 4   | [How do you enable binding expression validation](#How-do-you-enable-binding-expression-validation)                                                                                         |
-| 4   | [What is the purpose of any type cast function](#What-is-the-purpose-of-any-type-cast-function)                                                                                             |
-| 4   | [What is Non null type assertion operator](#What-is-Non-null-type-assertion-operator)                                                                                                       |
-| 4   | [What is type narrowing](#What-is-type-narrowing)                                                                                                                                           |
-| 4   | [How do you describe various dependencies in angular application](#How-do-you-describe-various-dependencies-in-angular-application)                                                         |
-| 4   | [What is zone](#What-is-zone)                                                                                                                                                               |
-| 4   | [What is codelyzer](#What-is-codelyzer)                                                                                                                                                     |
-| 4   | [What is Style function](#What-is-Style-function)                                                                                                                                           |
-| 4   | [What is the purpose of animate function](#What-is-the-purpose-of-animate-function)                                                                                                         |
-| 4   | [What is transition function](#What-is-transition-function)                                                                                                                                 |
-| 4   | [What is a service worker and its role in Angular](#What-is-a-service-worker-and-its-role-in-Angular)                                                                                       |
-| 4   | [What are the design goals of service workers](#What-are-the-design-goals-of-service-workers)                                                                                               |
-| 4   | [How do you add web workers in your application](#How-do-you-add-web-workers-in-your-application)                                                                                           |
-| 4   | [What are the limitations with web workers](#What-are-the-limitations-with-web-workers)                                                                                                     |
-| 4   | [How do you create app shell in Angular](#How-do-you-create-app-shell-in-Angular)                                                                                                           |
-| 4   | [What are the case types in Angular](#What-are-the-case-types-in-Angular)                                                                                                                   |
-| 4   | [What is a DI token](#What-is-a-DI-token)                                                                                                                                                   |
-| 4   | [What is Angular DSL](#What-is-Angular-DSL)                                                                                                                                                 |
-| 4   | [What is platform in Angular](#What-is-platform-in-Angular)                                                                                                                                 |
-| 4   | [How do you select an element with in a component template](#How-do-you-select-an-element-with-in-a-component-template)                                                                     |
-| 4   | [What is the purpose of differential loading in CLI](#What-is-the-purpose-of-differential-loading-in-CLI)                                                                                   |
-| 4   | [What are workspace APIs](#What-are-workspace-APIs)                                                                                                                                         |
-| 4   | [How do you upgrade location service of angularjs](#How-do-you-upgrade-location-service-of-angularjs)                                                                                       |
-| 4   | [What is NgUpgrade](#What-is-NgUpgrade)                                                                                                                                                     |
-| 4   | [How do you test Angular application using CLI](#How-do-you-test-Angular-application-using-CLI)                                                                                             |
-| 4   | [How to use polyfills in Angular application](#How-to-use-polyfills-in-Angular-application)                                                                                                 |
-| 4   | [What are the differences of various versions of Angular](#What-are-the-differences-of-various-versions-of-Angular)                                                                         |
-| 4   | [What are the security principles in angular](#What-are-the-security-principles-in-angular)                                                                                                 |
-| 4   | [What is the reason to deprecate Web Tracing Framework](#What-is-the-reason-to-deprecate-Web-Tracing-Framework)                                                                             |
-| 4   | [What is the reason to deprecate web worker packages](#What-is-the-reason-to-deprecate-web-worker-packages)                                                                                 |
-| 4   | [What is the browser support for Angular](#What-is-the-browser-support-for-Angular)                                                                                                         |
-| 4   | [What are the best practices for security in angular](#What-are-the-best-practices-for-security-in-angular)                                                                                 |
-| 4   | [What is Angular security model for preventing XSS attacks](#What-is-Angular-security-model-for-preventing-XSS-attacks)                                                                     |
-| 4   | [What is the role of template compiler for prevention of XSS attacks](#What-is-the-role-of-template-compiler-for-prevention-of-XSS-attacks)                                                 |
-| 4   | [What are the various security contexts in Angular](#What-are-the-various-security-contexts-in-Angular)                                                                                     |
-| 4   | [What is Sanitization? Is angular supports it](#What-is-Sanitization?-Is-angular-supports-it)                                                                                               |
-| 4   | [What is the purpose of innerHTML](#What-is-the-purpose-of-innerHTML)                                                                                                                       |
-| 4   | [How do you prevent automatic sanitization](#How-do-you-prevent-automatic-sanitization)                                                                                                     |
-| 4   | [Is safe to use direct DOM API methods in terms of security](#Is-safe-to-use-direct-DOM-API-methods-in-terms-of-security)                                                                   |
-| 4   | [What is DOM sanitize](#What-is-DOM-sanitize)                                                                                                                                               |
-| 4   | [How do you support server side XSS protection in Angular application](#How-do-you-support-server-side-XSS-protection-in-Angular-application)                                               |
-| 4   | [How does Angular simplifies Internationalization](#How-does-Angular-simplifies-Internationalization)                                                                                       |
-| 4   | [How do you manually register locale data](#How-do-you-manually-register-locale-data)                                                                                                       |
-| 4   | [What are the four phases of template translation](#What-are-the-four-phases-of-template-translation)                                                                                       |
-| 4   | [What is the purpose of i18n attribute](#What-is-the-purpose-of-i18n-attribute)                                                                                                             |
-| 4   | [What is the purpose of custom id](#What-is-the-purpose-of-custom-id)                                                                                                                       |
-| 4   | [What happens if the custom id is not unique](#What-happens-if-the-custom-id-is-not-unique)                                                                                                 |
-| 4   | [Can I translate text without creating an element](#Can-I-translate-text-without-creating-an-element)                                                                                       |
-| 4   | [How can I translate attribute](#How-can-I-translate-attribute)                                                                                                                             |
-| 4   | [List down the pluralization categories](#List-down-the-pluralization-categories)                                                                                                           |
-| 4   | [What is select ICU expression](#What-is-select-ICU-expression)                                                                                                                             |
-| 4   | [How do you report missing translations](#How-do-you-report-missing-translations)                                                                                                           |
-| 4   | [How do you provide build configuration for multiple locales](#How-do-you-provide-build-configuration-for-multiple-locales)                                                                 |
-| 4   | [What is an angular library](#What-is-an-angular-library)                                                                                                                                   |
-| 4   | [What is TestBed](#What-is-TestBed)                                                                                                                                                         |
-| 4   | [What is protractor](#What-is-protractor)                                                                                                                                                   |
-| 4   | [What is collection](#What-is-collection)                                                                                                                                                   |
-| 4   | [How do you use jquery in Angular](#How-do-you-use-jquery-in-Angular)                                                                                                                       |
-| 4   | [What is safe navigation operator](#What-is-safe-navigation-operator)                                                                                                                       |
-| 4   | [Is any special configuration required for Angular9](#Is-any-special-configuration-required-for-Angular9)                                                                                   |
-| 4   | [What are type safe TestBed API changes in Angular9](#What-are-type-safe-TestBed-API-changes-in-Angular9)                                                                                   |
-| 4   | [Is mandatory to pass static flag for ViewChild](#Is-mandatory-to-pass-static-flag-for-ViewChild)                                                                                           |
-| 4   | [Is it all components generated in production build](#Is-it-all-components-generated-in-production-build)                                                                                   |
-| 4   | [What is Angular compiler](#What-is-Angular-compiler)                                                                                                                                       |
-| 4   | [How do you get current direction for locales](#How-do-you-get-current-direction-for-locales)                                                                                               |
-| 4   | [What is ngcc](#What-is-ngcc)                                                                                                                                                               |
-| 4   | [What is ngzone](#What-is-ngzone)                                                                                                                                                           |
-| 4   | [What is NoopZone](#What-is-NoopZone)                                                                                                                                                       |
-| 4   | [How do you create displayBlock components](#How-do-you-create-displayBlock-components)                                                                                                     |
-| 4   | [What are the possible data change scenarios for change detection](#What-are-the-possible-data-change-scenarios-for-change-detection)                                                       |
-| 4   | [What is a zone context](#What-is-a-zone-context)                                                                                                                                           |
-| 4   | [How do you change the settings of zonejs](#How-do-you-change-the-settings-of-zonejs)                                                                                                       |
-| 4   | [What is Component Test Harnesses](#What-is-Component-Test-Harnesses)                                                                                                                       |
-| 4   | [What is the benefit of Automatic Inlining of Fonts](#What-is-the-benefit-of-Automatic-Inlining-of-Fonts)                                                                                   |
+| 2   | [How do you find angular CLI version](#How-do-you-find-angular-CLI-version)                                                                                                                 |
+| 3   | [How do you upgrade angular version](#How-do-you-upgrade-angular-version)                                                                                                                   |
+| 4   | [What is the difference between AngularJS and Angular](#What-is-the-difference-between-AngularJS-and-Angular)                                                                               |
+| 5   | [What is TypeScript](#What-is-TypeScript)                                                                                                                                                   |
+| 6   | [Write a pictorial diagram of Angular architecture](#Write-a-pictorial-diagram-of-Angular-architecture)                                                                                     |
+| 7   | [What are the key components of Angular](#What-are-the-key-components-of-Angular)                                                                                                           |
+| 8   | [What are components](#What-are-components)                                                                                                                                                 |
+| 9   | [What is a template](#What-is-a-template)                                                                                                                                                   |
+| 10  | [What is Angular CLI](#What-is-Angular-CLI)                                                                                                                                                 |
+| 11  | [What is Angular CLI Builder](#What-is-Angular-CLI-Builder)                                                                                                                                 |
+| 12  | [What is a builder](#What-is-a-builder)                                                                                                                                                     |
+| 13  | [How do you invoke a builder](#How-do-you-invoke-a-builder)                                                                                                                                 |
+| 14  | [What is dependency injection in Angular](#What-is-dependency-injection-in-Angular)                                                                                                         |
+| 15  | [How is Dependency Hierarchy formed](#How-is-Dependency-Hierarchy-formed)                                                                                                                   |
+| 16  | [What is the option to choose between inline and external template file](#What-is-the-option-to-choose-between-inline-and-external-template-file)                                           |
+| 17  | [What happens if you use script tag inside template](#What-happens-if-you-use-script-tag-inside-template)                                                                                   |
+| 18  | [What are template expressions](#What-are-template-expressions)                                                                                                                             |
+| 19  | [What are template statements](#What-are-template-statements)                                                                                                                               |
+| 20  | [What are Angular elements](#What-are-Angular-elements)                                                                                                                                     |
+| 21  | [What is the browser support of Angular Elements](#What-is-the-browser-support-of-Angular-Elements)                                                                                         |
+| 22  | [What are custom elements](#What-are-custom-elements)                                                                                                                                       |
+| 23  | [Do I need to bootstrap custom elements](#Do-I-need-to-bootstrap-custom-elements)                                                                                                           |
+| 24  | [Explain how custom elements works internally](#Explain-how-custom-elements-works-internally)                                                                                               |
+| 25  | [How to transfer components to custom elements](#How-to-transfer-components-to-custom-elements)                                                                                             |
+| 26  | [What are the mapping rules between Angular component and custom element](#What-are-the-mapping-rules-between-Angular-component-and-custom-element)                                         |
+| 27  | [How do you define typings for custom elements](#How-do-you-define-typings-for-custom-elements)                                                                                             |
+| 28  | [What are dynamic components](#What-are-dynamic-components)                                                                                                                                 |
+| 29  | [What is Angular Universal](#What-is-Angular-Universal)                                                                                                                                     |
+| 30  | [What is content projection](#What-is-content-projection)                                                                                                                                   |
+| 31  | [What is ng-content and its purpose](#What-is-ng-content-and-its-purpose)                                                                                                                   |
+| 32  | [How do you select an element in component template](#How-do-you-select-an-element-in-component-template)                                                                                   |
+| 33  | [What is standalone component](#What-is-standalone-component)                                                                                                                               |
+| 34  | [How to create a standalone component using CLI command](#How-to-create-a-standalone-component-using-CLI-command)                                                                           |
+| 35  | [What is hydration](#What-is-hydration)                                                                                                                                                     |
+| 36  | [What is a data binding](#What-is-a-data-binding)                                                                                                                                           |
+| 37  | [What is interpolation](#What-is-interpolation)                                                                                                                                             |
+| 38  | [How do you categorize data binding types](#How-do-you-categorize-data-binding-types)                                                                                                       |
+| 39  | [What is the difference between interpolated content and innerHTM](#What-is-the-difference-between-interpolated-content-and-innerHTM)                                                       |
+| 40  | [What are lifecycle hooks available](#What-are-lifecycle-hooks-available)                                                                                                                   |
+| 41  | [What is the difference between constructor and ngOnInit](#What-is-the-difference-between-constructor-and-ngOnInit)                                                                         |
+| 42  | [What are the lifecycle hooks of a zone](#What-are-the-lifecycle-hooks-of-a-zone)                                                                                                           |
+| 43  | [What are directives](#What-are-directives)                                                                                                                                                 |
+| 44  | [What are the differences between Component and Directive](#What-are-the-differences-between-Component-and-Directive)                                                                       |
+| 45  | [What is the purpose of *ngFor directive](#What-is-the-purpose-of-*ngFor-directive)                                                                                                         |
+| 46  | [What is the purpose of *ngIf directive](#What-is-the-purpose-of-*ngIf-directive)                                                                                                           |
+| 47  | [What are the various kinds of directives](#What-are-the-various-kinds-of-directives)                                                                                                       |
+| 48  | [How do you create directives using CLI](#How-do-you-create-directives-using-CLI)                                                                                                           |
+| 49  | [Give an example for attribute directives](#Give-an-example-for-attribute-directives)                                                                                                       |
+| 50  | [What is the purpose of hidden property](#What-is-the-purpose-of-hidden-property)                                                                                                           |
+| 51  | [What is the difference between ngIf and hidden property](#What-is-the-difference-between-ngIf-and-hidden-property)                                                                         |
+| 52  | [What is index property in ngFor directive](#What-is-index-property-in-ngFor-directive)                                                                                                     |
+| 53  | [What is the purpose of ngFor trackBy](#What-is-the-purpose-of-ngFor-trackBy)                                                                                                               |
+| 54  | [What is the purpose of ngSwitch directive](#What-is-the-purpose-of-ngSwitch-directive)                                                                                                     |
+| 55  | [How to set ngFor and ngIf on the same element](#How-to-set-ngFor-and-ngIf-on-the-same-element)                                                                                             |
+| 56  | [What is host property in css](#What-is-host-property-in-css)                                                                                                                               |
+| 57  | [What is metadata](#What-is-metadata)                                                                                                                                                       |
+| 58  | [What are the restrictions of metadata](#What-are-the-restrictions-of-metadata)                                                                                                             |
+| 59  | [What is the purpose of metadata json files](#What-is-the-purpose-of-metadata-json-files)                                                                                                   |
+| 60  | [Give an example of few metadata errors](#Give-an-example-of-few-metadata-errors)                                                                                                           |
+| 61  | [What is metadata rewriting](#What-is-metadata-rewriting)                                                                                                                                   |
+| 62  | [What is the role of ngModule metadata in compilation process](#What-is-the-role-of-ngModule-metadata-in-compilation-process)                                                               |
+| 63  | [What is a service](#What-is-a-service)                                                                                                                                                     |
+| 64  | [What are class field decorators](#What-are-class-field-decorators)                                                                                                                         |
+| 65  | [What are the class decorators in Angular](#What-are-the-class-decorators-in-Angular)                                                                                                       |
+| 66  | [Is it possible to do aliasing for inputs and outputs](#Is-it-possible-to-do-aliasing-for-inputs-and-outputs)                                                                               |
+| 67  | [What is a module](#What-is-a-module)                                                                                                                                                       |
+| 68  | [What are feature modules](#What-are-feature-modules)                                                                                                                                       |
+| 69  | [What are the types of feature modules](#What-are-the-types-of-feature-modules)                                                                                                             |
+| 70  | [What are the imported modules in CLI generated feature modules](#What-are-the-imported-modules-in-CLI-generated-feature-modules)                                                           |
+| 71  | [What is the purpose of common module](#What-is-the-purpose-of-common-module)                                                                                                               |
+| 72  | [What is Angular Material](#What-is-Angular-Material)                                                                                                                                       |
+| 73  | [What happens if browserModule used in feature module](#What-happens-if-browserModule-used-in-feature-module)                                                                               |
+| 74  | [What happens if I import the same module twice](#What-happens-if-I-import-the-same-module-twice)                                                                                           |
+| 75  | [How does forRoot method helpful to avoid duplicate router instances](#How-does-forRoot-method-helpful-to-avoid-duplicate-router-instances)                                                 |
+| 76  | [What are the differences between ngmodule and javascript module](#What-are-the-differences-between-ngmodule-and-javascript-module)                                                         |
+| 77  | [Give few examples for NgModules](#Give-few-examples-for-NgModules)                                                                                                                         |
+| 78  | [What is declarable in Angular](#What-is-declarable-in-Angular)                                                                                                                             |
+| 79  | [What are the restrictions on declarable classes](#What-are-the-restrictions-on-declarable-classes)                                                                                         |
+| 80  | [What classes should not be added to declarations](#What-classes-should-not-be-added-to-declarations)                                                                                       |
+| 81  | [What are the possible errors with declarations](#What-are-the-possible-errors-with-declarations)                                                                                           |
+| 82  | [What are the steps to use declaration elements](#What-are-the-steps-to-use-declaration-elements)                                                                                           |
+| 83  | [What is a provider](#What-is-a-provider)                                                                                                                                                   |
+| 84  | [What is the recommendation for provider scope](#What-is-the-recommendation-for-provider-scope)                                                                                             |
+| 85  | [How do you configure injectors with providers at different levels](#How-do-you-configure-injectors-with-providers-at-different-levels)                                                     |
+| 86  | [How do you restrict provider scope to a module](#How-do-you-restrict-provider-scope-to-a-module)                                                                                           |
+| 87  | [What is the reason for No provider for HTTP exception](#What-is-the-reason-for-No-provider-for-HTTP-exception)                                                                             |
+| 88  | [What is a bootstrapping module](#What-is-a-bootstrapping-module)                                                                                                                           |
+| 89  | [What is a bootstrapped component](#What-is-a-bootstrapped-component)                                                                                                                       |
+| 90  | [How do you manually bootstrap an application](#How-do-you-manually-bootstrap-an-application)                                                                                               |
+| 91  | [Is it necessary for bootstrapped component to be entry component](#Is-it-necessary-for-bootstrapped-component-to-be-entry-component)                                                       |
+| 92  | [Why is not necessary to use entryComponents array every time](#Why-is-not-necessary-to-use-entryComponents-array-every-time)                                                               |
+| 93  | [Do I still need to use entryComponents array in Angular9](#Do-I-still-need-to-use-entryComponents-array-in-Angular9)                                                                       |
+| 94  | [What is a routed entry component](#What-is-a-routed-entry-component)                                                                                                                       |
+| 95  | [What is an entry component](#What-is-an-entry-component)                                                                                                                                   |
+| 96  | [What is a shared module](#What-is-a-shared-module)                                                                                                                                         |
+| 97  | [Can I share services using modules](#Can-I-share-services-using-modules)                                                                                                                   |
+| 98  | [How do you provide a singleton service](#How-do-you-provide-a-singleton-service)                                                                                                           |
+| 99  | [What are the different ways to remove duplicate service registration](#What-are-the-different-ways-to-remove-duplicate-service-registration)                                               |
+| 100 | [Is it mandatory to use injectable on every service class](#Is-it-mandatory-to-use-injectable-on-every-service-class)                                                                       |
+| 101 | [What are the types of injector hierarchies](#What-are-the-types-of-injector-hierarchies)                                                                                                   |
+| 102 | [How to inject the dynamic script in angular](#How-to-inject-the-dynamic-script-in-angular)                                                                                                 |
+| 103 | [What are the differences between AngularJS and Angular with respect to dependency injection](#What-are-the-differences-between-AngularJS-and-Angular-with-respect-to-dependency-injection) |
+| 104 | [What is HttpClient and its benefits](#What-is-HttpClient-and-its-benefits)                                                                                                                 |
+| 105 | [Explain on how to use HttpClient with an example](#Explain-on-how-to-use-HttpClient-with-an-example)                                                                                       |
+| 106 | [How can you read full response](#How-can-you-read-full-response)                                                                                                                           |
+| 107 | [How do you perform Error handling](#How-do-you-perform-Error-handling)                                                                                                                     |
+| 108 | [How do you pass headers for HTTP client](#How-do-you-pass-headers-for-HTTP-client)                                                                                                         |
+| 109 | [Is angular prevents http level vulnerabilities](#Is-angular-prevents-http-level-vulnerabilities)                                                                                           |
+| 110 | [What is angular animation](#What-is-angular-animation)                                                                                                                                     |
+| 111 | [What are the steps to use animation module](#What-are-the-steps-to-use-animation-module)                                                                                                   |
+| 112 | [How do you trigger an animation](#How-do-you-trigger-an-animation)                                                                                                                         |
+| 113 | [What is an optional dependency](#What-is-an-optional-dependency)                                                                                                                           |
+| 114 | [What are pipes](#What-are-pipes)                                                                                                                                                           |
+| 115 | [What is the purpose of async pipe](#What-is-the-purpose-of-async-pipe)                                                                                                                     |
+| 116 | [What is a parameterized pipe](#What-is-a-parameterized-pipe)                                                                                                                               |
+| 117 | [How do you chain pipes](#How-do-you-chain-pipes)                                                                                                                                           |
+| 118 | [What is a custom pipe](#What-is-a-custom-pipe)                                                                                                                                             |
+| 119 | [Give an example of custom pipe](#Give-an-example-of-custom-pipe)                                                                                                                           |
+| 120 | [What is the difference between pure and impure pipe](#What-is-the-difference-between-pure-and-impure-pipe)                                                                                 |
+| 121 | [What is slice pipe](#What-is-slice-pipe)                                                                                                                                                   |
+| 122 | [What are the list of template expression operators](#What-are-the-list-of-template-expression-operators)                                                                                   |
+| 123 | [What is the precedence between pipe and ternary operators](#What-is-the-precedence-between-pipe-and-ternary-operators)                                                                     |
+| 124 | [How does angular finds components, directives and pipes](#How-does-angular-finds-components,-directives-and-pipes)                                                                         |
+| 125 | [What are Http Interceptors](#What-are-Http-Interceptors)                                                                                                                                   |
+| 126 | [What are the applications of HTTP interceptors](#What-are-the-applications-of-HTTP-interceptors)                                                                                           |
+| 127 | [How can I use interceptor for an entire application](#How-can-I-use-interceptor-for-an-entire-application)                                                                                 |
+| 128 | [What are reactive forms](#What-are-reactive-forms)                                                                                                                                         |
+| 129 | [What are dynamic forms](#What-are-dynamic-forms)                                                                                                                                           |
+| 130 | [What are template driven forms](#What-are-template-driven-forms)                                                                                                                           |
+| 131 | [What are the differences between reactive forms and template driven forms](#What-are-the-differences-between-reactive-forms-and-template-driven-forms)                                     |
+| 132 | [What are the different ways to group form controls](#What-are-the-different-ways-to-group-form-controls)                                                                                   |
+| 133 | [How do you update specific properties of a form model](#How-do-you-update-specific-properties-of-a-form-model)                                                                             |
+| 134 | [What is the purpose of FormBuilder](#What-is-the-purpose-of-FormBuilder)                                                                                                                   |
+| 135 | [How do you verify the model changes in forms](#How-do-you-verify-the-model-changes-in-forms)                                                                                               |
+| 136 | [What are the state CSS classes provided by ngModel](#What-are-the-state-CSS-classes-provided-by-ngModel)                                                                                   |
+| 137 | [How do you reset the form](#How-do-you-reset-the-form)                                                                                                                                     |
+| 138 | [What are the types of validator functions](#What-are-the-types-of-validator-functions)                                                                                                     |
+| 139 | [Can you give an example of built-in validators](#Can-you-give-an-example-of-built-in-validators)                                                                                           |
+| 140 | [How do you optimize the performance of async validators](#How-do-you-optimize-the-performance-of-async-validators)                                                                         |
+| 141 | [What is Angular Router](#What-is-Angular-Router)                                                                                                                                           |
+| 142 | [What is the purpose of base href tag](#What-is-the-purpose-of-base-href-tag)                                                                                                               |
+| 143 | [What are the router imports](#What-are-the-router-imports)                                                                                                                                 |
+| 144 | [What is router outlet](#What-is-router-outlet)                                                                                                                                             |
+| 145 | [What are router links](#What-are-router-links)                                                                                                                                             |
+| 146 | [What are active router links](#What-are-active-router-links)                                                                                                                               |
+| 147 | [What is router state](#What-is-router-state)                                                                                                                                               |
+| 148 | [What are router events](#What-are-router-events)                                                                                                                                           |
+| 149 | [What is activated route](#What-is-activated-route)                                                                                                                                         |
+| 150 | [How do you define routes](#How-do-you-define-routes)                                                                                                                                       |
+| 151 | [What is the purpose of Wildcard route](#What-is-the-purpose-of-Wildcard-route)                                                                                                             |
+| 152 | [Do I need a Routing Module always](#Do-I-need-a-Routing-Module-always)                                                                                                                     |
+| 153 | [How do you detect route change in Angular](#How-do-you-detect-route-change-in-Angular)                                                                                                     |
+| 154 | [How can I use SASS in angular project](#How-can-I-use-SASS-in-angular-project)                                                                                                             |
+| 155 | [How do you get the current route](#How-do-you-get-the-current-route)                                                                                                                       |
+| 156 | [Is Angular supports dynamic imports](#Is-Angular-supports-dynamic-imports)                                                                                                                 |
+| 157 | [What is lazy loading](#What-is-lazy-loading)                                                                                                                                               |
+| 158 | [What are different types of compilation in Angular](#What-are-different-types-of-compilation-in-Angular)                                                                                   |
+| 159 | [What is JIT](#What-is-JIT)                                                                                                                                                                 |
+| 160 | [What is AOT](#What-is-AOT)                                                                                                                                                                 |
+| 161 | [What is AOT compiler](#What-is-AOT-compiler)                                                                                                                                               |
+| 162 | [Why do we need compilation process](#Why-do-we-need-compilation-process)                                                                                                                   |
+| 163 | [What are the advantages with AOT](#What-are-the-advantages-with-AOT)                                                                                                                       |
+| 164 | [What are the ways to control AOT compilation](#What-are-the-ways-to-control-AOT-compilation)                                                                                               |
+| 165 | [What are the three phases of AOT](#What-are-the-three-phases-of-AOT)                                                                                                                       |
+| 166 | [Can I use arrow functions in AOT](#Can-I-use-arrow-functions-in-AOT)                                                                                                                       |
+| 167 | [Can I use any javascript feature for expression syntax in AOT](#Can-I-use-any-javascript-feature-for-expression-syntax-in-AOT)                                                             |
+| 168 | [What is Angular Ivy](#What-is-Angular-Ivy)                                                                                                                                                 |
+| 169 | [What are the features included in ivy preview](#What-are-the-features-included-in-ivy-preview)                                                                                             |
+| 170 | [Can I use AOT compilation with Ivy](#Can-I-use-AOT-compilation-with-Ivy)                                                                                                                   |
+| 171 | [What is Angular Language Service](#What-is-Angular-Language-Service)                                                                                                                       |
+| 172 | [How do you install angular language service in the project](#How-do-you-install-angular-language-service-in-the-project)                                                                   |
+| 173 | [Is there any editor support for Angular Language Service](#Is-there-any-editor-support-for-Angular-Language-Service)                                                                       |
+| 174 | [Explain the features provided by Angular Language Service](#Explain-the-features-provided-by-Angular-Language-Service)                                                                     |
+| 175 | [What is Bazel tool](#What-is-Bazel-tool)                                                                                                                                                   |
+| 176 | [What are the advantages of Bazel tool](#What-are-the-advantages-of-Bazel-tool)                                                                                                             |
+| 177 | [How do you use Bazel with Angular CLI](#How-do-you-use-Bazel-with-Angular-CLI)                                                                                                             |
+| 178 | [How do you run Bazel directly](#How-do-you-run-Bazel-directly)                                                                                                                             |
+| 179 | [What is schematic](#What-is-schematic)                                                                                                                                                     |
+| 180 | [What is rule in Schematics](#What-is-rule-in-Schematics)                                                                                                                                   |
+| 181 | [What is Schematics CLI](#What-is-Schematics-CLI)                                                                                                                                           |
+| 182 | [How do you create schematics for libraries](#How-do-you-create-schematics-for-libraries)                                                                                                   |
+| 183 | [What is folding](#What-is-folding)                                                                                                                                                         |
+| 184 | [What are macros](#What-are-macros)                                                                                                                                                         |
+| 185 | [How do you provide configuration inheritance](#How-do-you-provide-configuration-inheritance)                                                                                               |
+| 186 | [How do you specify angular template compiler options](#How-do-you-specify-angular-template-compiler-options)                                                                               |
+| 187 | [How do you enable binding expression validation](#How-do-you-enable-binding-expression-validation)                                                                                         |
+| 188 | [What is the purpose of any type cast function](#What-is-the-purpose-of-any-type-cast-function)                                                                                             |
+| 189 | [What is Non null type assertion operator](#What-is-Non-null-type-assertion-operator)                                                                                                       |
+| 190 | [What is type narrowing](#What-is-type-narrowing)                                                                                                                                           |
+| 191 | [How do you describe various dependencies in angular application](#How-do-you-describe-various-dependencies-in-angular-application)                                                         |
+| 192 | [What is zone](#What-is-zone)                                                                                                                                                               |
+| 193 | [What is codelyzer](#What-is-codelyzer)                                                                                                                                                     |
+| 194 | [What is Style function](#What-is-Style-function)                                                                                                                                           |
+| 195 | [What is the purpose of animate function](#What-is-the-purpose-of-animate-function)                                                                                                         |
+| 196 | [What is transition function](#What-is-transition-function)                                                                                                                                 |
+| 197 | [What is a service worker and its role in Angular](#What-is-a-service-worker-and-its-role-in-Angular)                                                                                       |
+| 198 | [What are the design goals of service workers](#What-are-the-design-goals-of-service-workers)                                                                                               |
+| 199 | [How do you add web workers in your application](#How-do-you-add-web-workers-in-your-application)                                                                                           |
+| 200 | [What are the limitations with web workers](#What-are-the-limitations-with-web-workers)                                                                                                     |
+| 201 | [How do you create app shell in Angular](#How-do-you-create-app-shell-in-Angular)                                                                                                           |
+| 202 | [What are the case types in Angular](#What-are-the-case-types-in-Angular)                                                                                                                   |
+| 203 | [What is a DI token](#What-is-a-DI-token)                                                                                                                                                   |
+| 204 | [What is Angular DSL](#What-is-Angular-DSL)                                                                                                                                                 |
+| 205 | [What is platform in Angular](#What-is-platform-in-Angular)                                                                                                                                 |
+| 206 | [How do you select an element with in a component template](#How-do-you-select-an-element-with-in-a-component-template)                                                                     |
+| 207 | [What is the purpose of differential loading in CLI](#What-is-the-purpose-of-differential-loading-in-CLI)                                                                                   |
+| 208 | [What are workspace APIs](#What-are-workspace-APIs)                                                                                                                                         |
+| 209 | [How do you upgrade location service of angularjs](#How-do-you-upgrade-location-service-of-angularjs)                                                                                       |
+| 210 | [What is NgUpgrade](#What-is-NgUpgrade)                                                                                                                                                     |
+| 211 | [How do you test Angular application using CLI](#How-do-you-test-Angular-application-using-CLI)                                                                                             |
+| 212 | [How to use polyfills in Angular application](#How-to-use-polyfills-in-Angular-application)                                                                                                 |
+| 213 | [What are the differences of various versions of Angular](#What-are-the-differences-of-various-versions-of-Angular)                                                                         |
+| 214 | [What are the security principles in angular](#What-are-the-security-principles-in-angular)                                                                                                 |
+| 215 | [What is the reason to deprecate Web Tracing Framework](#What-is-the-reason-to-deprecate-Web-Tracing-Framework)                                                                             |
+| 216 | [What is the reason to deprecate web worker packages](#What-is-the-reason-to-deprecate-web-worker-packages)                                                                                 |
+| 217 | [What is the browser support for Angular](#What-is-the-browser-support-for-Angular)                                                                                                         |
+| 218 | [What are the best practices for security in angular](#What-are-the-best-practices-for-security-in-angular)                                                                                 |
+| 219 | [What is Angular security model for preventing XSS attacks](#What-is-Angular-security-model-for-preventing-XSS-attacks)                                                                     |
+| 220 | [What is the role of template compiler for prevention of XSS attacks](#What-is-the-role-of-template-compiler-for-prevention-of-XSS-attacks)                                                 |
+| 221 | [What are the various security contexts in Angular](#What-are-the-various-security-contexts-in-Angular)                                                                                     |
+| 222 | [What is Sanitization? Is angular supports it](#What-is-Sanitization?-Is-angular-supports-it)                                                                                               |
+| 223 | [What is the purpose of innerHTML](#What-is-the-purpose-of-innerHTML)                                                                                                                       |
+| 224 | [How do you prevent automatic sanitization](#How-do-you-prevent-automatic-sanitization)                                                                                                     |
+| 225 | [Is safe to use direct DOM API methods in terms of security](#Is-safe-to-use-direct-DOM-API-methods-in-terms-of-security)                                                                   |
+| 226 | [What is DOM sanitize](#What-is-DOM-sanitize)                                                                                                                                               |
+| 227 | [How do you support server side XSS protection in Angular application](#How-do-you-support-server-side-XSS-protection-in-Angular-application)                                               |
+| 228 | [How does Angular simplifies Internationalization](#How-does-Angular-simplifies-Internationalization)                                                                                       |
+| 229 | [How do you manually register locale data](#How-do-you-manually-register-locale-data)                                                                                                       |
+| 230 | [What are the four phases of template translation](#What-are-the-four-phases-of-template-translation)                                                                                       |
+| 231 | [What is the purpose of i18n attribute](#What-is-the-purpose-of-i18n-attribute)                                                                                                             |
+| 232 | [What is the purpose of custom id](#What-is-the-purpose-of-custom-id)                                                                                                                       |
+| 233 | [What happens if the custom id is not unique](#What-happens-if-the-custom-id-is-not-unique)                                                                                                 |
+| 234 | [Can I translate text without creating an element](#Can-I-translate-text-without-creating-an-element)                                                                                       |
+| 235 | [How can I translate attribute](#How-can-I-translate-attribute)                                                                                                                             |
+| 236 | [List down the pluralization categories](#List-down-the-pluralization-categories)                                                                                                           |
+| 237 | [What is select ICU expression](#What-is-select-ICU-expression)                                                                                                                             |
+| 238 | [How do you report missing translations](#How-do-you-report-missing-translations)                                                                                                           |
+| 239 | [How do you provide build configuration for multiple locales](#How-do-you-provide-build-configuration-for-multiple-locales)                                                                 |
+| 240 | [What is an angular library](#What-is-an-angular-library)                                                                                                                                   |
+| 241 | [What is TestBed](#What-is-TestBed)                                                                                                                                                         |
+| 242 | [What is protractor](#What-is-protractor)                                                                                                                                                   |
+| 243 | [What is collection](#What-is-collection)                                                                                                                                                   |
+| 244 | [How do you use jquery in Angular](#How-do-you-use-jquery-in-Angular)                                                                                                                       |
+| 245 | [What is safe navigation operator](#What-is-safe-navigation-operator)                                                                                                                       |
+| 246 | [Is any special configuration required for Angular9](#Is-any-special-configuration-required-for-Angular9)                                                                                   |
+| 247 | [What are type safe TestBed API changes in Angular9](#What-are-type-safe-TestBed-API-changes-in-Angular9)                                                                                   |
+| 248 | [Is mandatory to pass static flag for ViewChild](#Is-mandatory-to-pass-static-flag-for-ViewChild)                                                                                           |
+| 249 | [Is it all components generated in production build](#Is-it-all-components-generated-in-production-build)                                                                                   |
+| 250 | [What is Angular compiler](#What-is-Angular-compiler)                                                                                                                                       |
+| 251 | [How do you get current direction for locales](#How-do-you-get-current-direction-for-locales)                                                                                               |
+| 252 | [What is ngcc](#What-is-ngcc)                                                                                                                                                               |
+| 253 | [What is ngzone](#What-is-ngzone)                                                                                                                                                           |
+| 254 | [What is NoopZone](#What-is-NoopZone)                                                                                                                                                       |
+| 255 | [How do you create displayBlock components](#How-do-you-create-displayBlock-components)                                                                                                     |
+| 256 | [What are the possible data change scenarios for change detection](#What-are-the-possible-data-change-scenarios-for-change-detection)                                                       |
+| 257 | [What is a zone context](#What-is-a-zone-context)                                                                                                                                           |
+| 258 | [How do you change the settings of zonejs](#How-do-you-change-the-settings-of-zonejs)                                                                                                       |
+| 259 | [What is Component Test Harnesses](#What-is-Component-Test-Harnesses)                                                                                                                       |
+| 260 | [What is the benefit of Automatic Inlining of Fonts](#What-is-the-benefit-of-Automatic-Inlining-of-Fonts)                                                                                   |
 
 ### <h2>What is Angular Framework</h2>
 
