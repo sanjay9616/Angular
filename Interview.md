@@ -2,121 +2,207 @@
 
 ### Table of Contents
 
-| No. | Questions                                                                                                                                               |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | [What is Angular Framework](#What-is-Angular-Framework)                                                                                                 |
-| 1   | [What is the difference between AngularJS and Angular](#What-is-the-difference-between-AngularJS-and-Angular)                                           |
-| 1   | [What is TypeScript](#What-is-TypeScript)                                                                                                               |
-| 1   | [Write a pictorial diagram of Angular architecture](#Write-a-pictorial-diagram-of-Angular-architecture)                                                 |
-| 1   | [What are the key components of Angular](#What-are-the-key-components-of-Angular)                                                                       |
-| 1   | [What are components](#What-are-components)                                                                                                             |
-| 1   | [What is a template](#What-is-a-template)                                                                                                               |
-| 1   | [What is Angular CLI](#What-is-Angular-CLI)                                                                                                             |
-| 1   | [What is dependency injection in Angular](#What-is-dependency-injection-in-Angular)                                                                     |
-| 1   | [How is Dependency Hierarchy formed](#How-is-Dependency-Hierarchy-formed)                                                                               |
-| 1   | [What is the option to choose between inline and external template file](#What-is-the-option-to-choose-between-inline-and-external-template-file)       |
-| 1   | [What happens if you use script tag inside template](#What-happens-if-you-use-script-tag-inside-template)                                               |
-| 1   | [What are template expressions](#What-are-template-expressions)                                                                                         |
-| 1   | [What are template statements](#What-are-template-statements)                                                                                           |
-| 1   | [What are Angular elements](#What-are-Angular-elements)                                                                                                 |
-| 1   | [What is the browser support of Angular Elements](#What-is-the-browser-support-of-Angular-Elements)                                                     |
-| 1   | [What are custom elements](#What-are-custom-elements)                                                                                                   |
-| 1   | [Do I need to bootstrap custom elements](#Do-I-need-to-bootstrap-custom-elements)                                                                       |
-| 1   | [Explain how custom elements works internally](#Explain-how-custom-elements-works-internally)                                                           |
-| 1   | [How to transfer components to custom elements](#How-to-transfer-components-to-custom-elements)                                                         |
-| 1   | [What are the mapping rules between Angular component and custom element](#What-are-the-mapping-rules-between-Angular-component-and-custom-element)     |
-| 1   | [How do you define typings for custom elements](#How-do-you-define-typings-for-custom-elements)                                                         |
-| 1   | [What are dynamic components](#What-are-dynamic-components)                                                                                             |
-| 1   | [What is Angular Universal](#What-is-Angular-Universal)                                                                                                 |
-| 1   | [What is a data binding](#What-is-a-data-binding)                                                                                                       |
-| 2   | [What is interpolation](#What-is-interpolation)                                                                                                         |
-| 3   | [How do you categorize data binding types](#How-do-you-categorize-data-binding-types)                                                                   |
-| 4   | [What is the difference between interpolated content and innerHTM](#What-is-the-difference-between-interpolated-content-and-innerHTM)                   |
-| 5   | [What are lifecycle hooks available](#What-are-lifecycle-hooks-available)                                                                               |
-| 6   | [What is the difference between constructor and ngOnInit](#What-is-the-difference-between-constructor-and-ngOnInit)                                     |
-| 7   | [What are the lifecycle hooks of a zone](#What-are-the-lifecycle-hooks-of-a-zone)                                                                       |
-| 8   | [What are directives](#What-are-directives)                                                                                                             |
-| 9   | [What are the differences between Component and Directive](#What-are-the-differences-between-Component-and-Directive)                                   |
-| 10  | [What is the purpose of *ngFor directive](#What-is-the-purpose-of-*ngFor-directive)                                                                     |
-| 11  | [What is the purpose of *ngIf directive](#What-is-the-purpose-of-*ngIf-directive)                                                                       |
-| 12  | [What are the various kinds of directives](#What-are-the-various-kinds-of-directives)                                                                   |
-| 13  | [How do you create directives using CLI](#How-do-you-create-directives-using-CLI)                                                                       |
-| 14  | [Give an example for attribute directives](#Give-an-example-for-attribute-directives)                                                                   |
-| 15  | [What is the purpose of hidden property](#What-is-the-purpose-of-hidden-property)                                                                       |
-| 16  | [What is the difference between ngIf and hidden property](#What-is-the-difference-between-ngIf-and-hidden-property)                                     |
-| 17  | [What is index property in ngFor directive](#What-is-index-property-in-ngFor-directive)                                                                 |
-| 18  | [What is the purpose of ngFor trackBy](#What-is-the-purpose-of-ngFor-trackBy)                                                                           |
-| 19  | [What is the purpose of ngSwitch directive](#What-is-the-purpose-of-ngSwitch-directive)                                                                 |
-| 20  | [How to set ngFor and ngIf on the same element](#How-to-set-ngFor-and-ngIf-on-the-same-element)                                                         |
-| 4   | [What is host property in css](#What-is-host-property-in-css)                                                                                           |
-| 4   | [What is metadata](#What-is-metadata)                                                                                                                   |
-| 4   | [What are the restrictions of metadata](#What-are-the-restrictions-of-metadata)                                                                         |
-| 4   | [What is the purpose of metadata json files](#What-is-the-purpose-of-metadata-json-files)                                                               |
-| 4   | [Give an example of few metadata errors](#Give-an-example-of-few-metadata-errors)                                                                       |
-| 4   | [What is metadata rewriting](#What-is-metadata-rewriting)                                                                                               |
-| 4   | [What is the role of ngModule metadata in compilation process](#What-is-the-role-of-ngModule-metadata-in-compilation-process)                           |
-| 4   | [What is a service](#What-is-a-service)                                                                                                                 |
-| 4   | [What are class field decorators](#What-are-class-field-decorators)                                                                                     |
-| 4   | [What are the class decorators in Angular](#What-are-the-class-decorators-in-Angular)                                                                   |
-| 4   | [Is it possible to do aliasing for inputs and outputs](#Is-it-possible-to-do-aliasing-for-inputs-and-outputs)                                           |
-| 4   | [What are pipes](#What-are-pipes)                                                                                                                       |
-| 4   | [What is the purpose of async pipe](#What-is-the-purpose-of-async-pipe)                                                                                 |
-| 4   | [What is a parameterized pipe](#What-is-a-parameterized-pipe)                                                                                           |
-| 4   | [How do you chain pipes](#How-do-you-chain-pipes)                                                                                                       |
-| 4   | [What is a custom pipe](#What-is-a-custom-pipe)                                                                                                         |
-| 4   | [Give an example of custom pipe](#Give-an-example-of-custom-pipe)                                                                                       |
-| 4   | [What is the difference between pure and impure pipe](#What-is-the-difference-between-pure-and-impure-pipe)                                             |
-| 4   | [What is slice pipe](#What-is-slice-pipe)                                                                                                               |
-| 4   | [What are the list of template expression operators](#What-are-the-list-of-template-expression-operators)                                               |
-| 4   | [What is the precedence between pipe and ternary operators](#What-is-the-precedence-between-pipe-and-ternary-operators)                                 |
-| 4   | [How does angular finds components, directives and pipes](#How-does-angular-finds-components,-directives-and-pipes)                                     |
-| 4   | [What are Http Interceptors](#What-are-Http-Interceptors)                                                                                               |
-| 4   | [What are the applications of HTTP interceptors](#What-are-the-applications-of-HTTP-interceptors)                                                       |
-| 4   | [How can I use interceptor for an entire application](#How-can-I-use-interceptor-for-an-entire-application)                                             |
-| 4   | [What are reactive forms](#What-are-reactive-forms)                                                                                                     |
-| 4   | [What are dynamic forms](#What-are-dynamic-forms)                                                                                                       |
-| 4   | [What are template driven forms](#What-are-template-driven-forms)                                                                                       |
-| 4   | [What are the differences between reactive forms and template driven forms](#What-are-the-differences-between-reactive-forms-and-template-driven-forms) |
-| 4   | [What are the different ways to group form controls](#What-are-the-different-ways-to-group-form-controls)                                               |
-| 4   | [How do you update specific properties of a form model](#How-do-you-update-specific-properties-of-a-form-model)                                         |
-| 4   | [What is the purpose of FormBuilder](#What-is-the-purpose-of-FormBuilder)                                                                               |
-| 4   | [How do you verify the model changes in forms](#How-do-you-verify-the-model-changes-in-forms)                                                           |
-| 4   | [What are the state CSS classes provided by ngModel](#What-are-the-state-CSS-classes-provided-by-ngModel)                                               |
-| 4   | [How do you reset the form](#How-do-you-reset-the-form)                                                                                                 |
-| 4   | [What are the types of validator functions](#What-are-the-types-of-validator-functions)                                                                 |
-| 4   | [Can you give an example of built-in validators](#Can-you-give-an-example-of-built-in-validators)                                                       |
-| 4   | [How do you optimize the performance of async validators](#How-do-you-optimize-the-performance-of-async-validators)                                     |
-| 4   | [What is Angular Router](#What-is-Angular-Router)                                                                                                       |
-| 4   | [What is the purpose of base href tag](#What-is-the-purpose-of-base-href-tag)                                                                           |
-| 4   | [What are the router imports](#What-are-the-router-imports)                                                                                             |
-| 4   | [What is router outlet](#What-is-router-outlet)                                                                                                         |
-| 4   | [What are router links](#What-are-router-links)                                                                                                         |
-| 4   | [What are active router links](#What-are-active-router-links)                                                                                           |
-| 4   | [What is router state](#What-is-router-state)                                                                                                           |
-| 4   | [What are router events](#What-are-router-events)                                                                                                       |
-| 4   | [What is activated route](#What-is-activated-route)                                                                                                     |
-| 4   | [How do you define routes](#How-do-you-define-routes)                                                                                                   |
-| 4   | [What is the purpose of Wildcard route](#What-is-the-purpose-of-Wildcard-route)                                                                         |
-| 4   | [Do I need a Routing Module always](#Do-I-need-a-Routing-Module-always)                                                                                 |
-| 4   | [How do you detect route change in Angular](#How-do-you-detect-route-change-in-Angular)                                                                 |
-| 4   | [How can I use SASS in angular project](#How-can-I-use-SASS-in-angular-project)                                                                         |
-| 4   | [How do you get the current route](#How-do-you-get-the-current-route)                                                                                   |
-| 4   | [Is Angular supports dynamic imports](#Is-Angular-supports-dynamic-imports)                                                                             |
-| 4   | [What is lazy loading](#What-is-lazy-loading)                                                                                                           |
-| 4   | [What are different types of compilation in Angular](#What-are-different-types-of-compilation-in-Angular)                                               |
-| 4   | [What is JIT](#What-is-JIT)                                                                                                                             |
-| 4   | [What is AOT](#What-is-AOT)                                                                                                                             |
-| 4   | [What is AOT compiler](#What-is-AOT-compiler)                                                                                                           |
-| 4   | [Why do we need compilation process](#Why-do-we-need-compilation-process)                                                                               |
-| 4   | [What are the advantages with AOT](#What-are-the-advantages-with-AOT)                                                                                   |
-| 4   | [What are the ways to control AOT compilation](#What-are-the-ways-to-control-AOT-compilation)                                                           |
-| 4   | [What are the three phases of AOT](#What-are-the-three-phases-of-AOT)                                                                                   |
-| 4   | [Can I use arrow functions in AOT](#Can-I-use-arrow-functions-in-AOT)                                                                                   |
-| 4   | [Can I use any javascript feature for expression syntax in AOT](#Can-I-use-any-javascript-feature-for-expression-syntax-in-AOT)                         |
+| No. | Questions                                                                                                                                                                                   |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | [What is Angular Framework](#What-is-Angular-Framework)                                                                                                                                     |
+| 1   | [How do you find angular CLI version](#How-do-you-find-angular-CLI-version)                                                                                                                 |
+| 1   | [How do you upgrade angular version](#How-do-you-upgrade-angular-version)                                                                                                                   |
+| 1   | [What is the difference between AngularJS and Angular](#What-is-the-difference-between-AngularJS-and-Angular)                                                                               |
+| 1   | [What is TypeScript](#What-is-TypeScript)                                                                                                                                                   |
+| 1   | [Write a pictorial diagram of Angular architecture](#Write-a-pictorial-diagram-of-Angular-architecture)                                                                                     |
+| 1   | [What are the key components of Angular](#What-are-the-key-components-of-Angular)                                                                                                           |
+| 1   | [What are components](#What-are-components)                                                                                                                                                 |
+| 1   | [What is a template](#What-is-a-template)                                                                                                                                                   |
+| 1   | [What is Angular CLI](#What-is-Angular-CLI)                                                                                                                                                 |
+| 1   | [What is dependency injection in Angular](#What-is-dependency-injection-in-Angular)                                                                                                         |
+| 1   | [How is Dependency Hierarchy formed](#How-is-Dependency-Hierarchy-formed)                                                                                                                   |
+| 1   | [What is the option to choose between inline and external template file](#What-is-the-option-to-choose-between-inline-and-external-template-file)                                           |
+| 1   | [What happens if you use script tag inside template](#What-happens-if-you-use-script-tag-inside-template)                                                                                   |
+| 1   | [What are template expressions](#What-are-template-expressions)                                                                                                                             |
+| 1   | [What are template statements](#What-are-template-statements)                                                                                                                               |
+| 1   | [What are Angular elements](#What-are-Angular-elements)                                                                                                                                     |
+| 1   | [What is the browser support of Angular Elements](#What-is-the-browser-support-of-Angular-Elements)                                                                                         |
+| 1   | [What are custom elements](#What-are-custom-elements)                                                                                                                                       |
+| 1   | [Do I need to bootstrap custom elements](#Do-I-need-to-bootstrap-custom-elements)                                                                                                           |
+| 1   | [Explain how custom elements works internally](#Explain-how-custom-elements-works-internally)                                                                                               |
+| 1   | [How to transfer components to custom elements](#How-to-transfer-components-to-custom-elements)                                                                                             |
+| 1   | [What are the mapping rules between Angular component and custom element](#What-are-the-mapping-rules-between-Angular-component-and-custom-element)                                         |
+| 1   | [How do you define typings for custom elements](#How-do-you-define-typings-for-custom-elements)                                                                                             |
+| 1   | [What are dynamic components](#What-are-dynamic-components)                                                                                                                                 |
+| 1   | [What is Angular Universal](#What-is-Angular-Universal)                                                                                                                                     |
+| 1   | [What is content projection](#What-is-content-projection)                                                                                                                                   |
+| 1   | [What is ng-content and its purpose](#What-is-ng-content-and-its-purpose)                                                                                                                   |
+| 1   | [How do you select an element in component template](#How-do-you-select-an-element-in-component-template)                                                                                   |
+| 1   | [What is standalone component](#What-is-standalone-component)                                                                                                                               |
+| 1   | [How to create a standalone component using CLI command](#How-to-create-a-standalone-component-using-CLI-command)                                                                           |
+| 1   | [What is hydration](#What-is-hydration)                                                                                                                                                     |
+| 1   | [What is a data binding](#What-is-a-data-binding)                                                                                                                                           |
+| 2   | [What is interpolation](#What-is-interpolation)                                                                                                                                             |
+| 3   | [How do you categorize data binding types](#How-do-you-categorize-data-binding-types)                                                                                                       |
+| 4   | [What is the difference between interpolated content and innerHTM](#What-is-the-difference-between-interpolated-content-and-innerHTM)                                                       |
+| 5   | [What are lifecycle hooks available](#What-are-lifecycle-hooks-available)                                                                                                                   |
+| 6   | [What is the difference between constructor and ngOnInit](#What-is-the-difference-between-constructor-and-ngOnInit)                                                                         |
+| 7   | [What are the lifecycle hooks of a zone](#What-are-the-lifecycle-hooks-of-a-zone)                                                                                                           |
+| 8   | [What are directives](#What-are-directives)                                                                                                                                                 |
+| 9   | [What are the differences between Component and Directive](#What-are-the-differences-between-Component-and-Directive)                                                                       |
+| 10  | [What is the purpose of *ngFor directive](#What-is-the-purpose-of-*ngFor-directive)                                                                                                         |
+| 11  | [What is the purpose of *ngIf directive](#What-is-the-purpose-of-*ngIf-directive)                                                                                                           |
+| 12  | [What are the various kinds of directives](#What-are-the-various-kinds-of-directives)                                                                                                       |
+| 13  | [How do you create directives using CLI](#How-do-you-create-directives-using-CLI)                                                                                                           |
+| 14  | [Give an example for attribute directives](#Give-an-example-for-attribute-directives)                                                                                                       |
+| 15  | [What is the purpose of hidden property](#What-is-the-purpose-of-hidden-property)                                                                                                           |
+| 16  | [What is the difference between ngIf and hidden property](#What-is-the-difference-between-ngIf-and-hidden-property)                                                                         |
+| 17  | [What is index property in ngFor directive](#What-is-index-property-in-ngFor-directive)                                                                                                     |
+| 18  | [What is the purpose of ngFor trackBy](#What-is-the-purpose-of-ngFor-trackBy)                                                                                                               |
+| 19  | [What is the purpose of ngSwitch directive](#What-is-the-purpose-of-ngSwitch-directive)                                                                                                     |
+| 20  | [How to set ngFor and ngIf on the same element](#How-to-set-ngFor-and-ngIf-on-the-same-element)                                                                                             |
+| 4   | [What is host property in css](#What-is-host-property-in-css)                                                                                                                               |
+| 4   | [What is metadata](#What-is-metadata)                                                                                                                                                       |
+| 4   | [What are the restrictions of metadata](#What-are-the-restrictions-of-metadata)                                                                                                             |
+| 4   | [What is the purpose of metadata json files](#What-is-the-purpose-of-metadata-json-files)                                                                                                   |
+| 4   | [Give an example of few metadata errors](#Give-an-example-of-few-metadata-errors)                                                                                                           |
+| 4   | [What is metadata rewriting](#What-is-metadata-rewriting)                                                                                                                                   |
+| 4   | [What is the role of ngModule metadata in compilation process](#What-is-the-role-of-ngModule-metadata-in-compilation-process)                                                               |
+| 4   | [What is a service](#What-is-a-service)                                                                                                                                                     |
+| 4   | [What are class field decorators](#What-are-class-field-decorators)                                                                                                                         |
+| 4   | [What are the class decorators in Angular](#What-are-the-class-decorators-in-Angular)                                                                                                       |
+| 4   | [Is it possible to do aliasing for inputs and outputs](#Is-it-possible-to-do-aliasing-for-inputs-and-outputs)                                                                               |
+| 4   | [What is a module](#What-is-a-module)                                                                                                                                                       |
+| 4   | [What are feature modules](#What-are-feature-modules)                                                                                                                                       |
+| 4   | [What are the types of feature modules](#What-are-the-types-of-feature-modules)                                                                                                             |
+| 4   | [What are the imported modules in CLI generated feature modules](#What-are-the-imported-modules-in-CLI-generated-feature-modules)                                                           |
+| 4   | [What is the purpose of common module](#What-is-the-purpose-of-common-module)                                                                                                               |
+| 4   | [What is Angular Material](#What-is-Angular-Material)                                                                                                                                       |
+| 4   | [What happens if browserModule used in feature module](#What-happens-if-browserModule-used-in-feature-module)                                                                               |
+| 4   | [What happens if I import the same module twice](#What-happens-if-I-import-the-same-module-twice)                                                                                           |
+| 4   | [How does forRoot method helpful to avoid duplicate router instances](#How-does-forRoot-method-helpful-to-avoid-duplicate-router-instances)                                                 |
+| 4   | [What are the differences between ngmodule and javascript module](#What-are-the-differences-between-ngmodule-and-javascript-module)                                                         |
+| 4   | [Give few examples for NgModules](#Give-few-examples-for-NgModules)                                                                                                                         |
+| 4   | [What is declarable in Angular](#What-is-declarable-in-Angular)                                                                                                                             |
+| 4   | [What are the restrictions on declarable classes](#What-are-the-restrictions-on-declarable-classes)                                                                                         |
+| 4   | [What classes should not be added to declarations](#What-classes-should-not-be-added-to-declarations)                                                                                       |
+| 4   | [What are the possible errors with declarations](#What-are-the-possible-errors-with-declarations)                                                                                           |
+| 4   | [What are the steps to use declaration elements](#What-are-the-steps-to-use-declaration-elements)                                                                                           |
+| 4   | [What is a provider](#What-is-a-provider)                                                                                                                                                   |
+| 4   | [What is the recommendation for provider scope](#What-is-the-recommendation-for-provider-scope)                                                                                             |
+| 4   | [How do you configure injectors with providers at different levels](#How-do-you-configure-injectors-with-providers-at-different-levels)                                                     |
+| 4   | [How do you restrict provider scope to a module](#How-do-you-restrict-provider-scope-to-a-module)                                                                                           |
+| 4   | [What is the reason for No provider for HTTP exception](#What-is-the-reason-for-No-provider-for-HTTP-exception)                                                                             |
+| 4   | [What is a bootstrapping module](#What-is-a-bootstrapping-module)                                                                                                                           |
+| 4   | [What is a bootstrapped component](#What-is-a-bootstrapped-component)                                                                                                                       |
+| 4   | [How do you manually bootstrap an application](#How-do-you-manually-bootstrap-an-application)                                                                                               |
+| 4   | [Is it necessary for bootstrapped component to be entry component](#Is-it-necessary-for-bootstrapped-component-to-be-entry-component)                                                       |
+| 4   | [Why is not necessary to use entryComponents array every time](#Why-is-not-necessary-to-use-entryComponents-array-every-time)                                                               |
+| 4   | [Do I still need to use entryComponents array in Angular9](#Do-I-still-need-to-use-entryComponents-array-in-Angular9)                                                                       |
+| 4   | [What is a routed entry component](#What-is-a-routed-entry-component)                                                                                                                       |
+| 4   | [What is an entry component](#What-is-an-entry-component)                                                                                                                                   |
+| 4   | [What is a shared module](#What-is-a-shared-module)                                                                                                                                         |
+| 4   | [Can I share services using modules](#Can-I-share-services-using-modules)                                                                                                                   |
+| 4   | [How do you provide a singleton service](#How-do-you-provide-a-singleton-service)                                                                                                           |
+| 4   | [What are the different ways to remove duplicate service registration](#What-are-the-different-ways-to-remove-duplicate-service-registration)                                               |
+| 4   | [Is it mandatory to use injectable on every service class](#Is-it-mandatory-to-use-injectable-on-every-service-class)                                                                       |
+| 4   | [What are the types of injector hierarchies](#What-are-the-types-of-injector-hierarchies)                                                                                                   |
+| 4   | [How to inject the dynamic script in angular](#How-to-inject-the-dynamic-script-in-angular)                                                                                                 |
+| 4   | [What are the differences between AngularJS and Angular with respect to dependency injection](#What-are-the-differences-between-AngularJS-and-Angular-with-respect-to-dependency-injection) |
+| 4   | [What is HttpClient and its benefits](#What-is-HttpClient-and-its-benefits)                                                                                                                 |
+| 4   | [Explain on how to use HttpClient with an example](#Explain-on-how-to-use-HttpClient-with-an-example)                                                                                       |
+| 4   | [How can you read full response](#How-can-you-read-full-response)                                                                                                                           |
+| 4   | [How do you perform Error handling](#How-do-you-perform-Error-handling)                                                                                                                     |
+| 4   | [How do you pass headers for HTTP client](#How-do-you-pass-headers-for-HTTP-client)                                                                                                         |
+| 4   | [Is angular prevents http level vulnerabilities](#Is-angular-prevents-http-level-vulnerabilities)                                                                                           |
+| 4   | [What is angular animation](#What-is-angular-animation)                                                                                                                                     |
+| 4   | [What are the steps to use animation module](#What-are-the-steps-to-use-animation-module)                                                                                                   |
+| 4   | [How do you trigger an animation](#How-do-you-trigger-an-animation)                                                                                                                         |
+| 4   | [What are pipes](#What-are-pipes)                                                                                                                                                           |
+| 4   | [What is the purpose of async pipe](#What-is-the-purpose-of-async-pipe)                                                                                                                     |
+| 4   | [What is a parameterized pipe](#What-is-a-parameterized-pipe)                                                                                                                               |
+| 4   | [How do you chain pipes](#How-do-you-chain-pipes)                                                                                                                                           |
+| 4   | [What is a custom pipe](#What-is-a-custom-pipe)                                                                                                                                             |
+| 4   | [Give an example of custom pipe](#Give-an-example-of-custom-pipe)                                                                                                                           |
+| 4   | [What is the difference between pure and impure pipe](#What-is-the-difference-between-pure-and-impure-pipe)                                                                                 |
+| 4   | [What is slice pipe](#What-is-slice-pipe)                                                                                                                                                   |
+| 4   | [What are the list of template expression operators](#What-are-the-list-of-template-expression-operators)                                                                                   |
+| 4   | [What is the precedence between pipe and ternary operators](#What-is-the-precedence-between-pipe-and-ternary-operators)                                                                     |
+| 4   | [How does angular finds components, directives and pipes](#How-does-angular-finds-components,-directives-and-pipes)                                                                         |
+| 4   | [What are Http Interceptors](#What-are-Http-Interceptors)                                                                                                                                   |
+| 4   | [What are the applications of HTTP interceptors](#What-are-the-applications-of-HTTP-interceptors)                                                                                           |
+| 4   | [How can I use interceptor for an entire application](#How-can-I-use-interceptor-for-an-entire-application)                                                                                 |
+| 4   | [What are reactive forms](#What-are-reactive-forms)                                                                                                                                         |
+| 4   | [What are dynamic forms](#What-are-dynamic-forms)                                                                                                                                           |
+| 4   | [What are template driven forms](#What-are-template-driven-forms)                                                                                                                           |
+| 4   | [What are the differences between reactive forms and template driven forms](#What-are-the-differences-between-reactive-forms-and-template-driven-forms)                                     |
+| 4   | [What are the different ways to group form controls](#What-are-the-different-ways-to-group-form-controls)                                                                                   |
+| 4   | [How do you update specific properties of a form model](#How-do-you-update-specific-properties-of-a-form-model)                                                                             |
+| 4   | [What is the purpose of FormBuilder](#What-is-the-purpose-of-FormBuilder)                                                                                                                   |
+| 4   | [How do you verify the model changes in forms](#How-do-you-verify-the-model-changes-in-forms)                                                                                               |
+| 4   | [What are the state CSS classes provided by ngModel](#What-are-the-state-CSS-classes-provided-by-ngModel)                                                                                   |
+| 4   | [How do you reset the form](#How-do-you-reset-the-form)                                                                                                                                     |
+| 4   | [What are the types of validator functions](#What-are-the-types-of-validator-functions)                                                                                                     |
+| 4   | [Can you give an example of built-in validators](#Can-you-give-an-example-of-built-in-validators)                                                                                           |
+| 4   | [How do you optimize the performance of async validators](#How-do-you-optimize-the-performance-of-async-validators)                                                                         |
+| 4   | [What is Angular Router](#What-is-Angular-Router)                                                                                                                                           |
+| 4   | [What is the purpose of base href tag](#What-is-the-purpose-of-base-href-tag)                                                                                                               |
+| 4   | [What are the router imports](#What-are-the-router-imports)                                                                                                                                 |
+| 4   | [What is router outlet](#What-is-router-outlet)                                                                                                                                             |
+| 4   | [What are router links](#What-are-router-links)                                                                                                                                             |
+| 4   | [What are active router links](#What-are-active-router-links)                                                                                                                               |
+| 4   | [What is router state](#What-is-router-state)                                                                                                                                               |
+| 4   | [What are router events](#What-are-router-events)                                                                                                                                           |
+| 4   | [What is activated route](#What-is-activated-route)                                                                                                                                         |
+| 4   | [How do you define routes](#How-do-you-define-routes)                                                                                                                                       |
+| 4   | [What is the purpose of Wildcard route](#What-is-the-purpose-of-Wildcard-route)                                                                                                             |
+| 4   | [Do I need a Routing Module always](#Do-I-need-a-Routing-Module-always)                                                                                                                     |
+| 4   | [How do you detect route change in Angular](#How-do-you-detect-route-change-in-Angular)                                                                                                     |
+| 4   | [How can I use SASS in angular project](#How-can-I-use-SASS-in-angular-project)                                                                                                             |
+| 4   | [How do you get the current route](#How-do-you-get-the-current-route)                                                                                                                       |
+| 4   | [Is Angular supports dynamic imports](#Is-Angular-supports-dynamic-imports)                                                                                                                 |
+| 4   | [What is lazy loading](#What-is-lazy-loading)                                                                                                                                               |
+| 4   | [What are different types of compilation in Angular](#What-are-different-types-of-compilation-in-Angular)                                                                                   |
+| 4   | [What is JIT](#What-is-JIT)                                                                                                                                                                 |
+| 4   | [What is AOT](#What-is-AOT)                                                                                                                                                                 |
+| 4   | [What is AOT compiler](#What-is-AOT-compiler)                                                                                                                                               |
+| 4   | [Why do we need compilation process](#Why-do-we-need-compilation-process)                                                                                                                   |
+| 4   | [What are the advantages with AOT](#What-are-the-advantages-with-AOT)                                                                                                                       |
+| 4   | [What are the ways to control AOT compilation](#What-are-the-ways-to-control-AOT-compilation)                                                                                               |
+| 4   | [What are the three phases of AOT](#What-are-the-three-phases-of-AOT)                                                                                                                       |
+| 4   | [Can I use arrow functions in AOT](#Can-I-use-arrow-functions-in-AOT)                                                                                                                       |
+| 4   | [Can I use any javascript feature for expression syntax in AOT](#Can-I-use-any-javascript-feature-for-expression-syntax-in-AOT)                                                             |
 
 ### <h2>What is Angular Framework</h2>
 
 Angular is a **TypeScript-based open-source** front-end platform that makes it easy to build web, mobile and desktop applications. The major features of this framework include declarative templates, dependency injection, end to end tooling which ease application development.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you find angular CLI version</h2>
+
+Angular CLI provides it's installed version using below different ways using ng command,
+
+```bash
+ng v
+ng version
+ng -v
+ng --version
+```
+and the output would be as below,
+
+```bash
+Angular CLI: 1.6.3
+Node: 8.11.3
+OS: darwin x64
+Angular:
+...
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you upgrade angular version</h2>
+
+The Angular upgrade is quite easier using Angular CLI `ng update` command as mentioned below. For example, if you upgrade from Angular 7 to 8 then your lazy loaded route imports will be migrated to the new import syntax automatically.
+
+```bash
+$ ng update @angular/cli @angular/core
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -489,6 +575,142 @@ Dynamic components are the components in which the component's location in the a
 ### <h2>What is Angular Universal</h2>
 
 Angular Universal is a server-side rendering module for Angular applications in various scenarios. This is a community driven project and available under @angular/platform-server package. Recently Angular Universal is integrated with Angular CLI.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is content projection</h2>
+
+Content projection is a pattern in which you insert, or project, the content you want to use inside another component.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is ng-content and its purpose</h2>
+
+The ng-content is used to insert the content dynamically inside the component that helps to increase component reusability.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you select an element in component template</h2>
+
+You can control any DOM element via ElementRef by injecting it into your component's constructor. i.e, The component should have constructor with ElementRef parameter,
+
+```javascript
+constructor(myElement: ElementRef) {
+    el.nativeElement.style.backgroundColor = 'yellow';
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is standalone component</h2>
+
+A standalone component is a type of component which is not part of any Angular module. It provides a simplified way to build Angular applications.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How to create a standalone component using CLI command</h2>
+
+Generate standalone component using CLI command as shown below
+
+```bash
+ng generate component component-name --standalone
+```
+
+On running the command standalone component is created.
+Here is the list of file created.
+
+1. `component-name.component.ts`
+2. `component-name.component.css`
+3. `component-name.component.spec`
+4. `component-name.component.html`
+
+Next need to update `app.module.ts` as shown below.
+
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { ComponentNameComponent } from './component-name/component-name.component';
+
+@NgModule({
+imports: [
+    BrowserModule,
+    ComponentNameComponent
+],
+declarations: [AppComponent],
+bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is hydration</h2>
+
+Hydration is the process that restores the server side rendered application on the client. This includes things like reusing the server rendered DOM structures, persisting the application state, transferring application data that was retrieved already by the server, and other processes.
+
+To enable hydration, we have to enable server side rendering or Angular Universal. Once enabled, we can add the following piece of code in the root component.
+
+```typescript
+import { bootstrapApplication, provideClientHydration } from '@angular/platform-browser';
+
+bootstrapApplication(RootCmp, {
+    providers: [provideClientHydration()]
+});
+```
+Alternatively we can add `providers: [provideClientHydration()]` in the App Module
+```typescript
+import {provideClientHydration} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+​
+@NgModule({
+declarations: [RootCmp],
+exports: [RootCmp],
+bootstrap: [RootCmp],
+providers: [provideClientHydration()],
+})
+export class AppModule {}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How to create a standalone component manually</h2>
+
+To make existing component to standalone, then add `standalone: true` in `component-name.component.ts` as shown below
+
+```typescript
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+standalone: true,
+imports: [CommonModule],
+selector: 'app-standalone-component',
+templateUrl: './standalone-component.component.html',
+styleUrls: ['./standalone-component.component.css'],
+})
+export class ComponentNameComponent implements OnInit {
+constructor() {}
+
+ngOnInit() {}
+}
+```
+Next need to update `app.module.ts` as shown below.
+
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { ComponentNameComponent } from './component-name/component-name.component';
+
+@NgModule({
+imports: [
+    BrowserModule,
+    ComponentNameComponent
+],
+declarations: [AppComponent],
+bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1169,6 +1391,823 @@ Yes, it is possible to do aliasing for inputs and outputs in two ways.
 ```ts
     @Input('buyItem') input1: string;
     @Output('completedEvent') outputEvent1 = new EventEmitter<string>();
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a module</h2>
+
+Modules are logical boundaries in your application and the application is divided into separate modules to separate the functionality of your application.
+
+Lets take an example of **app.module.ts** root module declared with **@NgModule** decorator as below,
+
+```typescript
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent }  from './app.component';
+
+@NgModule ({
+    imports:      [ BrowserModule ],
+    declarations: [ AppComponent ],
+    bootstrap:    [ AppComponent ],
+    providers: []
+})
+export class AppModule { }
+```
+
+The NgModule decorator has five important (among all) options:
+1. The imports option is used to import other dependent modules. The BrowserModule is required by default for any web based angular application.
+2. The declarations option is used to define components in the respective module.
+3. The bootstrap option tells Angular which Component to bootstrap in the application.
+4. The providers option is used to configure a set of injectable objects that are available in the injector of this module.
+5. The entryComponents option is a set of components dynamically loaded into the view.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are feature modules</h2>
+
+Feature modules are NgModules, which are used for the purpose of organizing code. The feature module can be created with Angular CLI using the below command in the root directory,
+
+```javascript
+ng generate module MyCustomFeature //
+```
+
+Angular CLI creates a folder called `my-custom-feature` with a file inside called `my-custom-feature.module.ts` with the following contents
+
+```javascript
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@NgModule({
+imports: [
+    CommonModule
+],
+declarations: []
+})
+export class MyCustomFeature { }
+```
+
+**Note:**  The "Module" suffix shouldn't present in the name because the CLI appends it.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the types of feature modules</h2>
+
+Below are the five categories of feature modules,
+
+1. **Domain:** Deliver a user experience dedicated to a particular application domain(For example, place an order, registration etc)
+2. **Routed:** These are domain feature modules whose top components are the targets of router navigation routes.
+3. **Routing:** It provides routing configuration for another module.
+4. **Service:** It provides utility services such as data access and messaging(For example, HttpClientModule)
+5. **Widget:** It makes components, directives, and pipes available to external modules(For example, third-party libraries such as Material UI)
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the imported modules in CLI generated feature modules</h2>
+
+In the CLI generated feature module, there are two JavaScript import statements at the top of the file
+
+1. **NgModule:** InOrder to use the `@NgModule` decorator
+2. **CommonModule:** It provides many common directives such as `ngIf` and `ngFor`.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the purpose of common module</h2>
+
+The commonly-needed services, pipes, and directives provided by @angular/common module. Apart from these HttpClientModule is available under @angular/common/http.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Angular Material</h2>
+
+Angular Material is a collection of Material Design components for Angular framework following the Material Design spec. You can apply Material Design very easily using Angular Material. The installation can be done through npm or yarn,
+
+```bash
+npm install --save @angular/material @angular/cdk @angular/animations
+(OR)
+yarn add @angular/material @angular/cdk @angular/animations
+```
+It supports the most recent two versions of all major browsers. The latest version of Angular material is 8.1.1
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What happens if browserModule used in feature module</h2>
+
+If you do import `BrowserModule` into a lazy loaded feature module, Angular returns an error telling you to use `CommonModule` instead. Because BrowserModule’s providers are for the entire app so it should only be in the root module, not in feature module. Whereas Feature modules only need the common directives in CommonModule.
+
+![ScreenShot](images/browser-module-error.gif)
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What happens if I import the same module twice</h2>
+
+If multiple modules imports the same module then angular evaluates it only once (When it encounters the module first time). It follows this condition even the module appears at any level in a hierarchy of imported NgModules.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How does forRoot method helpful to avoid duplicate router instances</h2>
+
+If the `RouterModule` module didn’t have forRoot() static method then each feature module would instantiate a new Router instance, which leads to broken application due to duplicate instances. After using forRoot() method, the root application module imports `RouterModule.forRoot(...)` and gets a Router, and all feature modules import `RouterModule.forChild(...)` which does not instantiate another Router.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the differences between ngmodule and javascript module</h2>
+
+Below are the main differences between Angular NgModule and javascript module,
+
+| NgModule                                                                          | JavaScript module                               |
+| --------------------------------------------------------------------------------- | ----------------------------------------------- |
+| NgModule bounds declarable classes only                                           | There is no restriction classes                 |
+| List the module's classes in declarations array only                              | Can define all member classes in one giant file |
+| It only export the declarable classes it owns or imports from other modules       | It can export any classes                       |
+| Extend the entire application with services by adding providers to provides array | Can't extend the application with services      |
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Give few examples for NgModules</h2>
+
+The Angular core libraries and third-party libraries are available as NgModules.
+
+1. Angular libraries such as FormsModule, HttpClientModule, and RouterModule are NgModules.
+2. Many third-party libraries such as Material Design, Ionic, and AngularFire2 are NgModules.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is declarable in Angular</h2>
+
+Declarable is a class type that you can add to the declarations list of an NgModule. The class types such as components, directives, and pipes comes can be declared in the module. The structure of declarations would be,
+
+```javascript
+declarations: [
+    YourComponent,
+    YourPipe,
+    YourDirective
+],
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the restrictions on declarable classes</h2>
+
+Below classes shouldn't be declared,
+
+1. A class that's already declared in another NgModule
+2. Ngmodule classes
+3. Service classes
+4. Helper classes
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What classes should not be added to declarations</h2>
+
+The below class types shouldn't be added to declarations
+
+1. A class which is already declared in any another module.
+2. Directives imported from another module.
+3. Module classes.
+4. Service classes.
+5. Non-Angular classes and objects, such as strings, numbers, functions, entity models, configurations, business logic, and helper classes.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the possible errors with declarations</h2>
+
+There are two common possible errors with declarations array,
+
+1. If you use a component without declaring it, Angular returns an error message.
+2. If you try to declare the same class in more than one module then compiler emits an error.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the steps to use declaration elements</h2>
+
+Below are the steps to be followed to use declaration elements.
+
+1. Create the element(component, directive and pipes) and export it from the file where you wrote it
+2. Import it into the appropriate module.
+3. Declare it in the @NgModule declarations array.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a provider</h2>
+
+A provider is an instruction to the Dependency Injection system on how to obtain a value for a dependency(aka services created). The service can be provided using Angular CLI as below,
+
+```javascript
+ng generate service my-service
+```
+
+The created service by CLI would be as below,
+
+```js
+import { Injectable } from '@angular/core';
+
+@Injectable({
+providedIn: 'root', //Angular provide the service in root injector
+})
+export class MyService {
+}
+```
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the recommendation for provider scope</h2>
+
+You should always provide your service in the root injector unless there is a case where you want the service to be available only if you import a particular @NgModule.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you configure injectors with providers at different levels</h2>
+
+You can configure injectors with providers at different levels of your application by setting a metadata value. The configuration can happen in one of three places,
+
+1. In the `@Injectable()` decorator for the service itself
+2. In the `@NgModule()` decorator for an NgModule
+3. In the `@Component()` decorator for a component
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you restrict provider scope to a module</h2>
+
+It is possible to restrict service provider scope to a specific module instead making available to entire application. There are two possible ways to do it.
+
+1. **Using providedIn in service:**
+
+```js
+import { Injectable } from '@angular/core';
+import { SomeModule } from './some.module';
+
+@Injectable({
+    providedIn: SomeModule,
+})
+export class SomeService {
+}
+```
+
+2. **Declare provider for the service in module:**
+
+```js
+import { NgModule } from '@angular/core';
+
+import { SomeService } from './some.service';
+
+@NgModule({
+    providers: [SomeService],
+})
+export class SomeModule {
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is the reason for No provider for HTTP exception</h2>
+
+This exception is due to missing HttpClientModule in your module. You just need to import in module as below,
+
+```javascript
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+imports: [
+    BrowserModule,
+    HttpClientModule,
+],
+declarations: [ AppComponent ],
+bootstrap:    [ AppComponent ]
+})
+export class AppModule { }
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a bootstrapping module</h2>
+
+Every application has at least one Angular module, the root module that you bootstrap to launch the application is called as bootstrapping module. It is commonly known as `AppModule`. The default structure of `AppModule` generated by AngularCLI would be as follows:
+
+```javascript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
+
+/* the AppModule class with the @NgModule decorator */
+@NgModule({
+    declarations: [
+    AppComponent
+    ],
+    imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a bootstrapped component</h2>
+
+A bootstrapped component is an entry component that Angular loads into the DOM during the bootstrap process or application launch time. Generally, this bootstrapped or root component is named as `AppComponent` in your root module using `bootstrap` property as below.
+
+```js
+@NgModule({
+declarations: [
+    AppComponent
+],
+imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
+],
+providers: [],
+bootstrap: [AppComponent] // bootstrapped entry component need to be declared here
+})
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you manually bootstrap an application</h2>
+
+You can use `ngDoBootstrap` hook for a manual bootstrapping of the application instead of using bootstrap array in `@NgModule` annotation. This hook is part of `DoBootstap` interface.
+
+```js
+interface DoBootstrap {
+    ngDoBootstrap(appRef: ApplicationRef): void
+}
+```
+
+The module needs to be implement the above interface to use the hook for bootstrapping.
+
+```js
+class AppModule implements DoBootstrap {
+    ngDoBootstrap(appRef: ApplicationRef) {
+        appRef.bootstrap(AppComponent); // bootstrapped entry component need to be passed
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Is it necessary for bootstrapped component to be entry component</h2>
+
+Yes, the bootstrapped component needs to be an entry component. This is because the bootstrapping process is an imperative process.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Why is not necessary to use entryComponents array every time</h2>
+
+Most of the time, you don't need to explicity to set entry components in entryComponents array of ngModule decorator. Because angular adds components from both @NgModule.bootstrap and route definitions to entry components automatically.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Do I still need to use entryComponents array in Angular9</h2>
+
+No. In previous angular releases, the entryComponents array of ngModule decorator is used to tell the compiler which components would be created and inserted dynamically in the view. In Angular9, this is not required anymore with Ivy.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a routed entry component</h2>
+
+The components referenced in router configuration are called as routed entry components. This routed entry component defined in a route definition as below,
+
+```js
+const routes: Routes = [
+    {
+        path: '',
+        component: TodoListComponent // router entry component
+    }
+];
+```
+Since router definition requires you to add the component in two places (router and entryComponents), these components are always entry components.
+
+**Note:** The compilers are smart enough to recognize a router definition and automatically add the router component into `entryComponents`.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is an entry component</h2>
+
+An entry component is any component that Angular loads imperatively(i.e, not referencing it in the template) by type. Due to this behavior, they can’t be found by the Angular compiler during compilation. These components created dynamically with `ComponentFactoryResolver`.
+
+Basically, there are two main kinds of entry components which are following -
+
+1. The bootstrapped root component
+2. A component you specify in a route
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is a shared module</h2>
+
+The Shared Module is the module in which you put commonly used directives, pipes, and components into one module that is shared(import it) throughout the application.
+
+For example, the below shared module imports CommonModule, FormsModule for common directives and components, pipes and directives based on the need,
+
+```js
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { UserComponent } from './user.component';
+import { NewUserDirective } from './new-user.directive';
+import { OrdersPipe } from './orders.pipe';
+
+@NgModule({
+imports:      [ CommonModule ],
+declarations: [ UserComponent, NewUserDirective, OrdersPipe ],
+exports:      [ UserComponent, NewUserDirective, OrdersPipe,
+                CommonModule, FormsModule ]
+})
+export class SharedModule { }
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Can I share services using modules</h2>
+
+No, it is not recommended to share services by importing module. i.e Import modules when you want to use directives, pipes, and components only. The best approach to get a hold of shared services is through 'Angular dependency injection' because importing a module will result in a new service instance.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you provide a singleton service</h2>
+
+There are two possible ways to provide a singleton service.
+
+1. Set the providedIn property of the @Injectable() to "root". This is the preferred way(starting from Angular 6.0) of creating a singleton service since it makes your services tree-shakable.
+
+```js
+import { Injectable } from '@angular/core';
+
+@Injectable({
+    providedIn: 'root',
+})
+export class MyService {
+}
+```
+
+2. Include the service in root module or in a module that is only imported by root module. It has been used to register services before Angular 6.0.
+
+```js
+@NgModule({
+    ...
+    providers: [MyService],
+    ...
+})
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the different ways to remove duplicate service registration</h2>
+
+If a module defines provides and declarations then loading the module in multiple feature modules will duplicate the registration of the service. Below are the different ways to prevent this duplicate behavior.
+
+1. Use the providedIn syntax instead of registering the service in the module.
+2. Separate your services into their own module.
+3. Define forRoot() and forChild() methods in the module.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Is it mandatory to use injectable on every service class</h2>
+
+No. The `@Injectable()` decorator is not strictly required if the class has other Angular decorators on it or does not have any dependencies. But the important thing here is any class that is going to be injected with Angular is decorated. i.e, If we add the decorator, the metadata `design:paramtypes` is added, and the dependency injection can do it's job. That is the exact reason to add the @Injectable() decorator on a service if this service has some dependencies itself.
+
+For example, Let's see the different variations of AppService in a root component,
+
+1. The below AppService can be injected in AppComponent without any problems. This is because there are no dependency services inside AppService.
+
+```js
+export class AppService {
+constructor() {
+    console.log('A new app service');
+}
+}
+```
+
+2. The below AppService with dummy decorator and httpService can be injected in AppComponent without any problems. This is because meta information is generated with dummy decorator.
+
+```js
+function SomeDummyDecorator() {
+    return (constructor: Function) => console.log(constructor);
+}
+
+@SomeDummyDecorator()
+export class AppService {
+    constructor(http: HttpService) {
+        console.log(http);
+    }
+}
+```
+
+and the generated javascript code of above service has meta information about HttpService,
+
+```js
+var AppService = (function () {
+    function AppService(http) {
+        console.log(http);
+    }
+    AppService = __decorate([
+        core_1.Injectable(),
+        __metadata('design:paramtypes', [http_service_1.HttpService])
+    ], AppService);
+    return AppService;
+}());
+exports.AppService = AppService;
+```
+
+3. The below AppService with @injectable decorator and httpService can be injected in AppComponent without any problems. This is because meta information is generated with Injectable decorator.
+
+```js
+@Injectable({
+providedIn: 'root',
+})
+export class AppService {
+    constructor(http: HttpService) {
+        console.log(http);
+    }
+}
+```
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the types of injector hierarchies</h2>
+
+There are two types of injector hierarchies in Angular
+
+1. **ModuleInjector hierarchy:** It configure on a module level using an @NgModule() or @Injectable() annotation.
+2. **ElementInjector hierarchy:** It created implicitly at each DOM element. Also it is empty by default unless you configure it in the providers property on @Directive() or @Component().
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How to inject the dynamic script in angular</h2>
+
+Using DomSanitizer we can inject the dynamic Html,Style,Script,Url.
+
+```ts
+import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+@Component({
+selector: 'my-app',
+template: `
+    <div [innerHtml]="htmlSnippet"></div>
+`,
+})
+export class App {
+    constructor(protected sanitizer: DomSanitizer) {}
+    htmlSnippet: string = this.sanitizer.bypassSecurityTrustScript("<script>safeCode()</script>");
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the differences between AngularJS and Angular with respect to dependency injection</h2>
+
+Dependency injection is a common component in both AngularJS and Angular, but there are some key differences between the two frameworks in how it actually works.
+
+| AngularJS                                                                   | Angular                                                                                                     |
+| --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Dependency injection tokens are always strings                              | Tokens can have different types. They are often classes and sometimes can be strings.                       |
+| There is exactly one injector even though it is a multi-module applications | There is a tree hierarchy of injectors, with a root injector and an additional injector for each component. |
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is HttpClient and its benefits</h2>
+
+Most of the Front-end applications communicate with backend services over `HTTP` protocol using either `XMLHttpRequest` interface or the `fetch()` API. Angular provides a simplified client HTTP API known as `HttpClient` which is based on top of `XMLHttpRequest` interface. This client is available from `@angular/common/http` package.
+
+You can import in your root module as below:
+
+```javascript
+import { HttpClientModule } from '@angular/common/http';
+```
+
+The major advantages of HttpClient can be listed as below,
+1. Contains testability features
+2. Provides typed request and response objects
+3. Intercept request and response
+4. Supports Observalbe APIs
+5. Supports streamlined error handling
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Explain on how to use HttpClient with an example</h2>
+
+Below are the steps need to be followed for the usage of `HttpClient`.
+
+1. Import `HttpClient` into root module:
+
+```javascript
+import { HttpClientModule } from '@angular/common/http';
+@NgModule({
+imports: [
+    BrowserModule,
+    // import HttpClientModule after BrowserModule.
+    HttpClientModule,
+],
+......
+})
+export class AppModule {}
+```
+
+2. Inject the `HttpClient` into the application:
+
+Let's create a userProfileService(`userprofile.service.ts`) as an example. It also defines get method of `HttpClient`:
+
+```javascript
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+const userProfileUrl: string = 'assets/data/profile.json';
+
+@Injectable()
+export class UserProfileService {
+    constructor(private http: HttpClient) { }
+
+    getUserProfile() {
+        return this.http.get(this.userProfileUrl);
+    }
+}
+```
+
+3. Create a component for subscribing service:
+
+Let's create a component called UserProfileComponent(`userprofile.component.ts`), which injects `UserProfileService` and invokes the service method:
+
+```javascript
+fetchUserProfile() {
+this.userProfileService.getUserProfile()
+    .subscribe((data: User) => this.user = {
+        id: data['userId'],
+        name: data['firstName'],
+        city:  data['city']
+    });
+}
+```
+Since the above service method returns an Observable which needs to be subscribed in the component.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How can you read full response</h2>
+
+The response body doesn't or may not return full response data because sometimes servers also return special headers or status code, which are important for the application workflow. In order to get the full response, you should use `observe` option from `HttpClient`:
+
+```javascript
+getUserResponse(): Observable<HttpResponse<User>> {
+    return this.http.get<User>(
+    this.userUrl, { observe: 'response' });
+}
+```
+Now `HttpClient.get()` method returns an Observable of typed `HttpResponse` rather than just the `JSON` data.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you perform Error handling</h2>
+
+If the request fails on the server or fails to reach the server due to network issues, then `HttpClient` will return an error object instead of a successful reponse. In this case, you need to handle in the component by passing `error` object as a second callback to `subscribe()` method.
+
+Let's see how it can be handled in the component with an example,
+
+```javascript
+fetchUser() {
+    this.userService.getProfile()
+    .subscribe(
+        (data: User) => this.userProfile = { ...data }, // success path
+        error => this.error = error // error path
+    );
+}
+```
+It is always a good idea to give the user some meaningful feedback instead of displaying the raw error object returned from `HttpClient`.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you pass headers for HTTP client</h2>
+
+You can directly pass object map for http client or create HttpHeaders class to supply the headers.
+
+```javascript
+constructor(private _http: HttpClient) {}
+this._http.get('someUrl',{
+    headers: {'header1':'value1','header2':'value2'}
+});
+
+(or)
+let headers = new HttpHeaders().set('header1', headerValue1); // create header object
+headers = headers.append('header2', headerValue2); // add a new header, creating a new object
+headers = headers.append('header3', headerValue3); // add another header
+
+let params = new HttpParams().set('param1', value1); // create params object
+params = params.append('param2', value2); // add a new param, creating a new object
+params = params.append('param3', value3); // add another param
+
+return this._http.get<any[]>('someUrl', { headers: headers, params: params })
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Is angular prevents http level vulnerabilities</h2>
+
+Angular has built-in support for preventing http level vulnerabilities such as as cross-site request forgery (CSRF or XSRF) and cross-site script inclusion (XSSI). Even though these vulnerabilities need to be mitigated on server-side, Angular provides helpers to make the integration easier on the client side.
+
+1. HttpClient supports a token mechanism used to prevent XSRF attacks
+2. HttpClient library recognizes the convention of prefixed JSON responses(which non-executable js code with ")]}',\\n" characters) and automatically strips the string ")]}',\\n" from all responses before further parsing
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is angular animation</h2>
+
+Angular's animation system is built on CSS functionality in order to animate any property that the browser considers animatable. These properties includes positions, sizes, transforms, colors, borders etc. The Angular modules for animations are **@angular/animations** and **@angular/platform-browser** and these dependencies are automatically added to your project when you create a project using Angular CLI.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the steps to use animation module</h2>
+
+You need to follow below steps to implement animation in your angular project,
+
+1. **Enabling the animations module:** Import BrowserAnimationsModule to add animation capabilities into your Angular root application module(for example, src/app/app.module.ts).
+
+```javascript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+@NgModule({
+    imports: [
+    BrowserModule,
+    BrowserAnimationsModule
+    ],
+    declarations: [ ],
+    bootstrap: [ ]
+})
+export class AppModule { }
+```
+
+2. **Importing animation functions into component files:** Import required animation functions from @angular/animations in component files(for example, src/app/app.component.ts).
+
+```javascript
+import {
+    trigger,
+    state,
+    style,
+    animate,
+    transition,
+    // ...
+} from '@angular/animations';
+```
+
+3. **Adding the animation metadata property:** add a metadata property called animations: within the @Component() decorator in component files(for example, src/app/app.component.ts)
+
+```javascript
+@Component({
+    selector: 'app-root',
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.css'],
+    animations: [
+    // animation triggers go here
+    ]
+})
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you trigger an animation</h2>
+
+Angular provides a `trigger()` function for animation in order to collect the states and transitions with a specific animation name, so that you can attach it to the triggering element in the HTML template. This function watch for changes and trigger initiates the actions when a change occurs.
+
+For example, let's create trigger named `upDown`, and attach it to the button element.
+
+```js
+content_copy
+@Component({
+selector: 'app-up-down',
+animations: [
+    trigger('upDown', [
+    state('up', style({
+        height: '200px',
+        opacity: 1,
+        backgroundColor: 'yellow'
+    })),
+    state('down', style({
+        height: '100px',
+        opacity: 0.5,
+        backgroundColor: 'green'
+    })),
+    transition('up => down', [
+        animate('1s')
+    ]),
+    transition('down => up', [
+        animate('0.5s')
+    ]),
+    ]),
+],
+templateUrl: 'up-down.component.html',
+styleUrls: ['up-down.component.css']
+})
+export class UpDownComponent {
+isUp = true;
+
+toggle() {
+    this.isUp = !this.isUp;
+}
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
