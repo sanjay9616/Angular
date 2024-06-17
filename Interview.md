@@ -167,6 +167,17 @@
 | 4   | [What are the three phases of AOT](#What-are-the-three-phases-of-AOT)                                                                                                                       |
 | 4   | [Can I use arrow functions in AOT](#Can-I-use-arrow-functions-in-AOT)                                                                                                                       |
 | 4   | [Can I use any javascript feature for expression syntax in AOT](#Can-I-use-any-javascript-feature-for-expression-syntax-in-AOT)                                                             |
+| 4   | [What is Angular Ivy](#What-is-Angular-Ivy)                                                                                                                                                 |
+| 4   | [What are the features included in ivy preview](#What-are-the-features-included-in-ivy-preview)                                                                                             |
+| 4   | [Can I use AOT compilation with Ivy](#Can-I-use-AOT-compilation-with-Ivy)                                                                                                                   |
+| 4   | [What is Angular Language Service](#What-is-Angular-Language-Service)                                                                                                                       |
+| 4   | [How do you install angular language service in the project](#How-do-you-install-angular-language-service-in-the-project)                                                                   |
+| 4   | [Is there any editor support for Angular Language Service](#Is-there-any-editor-support-for-Angular-Language-Service)                                                                       |
+| 4   | [Explain the features provided by Angular Language Service](#Explain-the-features-provided-by-Angular-Language-Service)                                                                     |
+| 4   | [What is Bazel tool](#What-is-Bazel-tool)                                                                                                                                                   |
+| 4   | [What are the advantages of Bazel tool](#What-are-the-advantages-of-Bazel-tool)                                                                                                             |
+| 4   | [How do you use Bazel with Angular CLI](#How-do-you-use-Bazel-with-Angular-CLI)                                                                                                             |
+| 4   | [How do you run Bazel directly](#How-do-you-run-Bazel-directly)                                                                                                                             |
 
 ### <h2>What is Angular Framework</h2>
 
@@ -3322,6 +3333,163 @@ If you still use arrow function, it generates an error node in place of the func
 No, the AOT collector understands a subset  of (or limited) JavaScript features. If an expression uses unsupported syntax, the collector writes an error node to the .metadata.json file. Later point of time, the compiler reports an error if it needs that piece of metadata to generate the application code.
 
 **[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Angular Ivy</h2>
+
+Angular Ivy is a new rendering engine for Angular. You can choose to opt in a preview version of Ivy from Angular version 8.
+
+1. You can enable ivy in a new project by using the --enable-ivy flag with the ng new command
+
+```bash
+ng new ivy-demo-app --enable-ivy
+```
+
+2. You can add it to an existing project by adding `enableIvy` option in the `angularCompilerOptions` in your project's `tsconfig.app.json`.
+
+```javascript
+{
+    "compilerOptions": { ... },
+    "angularCompilerOptions": {
+    "enableIvy": true
+    }
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the features included in ivy preview</h2>
+
+You can expect below features with Ivy preview,
+
+1. Generated code that is easier to read and debug at runtime
+2. Faster re-build time
+3. Improved payload size
+4. Improved template type checking
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Can I use AOT compilation with Ivy</h2>
+
+Yes, it is a recommended configuration. Also, AOT compilation with Ivy is faster. So you need set the default build options(with in angular.json) for your project to always use AOT compilation.
+
+```javascript
+{
+"projects": {
+    "my-project": {
+    "architect": {
+        "build": {
+        "options": {
+            ...
+            "aot": true,
+        }
+        }
+    }
+    }
+}
+}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Angular Language Service</h2>
+
+The Angular Language Service is a way to get completions, errors, hints, and navigation inside your Angular templates whether they are external in an HTML file or embedded in annotations/decorators in a string. It has the ability to autodetect that you are opening an Angular file, reads your `tsconfig.json` file, finds all the templates you have in your application, and then provides all the language services.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you install angular language service in the project</h2>
+
+You can install Angular Language Service in your project with the following npm command,
+
+```javascript
+npm install --save-dev @angular/language-service
+```
+After that add the following to the "compilerOptions" section of your project's tsconfig.json
+
+```javascript
+"plugins": [
+    {"name": "@angular/language-service"}
+]
+```
+**Note:** The completion and diagnostic services works for .ts files only. You need to use custom plugins for supporting HTML files.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Is there any editor support for Angular Language Service</h2>
+
+Yes, Angular Language Service is currently available for Visual Studio Code and WebStorm IDEs. You need to install angular language service using an extension and devDependency respectively. In sublime editor, you need to install typescript which has has a language service plugin model.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>Explain the features provided by Angular Language Service</h2>
+
+Basically there are 3 main features provided by Angular Language Service,
+
+1. **Autocompletion:** Autocompletion can speed up your development time by providing you with contextual possibilities and hints as you type with in an interpolation and elements.
+
+     ![ScreenShot](images/language-completion.gif)
+
+2. **Error checking:** It can also warn you of mistakes in your code.
+
+     ![ScreenShot](images/language-error.gif)
+
+3. **Navigation:** Navigation allows you to hover a component, directive, module and then click and press F12 to go directly to its definition.
+
+     ![ScreenShot](images/language-navigation.gif)
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What is Bazel tool</h2>
+
+Bazel is a powerful build tool developed and massively used by Google and it can keep track of the dependencies between different packages and build targets. In Angular8, you can build your CLI application with Bazel.
+
+**Note:** The Angular framework itself is built with Bazel.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>What are the advantages of Bazel tool</h2>
+
+Below are the list of key advantages of Bazel tool,
+
+1. It creates the possibility of building your back-ends and front-ends with the same tool
+2. The incremental build and tests
+3. It creates the possibility to have remote builds and cache on a build farm.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you use Bazel with Angular CLI</h2>
+
+The @angular/bazel package provides a builder that allows Angular CLI to use Bazel as the build tool.
+
+1. **Use in an existing applciation:** Add @angular/bazel using CLI
+
+```javascript
+ng add @angular/bazel
+```
+
+2. **Use in a new application:** Install the package and create the application with collection option
+
+```javascript
+npm install -g @angular/bazel
+ng new --collection=@angular/bazel
+```
+
+When you use ng build and ng serve commands, Bazel is used behind the scenes and outputs the results in dist/bin folder.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### <h2>How do you run Bazel directly</h2>
+
+Sometimes you may want to bypass the Angular CLI builder and run Bazel directly using Bazel CLI. You can install it globally using @bazel/bazel npm package. i.e, Bazel CLI is available under @bazel/bazel package. After you can apply the below common commands,
+
+```ts
+bazel build [targets] // Compile the default output artifacts of the given targets.
+bazel test [targets] // Run the tests with *_test targets found in the pattern.
+bazel run [target]: Compile the program represented by target and then run it.
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 
 
 

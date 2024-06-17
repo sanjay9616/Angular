@@ -14,21 +14,11 @@ How do you describe various dependencies in angular application?
 What is zone?
 What is codelyzer?
 
-What is State function?
 What is Style function?
 What is the purpose of animate function?
 What is transition function?
 What is a service worker and its role in Angular?
 What are the design goals of service workers?
-
-What is Angular Ivy?
-What are the features included in ivy preview?
-Can I use AOT compilation with Ivy?
-What is Angular Language Service?
-
-How do you install angular language service in the project?
-Is there any editor support for Angular Language Service?
-Explain the features provided by Angular Language Service?
 
 How do you add web workers in your application?
 What are the limitations with web workers?
@@ -40,11 +30,6 @@ How do you create app shell in Angular?
 What are the case types in Angular?
 What is a DI token?
 What is Angular DSL?
-
-What is Bazel tool?
-What are the advantages of Bazel tool?
-How do you use Bazel with Angular CLI?
-How do you run Bazel directly?
 
 What is platform in Angular?
 How do you select an element with in a component template?
