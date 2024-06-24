@@ -6,8 +6,17 @@
 
 ```ts
 const routes: Routes = [
- { path: '', component: HomeComponent },
- { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) }
+    {
+        path: '',
+        component: HomeComponent
+    },
+    {
+        path: 'lazy',
+        component: LazyLayoutComponent,
+        loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule),
+        canActivate: [AuthGuard],
+        data: { title: "Lazy Loading" }
+    },
 ];
 ```
 
