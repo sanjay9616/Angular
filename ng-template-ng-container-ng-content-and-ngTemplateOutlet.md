@@ -2,7 +2,7 @@
 
 <h2>1. ng-container</h2>
 
-- ng-container is an extremely simple directive that allows you to group elements in a template that doesn’t interfere with styles or layout because Angular doesn’t put it in the DOM
+- `ng-container` is a non-rendered container element that allows you to group elements in a template and doesn’t interfere with styles or layout because Angular doesn’t put it in the DOM
 - This is helpful if you don’t want any extra div on DOM, you can simply use ng-container. For eg: If there are two structural directives being called on one div as below:
 
 ```html
