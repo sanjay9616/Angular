@@ -2,7 +2,7 @@
 
 Angular routing is a mechanism that allows you to navigate between different components in a single-page application (SPA) without triggering a full page reload. It helps organize and structure your application by associating different views (components) with specific URLs.
 
-**Key Terms Explained:**
+<h3>Key Terms Explained</h3>
 
 1. **Route**: A route in Angular is a mapping between a URL path and a component. When a user navigates to a specific URL, the associated component is rendered.
 2. **Router**: The Angular Router is a powerful module that facilitates navigation and provides a way to configure routes in your application.
