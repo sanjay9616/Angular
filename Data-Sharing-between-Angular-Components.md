@@ -2,20 +2,20 @@
 
 When building an Angular application, it's common to break it down into smaller components to keep the code manageable. However, when working with smaller components, you may need to share data between them. To do this, it's important to first define the relationship between the components. Once you have a clear understanding of the relationship, you can choose the most appropriate method to share the data.
 
-1. Using @Input @Output decorator for Parent Child Components.
-2. Using a Shared Service.
-3. Using State Management Libraries i.e Ngrx.
-4. Using Local Storage or Session Storage.
-5. Using @ViewChild property.
-6. Using RouterState.
+1. Using @Input @Output decorator for Parent Child Components - parent-child relationship.
+2. Using a Shared Service - don't have parent-child relationship.
+3. Using State Management Libraries i.e Ngrx - manage complex application state in in a centralized location.
+4. Using Local Storage or Session Storage - store small amounts of data.
+5. Using @ViewChild property - access the properties and methods of a child component that is several levels deep in the component hierarchy
+6. Using RouterState - share data between routed components
 
 <h2>1. Using @Input @Output decorator for Parent Child Components</h2>
 
-The @Input and @Output decorators are used to pass data between components that have a parent-child relationship. @Input allows a parent component to pass data down to a child component, while @Output allows a child component to emit an event to the parent component.
+The @Input and @Output decorators are used to pass data between components that have a **parent-child relationship**. @Input allows a parent component to pass data down to a child component, while @Output allows a child component to emit an event to the parent component.
 
-- Use `@Input` when you need to pass data down from a parent component to a child component. This approach is useful when you want to reuse a child component in different parts of your application.
+- Use `@Input` when you need to pass data down from a parent component to a child component. `This approach is useful when you want to reuse a child component in different parts of your application`.
 
-- Use `@Output` when you need to emit an event from a child component to a parent component. This approach is useful when you want to notify the parent component of a change that occurred in the child component.
+- Use `@Output` when you need to emit an event from a child component to a parent component. `This approach is useful when you want to notify the parent component of a change that occurred in the child component`.
 
 **Parent component HTML:**
 ```html
