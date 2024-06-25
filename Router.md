@@ -11,7 +11,7 @@ Angular routing is a mechanism that allows you to navigate between different com
 5. **RouterLink**: The [routerLink] directive is used in templates to create links for navigating to specific routes. It's a handy way to navigate without writing out the full URL.
 6. **RouterModule**: The RouterModule is an Angular module that provides the necessary directives, services, and functionality for implementing routing in an application.
 
-Let's Break It Down...
+`Let's Break It Down...`
 
 <h2>1. Setting Up Routes</h2>
 
@@ -98,16 +98,47 @@ ngOnInit(): void {
   }
 ```
 
-<h2>9 ways to pass data through Angular RouterState</h2>
+<h1>9 ways to pass data through Angular RouterState</h1>
 
-1. URL or route parameters
-2. Query parameters using router. navigate
-3. Query parameters using queryParamsHandling
-4. Query parameters using RouterLink
-5. URL fragment
-6. Data property
-7. RouterLink for dynamic data
-8. Dynamic data using navigateByURL
-9. Wildcard routes
+<h3>1. URL or route parameters</h3>
+
+Consider a route /pizza. To fetch details of a particular pizza, the route must look like /pizza/1 or /pizza/2, where the numbers 1 and 2 refer to the unique ID of a pizza. However, this number varies depending on which pizza the user clicked on and, thus, chose to order. Such dynamic values are handled using route parameters (1 and 2 are known as URL or route parameters).
+
+Route parameters can be passed in just two simple steps:
+
+- Define the route
+- Define the navigation
+
+**a. Define the route**: The parameter is defined by adding a forward slash (/), followed by a colon (:) and a placeholder. Consider the example below:
+
+```ts
+{ path: ’pizza/:id’, component: PizzaComponent }
+```
+
+The above path matches all the pizzas with URLs such as `/pizza/1`, `/pizza/2`, and so on.
+
+In case of multiple parameters, add one more /,: and placeholder. See the example given below:
+
+```ts
+{ path: ’pizza/:id/:id1/:id2’,component: PizzaComponent }
+```
+
+**b. Define the navigation**: Consider the URL:/pizza/:id that fetches details of a particular pizza by its unique ID. The base path (pizza) and the route parameter (id) must be provided to the routerLink directive as shown below:
+
+```html
+<a [routerLink]="[‘/pizza’,pizzaObject.pizzaID]">{{pizzaObject.name}}</a>
+```
+
+‘pizza’ and ‘pizzaID’ are passed as the first parameter and second parameter, respectively, to the routerLink array. Thus, pizzaID is dynamically taken from the pizza object, pizzaObject.
+
+
+1. Query parameters using router. navigate
+2. Query parameters using queryParamsHandling
+3. Query parameters using RouterLink
+4. URL fragment
+5. Data property
+6. RouterLink for dynamic data
+7. Dynamic data using navigateByURL
+8.  Wildcard routes
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
