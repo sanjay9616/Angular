@@ -71,7 +71,7 @@ The SimpleChanges instance looks like this...
 
 ```ts
 class SimpleChange {
-  constructor(previousValue: any, currentValue: any, firstChange: boolean)
+  constructor(previousValue: any, currentValue: any, firstChange: boolean) {}
   previousValue: any
   currentValue: any
   firstChange: boolean
