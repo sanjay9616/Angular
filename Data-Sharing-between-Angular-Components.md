@@ -7,7 +7,7 @@ When building an Angular application, it's common to break it down into smaller 
 3. Using State Management Libraries i.e Ngrx.
 4. Using Local Storage or Session Storage.
 5. Using @ViewChild property.
-6. 9 ways to pass data through Angular RouterState.
+6. Using RouterState.
 
 <h2>1. Using @Input @Output decorator for Parent Child Components</h2>
 
@@ -282,7 +282,7 @@ export class ParentComponent {
 }
 ```
 
-<h2><a href="https://github.com/sanjay9616/Angular/blob/master/Router.md">6. 9 ways to pass data through Angular RouterState</a></h2>
+<h2><a href="https://github.com/sanjay9616/Angular/blob/master/Router.md">6. Using RouterState</a></h2>
 
 **Summary:**
 
