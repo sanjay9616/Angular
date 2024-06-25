@@ -67,7 +67,7 @@ The <router-outlet> serves as a placeholder where the content of the routed comp
 ```
 Clicking the link triggers navigation to the 'about' route.
 
-<h2>Accessing query parameters and fragments</h2>
+<h2>4. Accessing query parameters and fragments</h2>
 
 ```ts
 import { Component, OnInit } from '@angular/core';
@@ -123,22 +123,137 @@ In case of multiple parameters, add one more /,: and placeholder. See the exampl
 { path: ’pizza/:id/:id1/:id2’,component: PizzaComponent }
 ```
 
-**b. Define the navigation**: Consider the URL:/pizza/:id that fetches details of a particular pizza by its unique ID. The base path (pizza) and the route parameter (id) must be provided to the routerLink directive as shown below:
+**b. Define the navigation**: Consider the `URL:/pizza/:id` that fetches details of a particular pizza by its unique ID. The base path (pizza) and the route parameter (id) must be provided to the routerLink directive as shown below:
 
 ```html
 <a [routerLink]="[‘/pizza’,pizzaObject.pizzaID]">{{pizzaObject.name}}</a>
 ```
 
-‘pizza’ and ‘pizzaID’ are passed as the first parameter and second parameter, respectively, to the routerLink array. Thus, pizzaID is dynamically taken from the pizza object, pizzaObject.
+`pizza` and `pizzaID` are passed as the first parameter and second parameter, respectively, to the routerLink array. Thus, `pizzaID` is dynamically taken from the pizza object, pizzaObject.
 
 
-1. Query parameters using router. navigate
-2. Query parameters using queryParamsHandling
-3. Query parameters using RouterLink
-4. URL fragment
-5. Data property
-6. RouterLink for dynamic data
-7. Dynamic data using navigateByURL
-8.  Wildcard routes
+<h3>2. Query parameters using router. navigate</h3>
+
+Query parameters are those that appear after a question mark `(?)`. The parameters and their corresponding values are separated by an equal to `(=)` sign. Consider the URL `http://localhost:4200/pizzas?order=popular` to display the pizzas ordered by most users.
+
+```ts
+goPizzas(){
+  this.router.navigate( ['/pizza/'], { queryParams: { order: 'popular' } } );
+}
+```
+Query parameters are set using queryParams in Router. navigate. Multiple query parameters can be passed by passing them as comma-separated parameters along with their corresponding values.
+
+```ts
+goPizzas(){
+  this.router.navigate( ['/pizza'], { queryParams: { order: 'popular', price-range: 'expensive' } } );
+}
+```
+The resultant URL will be `http://localhost:4200/pizzas?order=popular&price-range=expensive`
+
+<h3>3. Query parameters using queryParamsHandling</h3>
+
+When a user navigates from one view to another, query parameters are lost. Setting queryParamsHandling to ‘preserve’ or ‘merge’ helps preserve the required query parameters.
+
+**Note**: This feature is available only for Angular 4+.
+
+For example, routing users from the pizzas page with the query parameter {order:’popular’} to the /billing page - while also preserving the query parameter - can be achieved in Angular with:
+
+```ts
+goToBilling() {
+  this.router.navigate( [‘/billing’], { queryParamsHandling: 'preserve' } );
+}
+```
+The resultant URL will be `http://localhost:4200/billing?order=popular`
+
+As you can see from the URL, the user is taken to the billing page, yet the query parameter from the previous page (order=popular) is retained.
+
+New query parameters can also be merged while still preserving the previous query parameter. Suppose we want to route users to the /billing page while also passing the query parameter {payment:’UPI’}, we can accomplish the same with the following code:
+
+```ts
+goToBilling() {
+  this.router.navigate( ['/billing'], { queryParamsHandling: 'merge' } );
+}
+```
+The resultant URL is `http://localhost:4200/billing?order=popular&payment=upi`
+
+Note that the old parameter `(order=popular)` has been preserved while adding the new parameter `(payment=upi)`.
+
+<h3>4. Query parameters using RouterLink</h3>
+
+As shown in the section on URL parameters, if the routerLink directive is used for navigation, query parameters can be used along with it as follows:
+
+```html
+<a [routerLink]="['/pizzas']" [queryParams]="{ order: 'popular' }">Pizzas</a>
+```
+
+Further, ‘preserve’ or ‘merge’ can be added as another attribute to the tag by setting queryParamsHanding accordingly.
+
+<h3>5. URL fragment</h3>
+
+URL fragment or hash appears at the end of the URL. It is a link that jumps or, in other words, scrolls down to the content whose ID is the same as that in the fragment of the Angular router. It is also known as a named anchor and is an internal page reference.
+
+Consider the URL `careers.com/tech#fullstackdeveloper`. It will take us to a page with details on different careers, and under tech careers, information on every specialization. The fragment (`fullstackdeveloper`) will scroll to the part of the page focusing on `fullstackdeveloper` under tech. If a user clicks on, say, `cybersecurity`, the URL will change to `careers.com/tech#cybersecurity`.
+
+Note that the fragment changed from #fullstackdeveloper to #cybersecurity. The hash, therefore, keeps changing, depending on which tech specialization is clicked on by the visitor.
+
+The corresponding snippet in Angular 10 is as follows:
+
+```ts
+const routes:Routes = []
+const routerOptions:ExtraOptions = {
+  scrollPositionRestoration:’enabled’,
+  anchorScrolling:’enabled’,
+};
+@NgModule({
+  imports:[RouterModule.forRoot(routes,routerOptions)],
+  exports:[RouterModule],
+})
+```
+
+We add routerOptions with the type ExtraOptions. ExtraOptions is the set of configuration options for a routing module provided in the forward method. Here, extra options can be defined. In our case, `scrollPositionRestoration` and `anchorScrolling` are the two extra options used. The `scrollPositionRestoration` option stores the scroll position and maintains it when we click on the back or forward buttons.
+
+
+<h3>6. Data property</h3>
+
+The Angular route data property helps pass static data to a route. It is an array of key-value pairs and is used to store read-only static data, such as page titles. Consider a route with a data property set as follows:
+
+```ts
+{ path: 'static', component: StaticComponent, data: { id:'1', name: "Angular" } }
+```
+
+Here, `{id:'1', name: "Mita" }` is the static data passed when the component, StaticComponent, is rendered. Observe that the key-value pairs are strings here `("Angular" and "1")` as they are enclosed within quotes.
+
+<h3>7. RouterLink for dynamic data</h3>
+
+Dynamic data or user-defined objects can be passed from Angular version 7.2 using the state object stored in History API. The state value can be provided using the `routerLink` directive or `navigateByURL`.
+
+The snippet to achieve the the routerLink directive is:
+
+```html
+<a [routerLink]="['dynamic']" [state]="{ id:100 , name:'Maya'}">Dynamic Data</a>
+```
+
+<h3>8. Dynamic data using navigateByURL</h3>
+
+An alternative method to pass dynamic data is by using navigateByURL as follows:
+
+```ts
+this.router.navigateByUrl('/dynamic', { state: { id:100 , name:'Maya' } });
+```
+Here, the router will add a navigationId property to the state object, so you shouldn’t use a scalar value.
+
+<h3>9. Wildcard routes</h3>
+
+The `double asterisk sign (**)` sets up a wildcard route in Angular. Wildcard routes are essential to handle users navigating to a path not defined in the routes. In that case, the website should route them to `Page Not Found` and so on. As it matches any given path, it should be defined as the last path.
+
+```ts
+const routes:Routes = [
+  { path: 'home', component: HomeComponent },
+  { path:'pizzas', component: PizzaComponent },
+  { path: 'billing', component: BillingComponent },
+  { path: '**', component: PageNotFoundComponent }
+];
+```
+
 
 <h2><a href="https://github.com/sanjay9616/Angular/blob/master/README.md"> 🔙 Back</a></h2>
