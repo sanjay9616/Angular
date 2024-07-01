@@ -12,8 +12,8 @@
 | 8   | <a href="https://github.com/sanjay9616/Angular/blob/master/Life-Cycle-Hooks.md">Component Life Cycle Hooks</a>                                                                          |
 | 9   | <a href="https://github.com/sanjay9616/Angular/blob/master/Route-Guards.md">Route Guards in Angular</a>                                                                                 |
 | 10  | <a href="https://github.com/sanjay9616/Angular/blob/master/Directives.md">Angular Directives</a>                                                                                        |
-| 11  | <a href="https://github.com/sanjay9616/Angular/blob/master/Decorators.md">Angular Decorators</a>                                                                                        |
-| 12  | <a href="https://github.com/sanjay9616/Angular/blob/master/Pipes.md">Angular Pipes</a>                                                                                                  |
+| 11  | <a href="https://github.com/sanjay9616/Angular/blob/master/Pipes.md">Angular Pipes</a>                                                                                                  |
+| 12  | <a href="https://github.com/sanjay9616/Angular/blob/master/Decorators.md">Angular Decorators</a>                                                                                        |
 | 13  | <a href="https://github.com/sanjay9616/Angular/blob/master/Http-Intercepters.md">Http Intercepters</a>                                                                                  |
 | 14  | <a href="https://github.com/sanjay9616/Angular/blob/master/Dependency-Injection.md">Dependency Injection in Angular</a>                                                                 |
 | 15  | <a href="https://github.com/sanjay9616/Angular/blob/master/HttpClient-Module.md">HttpClient Module in Angular</a>                                                                       |
